@@ -1,4 +1,4 @@
-                            WAVEFRAG
+#                            WAVEFRAG
                             
     This is the core project for voice recognition research. All kinds of
 ideas are implemented, tried out. Several kind of frequency analysis,
@@ -16,4 +16,5 @@ further resource ..
                                                         
                             
                             
+
 
