@@ -1,0 +1,109 @@
+\hypertarget{group__ddd}{\section{String Collection Management}
+\label{group__ddd}\index{String Collection Management@{String Collection Management}}
+}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{wflib_8h_a04f24f8cb8df37b828ec454107aeb686}{W\-F\-L\-\_\-\-D\-L\-L} void \hyperlink{group__ddd_ga7474d1e144d78b0eef5d486e60c8b439}{W\-F\-L\-\_\-\-Set\-Train\-Str} (\hyperlink{wflib_8h_a50a88b13633a8142e9172fb5124d729a}{C\-C\-H\-A\-R} $\ast$pname)
+\begin{DoxyCompactList}\small\item\em Set current str to train. \end{DoxyCompactList}\item 
+\hyperlink{wflib_8h_a04f24f8cb8df37b828ec454107aeb686}{W\-F\-L\-\_\-\-D\-L\-L} void \hyperlink{group__ddd_ga1ea068942b4780bab9e0f3a6b4ed74fe}{W\-F\-L\-\_\-\-Clear\-Training} (\hyperlink{wflib_8h_a50a88b13633a8142e9172fb5124d729a}{C\-C\-H\-A\-R} $\ast$pname)
+\begin{DoxyCompactList}\small\item\em Clear string. Pass N\-U\-L\-L for clearing all training. \end{DoxyCompactList}\item 
+\hyperlink{wflib_8h_a04f24f8cb8df37b828ec454107aeb686}{W\-F\-L\-\_\-\-D\-L\-L} void \hyperlink{group__ddd_ga216f3cfebb61b508abc8ee78d93ebd73}{W\-F\-L\-\_\-\-Clear\-Train\-Item} (\hyperlink{wflib_8h_a50a88b13633a8142e9172fb5124d729a}{C\-C\-H\-A\-R} $\ast$pname, \hyperlink{wflib_8h_a50a88b13633a8142e9172fb5124d729a}{C\-C\-H\-A\-R} $\ast$pitem)
+\begin{DoxyCompactList}\small\item\em Clear O\-N\-E traing item from pname. \end{DoxyCompactList}\item 
+\hyperlink{wflib_8h_a04f24f8cb8df37b828ec454107aeb686}{W\-F\-L\-\_\-\-D\-L\-L} int \hyperlink{group__ddd_ga8d939f96fbe278991755c888779299b0}{W\-F\-L\-\_\-\-Get\-Coll\-Name} (int idx, char $\ast$str, int maxlen)
+\begin{DoxyCompactList}\small\item\em Get name of entry by index. \end{DoxyCompactList}\item 
+\hyperlink{wflib_8h_a04f24f8cb8df37b828ec454107aeb686}{W\-F\-L\-\_\-\-D\-L\-L} int \hyperlink{group__ddd_gaab70092332a780691e1b947ac450e187}{W\-F\-L\-\_\-\-Get\-Coll\-Str} (int idx, int idx2, char $\ast$str, int maxlen)
+\begin{DoxyCompactList}\small\item\em List sub entries by two indexes. \end{DoxyCompactList}\item 
+\hyperlink{wflib_8h_a04f24f8cb8df37b828ec454107aeb686}{W\-F\-L\-\_\-\-D\-L\-L} void \hyperlink{group__ddd_ga300ace9163bae9b1310e6678ea392d4d}{W\-F\-L\-\_\-\-Load\-Str\-Coll} (\hyperlink{wflib_8h_a50a88b13633a8142e9172fb5124d729a}{C\-C\-H\-A\-R} $\ast$fname)
+\begin{DoxyCompactList}\small\item\em Load str coll from file. \end{DoxyCompactList}\item 
+\hyperlink{wflib_8h_a04f24f8cb8df37b828ec454107aeb686}{W\-F\-L\-\_\-\-D\-L\-L} void \hyperlink{group__ddd_gab2ec5674ad043c6e54e0279b0d2e181b}{W\-F\-L\-\_\-\-Save\-Str\-Coll} (\hyperlink{wflib_8h_a50a88b13633a8142e9172fb5124d729a}{C\-C\-H\-A\-R} $\ast$fname)
+\begin{DoxyCompactList}\small\item\em Save str coll to file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+These functions manage string collection and training. 
+
+\subsection{Function Documentation}
+\hypertarget{group__ddd_ga1ea068942b4780bab9e0f3a6b4ed74fe}{\index{String Collection Management@{String Collection Management}!W\-F\-L\-\_\-\-Clear\-Training@{W\-F\-L\-\_\-\-Clear\-Training}}
+\index{W\-F\-L\-\_\-\-Clear\-Training@{W\-F\-L\-\_\-\-Clear\-Training}!String Collection Management@{String Collection Management}}
+\subsubsection[{W\-F\-L\-\_\-\-Clear\-Training}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\-F\-L\-\_\-\-D\-L\-L} void W\-F\-L\-\_\-\-Clear\-Training (
+\begin{DoxyParamCaption}
+\item[{{\bf C\-C\-H\-A\-R} $\ast$}]{pname}
+\end{DoxyParamCaption}
+)}}\label{group__ddd_ga1ea068942b4780bab9e0f3a6b4ed74fe}
+
+
+Clear string. Pass N\-U\-L\-L for clearing all training. 
+
+\hypertarget{group__ddd_ga216f3cfebb61b508abc8ee78d93ebd73}{\index{String Collection Management@{String Collection Management}!W\-F\-L\-\_\-\-Clear\-Train\-Item@{W\-F\-L\-\_\-\-Clear\-Train\-Item}}
+\index{W\-F\-L\-\_\-\-Clear\-Train\-Item@{W\-F\-L\-\_\-\-Clear\-Train\-Item}!String Collection Management@{String Collection Management}}
+\subsubsection[{W\-F\-L\-\_\-\-Clear\-Train\-Item}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\-F\-L\-\_\-\-D\-L\-L} void W\-F\-L\-\_\-\-Clear\-Train\-Item (
+\begin{DoxyParamCaption}
+\item[{{\bf C\-C\-H\-A\-R} $\ast$}]{pname, }
+\item[{{\bf C\-C\-H\-A\-R} $\ast$}]{pitem}
+\end{DoxyParamCaption}
+)}}\label{group__ddd_ga216f3cfebb61b508abc8ee78d93ebd73}
+
+
+Clear O\-N\-E traing item from pname. 
+
+\hypertarget{group__ddd_ga8d939f96fbe278991755c888779299b0}{\index{String Collection Management@{String Collection Management}!W\-F\-L\-\_\-\-Get\-Coll\-Name@{W\-F\-L\-\_\-\-Get\-Coll\-Name}}
+\index{W\-F\-L\-\_\-\-Get\-Coll\-Name@{W\-F\-L\-\_\-\-Get\-Coll\-Name}!String Collection Management@{String Collection Management}}
+\subsubsection[{W\-F\-L\-\_\-\-Get\-Coll\-Name}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\-F\-L\-\_\-\-D\-L\-L} int W\-F\-L\-\_\-\-Get\-Coll\-Name (
+\begin{DoxyParamCaption}
+\item[{int}]{idx, }
+\item[{char $\ast$}]{str, }
+\item[{int}]{maxlen}
+\end{DoxyParamCaption}
+)}}\label{group__ddd_ga8d939f96fbe278991755c888779299b0}
+
+
+Get name of entry by index. 
+
+\hypertarget{group__ddd_gaab70092332a780691e1b947ac450e187}{\index{String Collection Management@{String Collection Management}!W\-F\-L\-\_\-\-Get\-Coll\-Str@{W\-F\-L\-\_\-\-Get\-Coll\-Str}}
+\index{W\-F\-L\-\_\-\-Get\-Coll\-Str@{W\-F\-L\-\_\-\-Get\-Coll\-Str}!String Collection Management@{String Collection Management}}
+\subsubsection[{W\-F\-L\-\_\-\-Get\-Coll\-Str}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\-F\-L\-\_\-\-D\-L\-L} int W\-F\-L\-\_\-\-Get\-Coll\-Str (
+\begin{DoxyParamCaption}
+\item[{int}]{idx, }
+\item[{int}]{idx2, }
+\item[{char $\ast$}]{str, }
+\item[{int}]{maxlen}
+\end{DoxyParamCaption}
+)}}\label{group__ddd_gaab70092332a780691e1b947ac450e187}
+
+
+List sub entries by two indexes. 
+
+\hypertarget{group__ddd_ga300ace9163bae9b1310e6678ea392d4d}{\index{String Collection Management@{String Collection Management}!W\-F\-L\-\_\-\-Load\-Str\-Coll@{W\-F\-L\-\_\-\-Load\-Str\-Coll}}
+\index{W\-F\-L\-\_\-\-Load\-Str\-Coll@{W\-F\-L\-\_\-\-Load\-Str\-Coll}!String Collection Management@{String Collection Management}}
+\subsubsection[{W\-F\-L\-\_\-\-Load\-Str\-Coll}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\-F\-L\-\_\-\-D\-L\-L} void W\-F\-L\-\_\-\-Load\-Str\-Coll (
+\begin{DoxyParamCaption}
+\item[{{\bf C\-C\-H\-A\-R} $\ast$}]{fname}
+\end{DoxyParamCaption}
+)}}\label{group__ddd_ga300ace9163bae9b1310e6678ea392d4d}
+
+
+Load str coll from file. 
+
+Call On start \hypertarget{group__ddd_gab2ec5674ad043c6e54e0279b0d2e181b}{\index{String Collection Management@{String Collection Management}!W\-F\-L\-\_\-\-Save\-Str\-Coll@{W\-F\-L\-\_\-\-Save\-Str\-Coll}}
+\index{W\-F\-L\-\_\-\-Save\-Str\-Coll@{W\-F\-L\-\_\-\-Save\-Str\-Coll}!String Collection Management@{String Collection Management}}
+\subsubsection[{W\-F\-L\-\_\-\-Save\-Str\-Coll}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\-F\-L\-\_\-\-D\-L\-L} void W\-F\-L\-\_\-\-Save\-Str\-Coll (
+\begin{DoxyParamCaption}
+\item[{{\bf C\-C\-H\-A\-R} $\ast$}]{fname}
+\end{DoxyParamCaption}
+)}}\label{group__ddd_gab2ec5674ad043c6e54e0279b0d2e181b}
+
+
+Save str coll to file. 
+
+Call On end \hypertarget{group__ddd_ga7474d1e144d78b0eef5d486e60c8b439}{\index{String Collection Management@{String Collection Management}!W\-F\-L\-\_\-\-Set\-Train\-Str@{W\-F\-L\-\_\-\-Set\-Train\-Str}}
+\index{W\-F\-L\-\_\-\-Set\-Train\-Str@{W\-F\-L\-\_\-\-Set\-Train\-Str}!String Collection Management@{String Collection Management}}
+\subsubsection[{W\-F\-L\-\_\-\-Set\-Train\-Str}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\-F\-L\-\_\-\-D\-L\-L} void W\-F\-L\-\_\-\-Set\-Train\-Str (
+\begin{DoxyParamCaption}
+\item[{{\bf C\-C\-H\-A\-R} $\ast$}]{pname}
+\end{DoxyParamCaption}
+)}}\label{group__ddd_ga7474d1e144d78b0eef5d486e60c8b439}
+
+
+Set current str to train. 
+

@@ -1,0 +1,11 @@
+ONE             [ONE]           w ah n
+TWO             [TWO]           t uw
+THREE           [THREE]         th r iy
+FOUR            [FOUR]          f ow r
+FIVE            [FIVE]          f ay v
+SIX             [SIX]           s ih k s
+EIGHT           [EIGHT]         ey t
+NINE            [NINE]          n ay n
+TEN             [TEN]           t eh n
+
+

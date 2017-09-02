@@ -1,0 +1,387 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <meta http-equiv="content-type"
+ content="text/html; charset=ISO-8859-1">
+  <title>WavFrag</title>
+  <meta content="Peter Glen" name="author">
+  <meta content="Peter Glen" name="author">
+  <meta content="WavFrag KeyStrokes Page" name="description">
+  <style>
+A:link {color: #664444}
+A:active {color: #220000}
+A:visited {color: #553333}
+  </style>
+</head>
+<body>
+<center>
+<div style="text-align: center;"></div>
+<table
+ style="text-align: left; width: 900px; margin-left: auto; margin-right: auto;"
+ background="bg.jpg" border="0" cellpadding="8" cellspacing="2">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top; text-align: center;"><font
+ style="font-weight: bold;" size="+2"><img
+ style="width: 860px; height: 211px;" alt="" src="header.jpg"></font><small><small><br>
+      <br>
+      </small></small><font style="font-weight: bold;" size="+2">[ <a
+ href="index.html">Home</a> ] [ <a href="rec.html">Recognition</a> ] [
+      <a href="train.html">Training</a> ] </font><font
+ style="font-weight: bold;" size="+2">[ <a href="comm.html">Commands</a>
+]&nbsp; </font><font style="font-weight: bold;" size="+2">[ <a
+ href="tech.html"><span style="text-decoration: underline;">Technology</span></a>
+] [ <a href="contact.html">Contact</a> ]<small><small><small><small><br>
+      <br>
+      </small></small></small></small>WavFrag Voice Recognition,
+KeyStrokes</font><br>
+      <br>
+      <div style="text-align: left;">&nbsp; One can send arbitrary
+ASCII characters to the currently active window. The letters A-Z, the
+numbers from 0 to 9 and the punctuation marks are sent without any
+modifications to the currently active application. In addition, the
+following special sequences are recognized:<br>
+      </div>
+      <div style="text-align: left;">&nbsp; <br>
+      <table style="text-align: left; width: 100%;" border="0"
+ cellpadding="2" cellspacing="2">
+        <tbody>
+          <tr>
+            <td
+ style="vertical-align: top; background-color: rgb(238, 238, 238);">VK_RETURN
+            </td>
+            <td
+ style="vertical-align: top; background-color: rgb(238, 238, 238);">&nbsp;&nbsp;
+            <br>
+            </td>
+            <td
+ style="vertical-align: top; background-color: rgb(238, 238, 238);">The
+return key.<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">VK_SHIFT&nbsp;&nbsp; <br>
+            </td>
+            <td style="vertical-align: top;"><br>
+            </td>
+            <td style="vertical-align: top;">The shift key. This is a
+toggle key. Sending it the first time is equivalent to pressing the
+shift key, sending it the second time is equivalent to release the
+shift key.&nbsp; The user is responsible to maintain the send count to
+get the expected results.<br>
+            </td>
+          </tr>
+          <tr>
+            <td
+ style="vertical-align: top; background-color: rgb(238, 238, 238);">VK_CONTROL&nbsp;&nbsp;
+            <br>
+            </td>
+            <td
+ style="vertical-align: top; background-color: rgb(238, 238, 238);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <br>
+            </td>
+            <td
+ style="vertical-align: top; background-color: rgb(238, 238, 238);">The
+control key. This is a toggle key. Sending it the first time is
+equivalent to pressing the control key,
+sending it the second time is equivalent to the release of the control
+key.&nbsp; The
+user is responsible to maintain the send count to get the expected
+results.</td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">VK_MENU &nbsp;&nbsp; <br>
+            </td>
+            <td style="vertical-align: top;"><br>
+            </td>
+            <td style="vertical-align: top;">The alt key. This is a
+toggle key. Sending it the first time is equivalent to pressing the alt
+key,
+sending it the second time is equivalent to the release of the alt
+key.&nbsp; The
+user is responsible to maintain the send count to get the expected
+results.</td>
+          </tr>
+          <tr>
+            <td
+ style="vertical-align: top; background-color: rgb(238, 238, 238);">VK_BACK&nbsp;&nbsp;
+            <br>
+            </td>
+            <td
+ style="vertical-align: top; background-color: rgb(238, 238, 238);"><br>
+            </td>
+            <td
+ style="vertical-align: top; background-color: rgb(238, 238, 238);">The
+backspace key<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">VK_TAB<br>
+            </td>
+            <td style="vertical-align: top;"><br>
+            </td>
+            <td style="vertical-align: top;">The tab key</td>
+          </tr>
+          <tr>
+            <td
+ style="vertical-align: top; background-color: rgb(238, 238, 238);">VK_SPACE
+            <br>
+            </td>
+            <td
+ style="vertical-align: top; background-color: rgb(238, 238, 238);"><br>
+            </td>
+            <td
+ style="vertical-align: top; background-color: rgb(238, 238, 238);">The
+space key</td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">VK_PRIOR <br>
+            </td>
+            <td style="vertical-align: top;"><br>
+            </td>
+            <td style="vertical-align: top;">The page up key</td>
+          </tr>
+          <tr>
+            <td
+ style="vertical-align: top; background-color: rgb(238, 238, 238);">VK_NEXT&nbsp;
+            <br>
+            </td>
+            <td
+ style="vertical-align: top; background-color: rgb(238, 238, 238);"><br>
+            </td>
+            <td
+ style="vertical-align: top; background-color: rgb(238, 238, 238);">The
+page down key</td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">VK_END</td>
+            <td style="vertical-align: top;"><br>
+            </td>
+            <td style="vertical-align: top;">The end key</td>
+          </tr>
+          <tr>
+            <td
+ style="vertical-align: top; background-color: rgb(238, 238, 238);">VK_HOME</td>
+            <td
+ style="vertical-align: top; background-color: rgb(238, 238, 238);"><br>
+            </td>
+            <td
+ style="vertical-align: top; background-color: rgb(238, 238, 238);">The
+home key</td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">VK_LEFT</td>
+            <td style="vertical-align: top;"><br>
+            </td>
+            <td style="vertical-align: top;">The left arrow key</td>
+          </tr>
+          <tr>
+            <td
+ style="vertical-align: top; background-color: rgb(238, 238, 238);">VK_DOWN
+            <br>
+            </td>
+            <td
+ style="vertical-align: top; background-color: rgb(238, 238, 238);"><br>
+            </td>
+            <td
+ style="vertical-align: top; background-color: rgb(238, 238, 238);">The
+down arrow key</td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">VK_RIGHT</td>
+            <td style="vertical-align: top;"><br>
+            </td>
+            <td style="vertical-align: top;">The right arrow key</td>
+          </tr>
+          <tr>
+            <td
+ style="vertical-align: top; background-color: rgb(238, 238, 238);">VK_ESCAPE</td>
+            <td
+ style="vertical-align: top; background-color: rgb(238, 238, 238);"><br>
+            </td>
+            <td
+ style="vertical-align: top; background-color: rgb(238, 238, 238);">The
+escape key</td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">VK_CAPITAL
+&nbsp;&nbsp;&nbsp; </td>
+            <td style="vertical-align: top;"><br>
+            </td>
+            <td style="vertical-align: top;">The caps lock key</td>
+          </tr>
+          <tr>
+            <td
+ style="vertical-align: top; background-color: rgb(238, 238, 238);">VK_SNAPSHOT</td>
+            <td
+ style="vertical-align: top; background-color: rgb(238, 238, 238);"><br>
+            </td>
+            <td
+ style="vertical-align: top; background-color: rgb(238, 238, 238);">The
+print screen&nbsp; key (PRNSCR)</td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">VK_DELETE&nbsp;&nbsp;&nbsp;
+&nbsp; <br>
+            </td>
+            <td style="vertical-align: top;"><br>
+            </td>
+            <td style="vertical-align: top;">The delete key</td>
+          </tr>
+          <tr>
+            <td
+ style="vertical-align: top; background-color: rgb(238, 238, 238);">VK_INSERT</td>
+            <td
+ style="vertical-align: top; background-color: rgb(238, 238, 238);"><br>
+            </td>
+            <td
+ style="vertical-align: top; background-color: rgb(238, 238, 238);">The
+insert key</td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">VK_F1 - VK_F9 <br>
+VK_F10<br>
+VK_F11 &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; <br>
+VK_F12&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; </td>
+            <td style="vertical-align: top;"><br>
+            </td>
+            <td style="vertical-align: top;">The function keys from F1
+to F9 and F10, F11, F12</td>
+          </tr>
+          <tr>
+            <td
+ style="vertical-align: top; background-color: rgb(238, 238, 238);">VK_ADD</td>
+            <td
+ style="vertical-align: top; background-color: rgb(238, 238, 238);"><br>
+            </td>
+            <td
+ style="vertical-align: top; background-color: rgb(238, 238, 238);">The
++ key</td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">VK_DIVIDE&nbsp; <br>
+            </td>
+            <td style="vertical-align: top;"><br>
+            </td>
+            <td style="vertical-align: top;">The / key</td>
+          </tr>
+          <tr>
+            <td
+ style="vertical-align: top; background-color: rgb(238, 238, 238);">VK_MULTIPLY&nbsp;
+            <br>
+            </td>
+            <td
+ style="vertical-align: top; background-color: rgb(238, 238, 238);"><br>
+            </td>
+            <td
+ style="vertical-align: top; background-color: rgb(238, 238, 238);">The
+* key</td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">VK_SUBTRACT&nbsp; <br>
+            </td>
+            <td style="vertical-align: top;"><br>
+            </td>
+            <td style="vertical-align: top;">The - key</td>
+          </tr>
+          <tr>
+            <td
+ style="vertical-align: top; background-color: rgb(238, 238, 238);">VK_HELP&nbsp;&nbsp;
+            <br>
+            </td>
+            <td
+ style="vertical-align: top; background-color: rgb(238, 238, 238);"><br>
+            </td>
+            <td
+ style="vertical-align: top; background-color: rgb(238, 238, 238);">The
+F1 key (Help)<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">VK_NUMPAD0&nbsp; <br>
+.....<br>
+            </td>
+            <td style="vertical-align: top;"><br>
+            </td>
+            <td style="vertical-align: top;">The numberpad keys from 0
+- 9<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;">VK_NUMPAD9</td>
+            <td style="vertical-align: top;"><br>
+            </td>
+            <td style="vertical-align: top;"><br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <hr style="width: 100%; height: 2px;">To send a special key just
+embed it into the character sequence you are sending. For example to
+send shift down arrow, enter the following sequence:<br>
+      <br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+VK_SHIFTVK_DOWNVK_SHIFT<br>
+      <br>
+To send the Capital 'A'.<br>
+&nbsp;&nbsp;&nbsp; <br>
+&nbsp;&nbsp;&nbsp; VK_SHIFTAVK_SHIFT<br>
+      <br>
+To highlight the whole document via the keystrokes&nbsp; control home -
+shift control end:<br>
+      <br>
+&nbsp;&nbsp;&nbsp; VK_CONTROLVH_HOMEVK_SHIFTVK_ENDVK_SHIFTVK_CONTROL<br>
+      <br>
+Do not forget to issue a duplicate shift at a duplicate control to
+reset their states.<br>
+      <br>
+      <hr style="width: 100%; height: 2px;">Here is a complete list of
+all the keys recognized:<br>
+      <br>
+VK_LBUTTON&nbsp;&nbsp; VK_RBUTTON&nbsp;&nbsp;
+VK_CANCEL&nbsp;&nbsp;&nbsp; VK_MBUTTON&nbsp;&nbsp; VK_BACK&nbsp;&nbsp;
+VK_CLEAR&nbsp;&nbsp;&nbsp; VK_RETURN&nbsp;&nbsp;&nbsp; VK_SHIFT&nbsp; <br>
+VK_CONTROL&nbsp;&nbsp; VK_MENU&nbsp;&nbsp;&nbsp; VK_PAUSE&nbsp;&nbsp;
+VK_CAPITAL&nbsp;&nbsp; VK_PRIOR&nbsp;&nbsp; VK_NEXT&nbsp;&nbsp;&nbsp;
+VK_END&nbsp;&nbsp;&nbsp; VK_HOME&nbsp; <br>
+VK_LEFT&nbsp;&nbsp; VK_SELECT&nbsp;&nbsp; VK_EXECUTE&nbsp;&nbsp;
+VK_SNAPSHOT&nbsp; VK_PLAY&nbsp;&nbsp; VK_ACCEPT&nbsp;&nbsp;
+VK_ADD&nbsp;&nbsp;&nbsp; VK_CANCEL&nbsp; <br>
+VK_CLEAR&nbsp;&nbsp; VK_CONTROL&nbsp;&nbsp; VK_CONVERT&nbsp;&nbsp;
+VK_DECIMAL&nbsp;&nbsp; VK_DELETE&nbsp;&nbsp; VK_DIVIDE&nbsp;&nbsp;
+VK_DOWN&nbsp;&nbsp; VK_END&nbsp;&nbsp; <br>
+VK_ESCAPE&nbsp;&nbsp; VK_F1&nbsp;&nbsp;&nbsp; VK_F10&nbsp;&nbsp;&nbsp;
+VK_F11&nbsp;&nbsp;&nbsp; VK_F12&nbsp;&nbsp;&nbsp;
+VK_F2&nbsp;&nbsp;&nbsp; VK_F3&nbsp;&nbsp;&nbsp; VK_F4&nbsp;&nbsp;
+VK_F5&nbsp;&nbsp;&nbsp; VK_F6&nbsp;&nbsp;&nbsp; VK_F7&nbsp;&nbsp;&nbsp;
+VK_F8&nbsp;&nbsp;&nbsp; VK_F9&nbsp;&nbsp;&nbsp; VK_FINAL&nbsp;&nbsp;
+VK_HELP&nbsp;&nbsp; VK_HOME&nbsp; VK_INSERT&nbsp;&nbsp;
+VK_KANA&nbsp;&nbsp; VK_KANJI&nbsp;&nbsp; VK_LEFT&nbsp;&nbsp;
+VK_MODECHANGE VK_MULTIPLY&nbsp; VK_NONCONVERT VK_NUMPAD0&nbsp;
+VK_NUMPAD1&nbsp;&nbsp; VK_NUMPAD2&nbsp;&nbsp; VK_NUMPAD3&nbsp;&nbsp;
+VK_NUMPAD4&nbsp;&nbsp; VK_NUMPAD5&nbsp;&nbsp; VK_NUMPAD6&nbsp;&nbsp;
+VK_NUMPAD7&nbsp;&nbsp; VK_NUMPAD8&nbsp; VK_NUMPAD9&nbsp;&nbsp;
+VK_PAUSE&nbsp;&nbsp; VK_RIGHT&nbsp;&nbsp; VK_SEPARATOR
+VK_SHIFT&nbsp;&nbsp; VK_SPACE&nbsp;&nbsp; VK_SUBTRACT&nbsp;
+VK_TAB&nbsp;&nbsp; VK_UP&nbsp;&nbsp;&nbsp; VK_LWIN&nbsp;&nbsp;&nbsp;
+VK_RWIN&nbsp;&nbsp;&nbsp;
+VK_APPS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <br>
+      <br>
+      <hr style="width: 100%; height: 2px;"><br>
+      <img style="width: 860px; height: 100px;" alt="" src="footer.jpg"><br
+ style="font-style: italic;">
+      </div>
+      </td>
+    </tr>
+    <tr style="font-style: italic;" align="center">
+      <td style="vertical-align: top;"><font size="-1">Copyright by (C)
+2009,&nbsp;&nbsp; Peter Glen,&nbsp; </font><font size="-1">(C) </font><font
+ size="-1">2010 </font><font size="-1">RobotMonkeySoftware LLC.</font><br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</center>
+</body>
+</html>

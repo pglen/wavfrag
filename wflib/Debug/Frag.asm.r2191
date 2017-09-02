@@ -1,0 +1,3147 @@
+	TITLE	C:\develop3\wavfrag\work\wflib\Frag.cpp
+	.386P
+include listing.inc
+if @Version gt 510
+.model FLAT
+else
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+_BSS	SEGMENT DWORD USE32 PUBLIC 'BSS'
+_BSS	ENDS
+$$SYMBOLS	SEGMENT BYTE USE32 'DEBSYM'
+$$SYMBOLS	ENDS
+$$TYPES	SEGMENT BYTE USE32 'DEBTYP'
+$$TYPES	ENDS
+_TLS	SEGMENT DWORD USE32 PUBLIC 'TLS'
+_TLS	ENDS
+;	COMDAT ??_C@_0BB@NAAD@Magellan?5MSWHEEL?$AA@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_C@_06FPAF@MouseZ?$AA@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_C@_0BA@CLBL@MSWHEEL_ROLLMSG?$AA@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_C@_0BF@DLPD@MSH_WHEELSUPPORT_MSG?$AA@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_C@_0BF@ODOJ@MSH_SCROLL_LINES_MSG?$AA@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_C@_0EE@LGAC@c?3?2program?5files?2microsoft?5visua@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_C@_0CB@EKNB@c?3?2develop3?2common?2work?2intarr?4h@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_C@_0CC@BBMP@c?3?2develop3?2common?2work?2xptrarr?4@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_C@_04FCPF@?4wfa?$AA@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_C@_04MPDF@?4wav?$AA@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ?__LINE__Var@?1???0CFrag@@QAE@XZ@4FA
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ?__LINE__Var@?1???1CFrag@@UAE@XZ@4FA
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_0BG@FFGF@Cannot?5load?5Wave?5?$CFs?$AN?6?$AA@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_C@_0CI@DEPE@Cannot?5create?5?1?5open?5frag?5file?5f@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ?__LINE__Var@?1??ParseFragWav@CFrag@@SAHPBD0H@Z@4FA@c97f9caa
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_0M@BDNF@1234567890?9?$AA@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_C@_0BG@HLAC@Cannot?5load?5file?5?$CFs?$AN?6?$AA@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_C@_0CE@LGCK@CFrag?3?3LoadFrag?5BAD?5magic?5?$CIstart@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_C@_0CC@KACJ@CFrag?3?3LoadFrag?5BAD?5magic?5?$CIend?$CJ?$AN@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_C@_0CF@FNN@CFrag?3?3LoadFrag?5empty?5buffer?5on?5@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ?__LINE__Var@?1??LoadFrag@CFrag@@QAEHPBDH@Z@4FA
+_DATA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+_DATA	ENDS
+;	COMDAT ??_C@_0CE@DJCF@name?$DN?8?$CFs?8?5shortname?$DN?8?$CFs?8?5frags?$DN?$CF@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_C@_0CB@LHEA@CFrag?3?3LoadFrag?5lo?1hi?5Dump?3?5?$CFs?$AN?6@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_C@_0EE@EEFC@c?3?2program?5files?2microsoft?5visua@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+CRT$XCA	SEGMENT DWORD USE32 PUBLIC 'DATA'
+CRT$XCA	ENDS
+CRT$XCU	SEGMENT DWORD USE32 PUBLIC 'DATA'
+CRT$XCU	ENDS
+CRT$XCL	SEGMENT DWORD USE32 PUBLIC 'DATA'
+CRT$XCL	ENDS
+CRT$XCC	SEGMENT DWORD USE32 PUBLIC 'DATA'
+CRT$XCC	ENDS
+CRT$XCZ	SEGMENT DWORD USE32 PUBLIC 'DATA'
+CRT$XCZ	ENDS
+;	COMDAT ?GetSize@CIntArr@@QBEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetAt@CIntArr@@QBEHH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?ElementAt@CIntArr@@QAEAAHH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Add@CIntArr@@QAEHH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetSize@CArrIntArr@@QAEHXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetData@CArrIntArr@@QAEPAVCPtrArray@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetAt@CxPtrArr@@QBEPAXH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?ElementAt@CxPtrArr@@QAEAAPAXH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT _$E306
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT _$E307
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT _$E309
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT _$E310
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT _$E312
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT _$E313
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT _$E314
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT _$E315
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0CFrag@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_GCFrag@@UAEPAXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1CFrag@@UAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_GCString@@QAEPAXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?ParseFragWav@CFrag@@SAHPBD0H@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?LoadFrag@CFrag@@QAEHPBDH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?Dump@CFrag@@QAEXXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?DumpLoHi@CFrag@@QAEXXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?CmpFrags@CFrag@@QAEHPAVCAnalRes@@HPAVCCmpRes@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?xHitFrags@CFrag@@IAEHPAVCAnalRes@@HHH@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0?$_CIP@UIUnknown@@$1?IID_IUnknown@@3U_GUID@@B@@QAE@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0?$_CIP@UIUnknown@@$1?IID_IUnknown@@3U_GUID@@B@@QAE@PAUIUnknown@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0?$_CIP@UIUnknown@@$1?IID_IUnknown@@3U_GUID@@B@@QAE@PAUIUnknown@@H@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0?$_CIP@UIUnknown@@$1?IID_IUnknown@@3U_GUID@@B@@QAE@ABU_GUID@@K@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0?$_CIP@UIUnknown@@$1?IID_IUnknown@@3U_GUID@@B@@QAE@PAGK@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??4?$_CIP@UIUnknown@@$1?IID_IUnknown@@3U_GUID@@B@@QAEAAV0@PAUIUnknown@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??4?$_CIP@UIUnknown@@$1?IID_IUnknown@@3U_GUID@@B@@QAEAAV0@ABV0@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??4?$_CIP@UIUnknown@@$1?IID_IUnknown@@3U_GUID@@B@@QAEAAV0@ABU_GUID@@@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??4?$_CIP@UIUnknown@@$1?IID_IUnknown@@3U_GUID@@B@@QAEAAV0@PAG@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetInterfacePtr@?$_CIP@UIUnknown@@$1?IID_IUnknown@@3U_GUID@@B@@QBEPAUIUnknown@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?CreateObject@?$_CIP@UIUnknown@@$1?IID_IUnknown@@3U_GUID@@B@@QAEJABU_GUID@@K@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?CreateObject@?$_CIP@UIUnknown@@$1?IID_IUnknown@@3U_GUID@@B@@QAEJPAGK@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?_AddRef@?$_CIP@UIUnknown@@$1?IID_IUnknown@@3U_GUID@@B@@AAEXXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?GetIID@?$_CIP@UIUnknown@@$1?IID_IUnknown@@3U_GUID@@B@@SAABU_GUID@@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ?_Release@?$_CIP@UIUnknown@@$1?IID_IUnknown@@3U_GUID@@B@@AAEXXZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??0?$_CIP@UIUnknown@@$1?IID_IUnknown@@3U_GUID@@B@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1?$_CIP@UIUnknown@@$1?IID_IUnknown@@3U_GUID@@B@@QAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_GCNoTrackObject@@UAEPAXI@Z
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??1CNoTrackObject@@UAE@XZ
+_TEXT	SEGMENT PARA USE32 PUBLIC 'CODE'
+_TEXT	ENDS
+;	COMDAT ??_7CNoTrackObject@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+;	COMDAT ??_7CFrag@@6B@
+CONST	SEGMENT DWORD USE32 PUBLIC 'CONST'
+CONST	ENDS
+FLAT	GROUP _DATA, CONST, _BSS, CRT$XCA, CRT$XCU, CRT$XCL, CRT$XCC, CRT$XCZ
+	ASSUME	CS: FLAT, DS: FLAT, SS: FLAT
+endif
+PUBLIC	?onefraglen@CFrag@@2HA				; CFrag::onefraglen
+PUBLIC	?wavext@CFrag@@2VCString@@A			; CFrag::wavext
+PUBLIC	?fragext@CFrag@@2VCString@@A			; CFrag::fragext
+_BSS	SEGMENT
+?wavext@CFrag@@2VCString@@A DD 01H DUP (?)		; CFrag::wavext
+?fragext@CFrag@@2VCString@@A DD 01H DUP (?)		; CFrag::fragext
+_BSS	ENDS
+_DATA	SEGMENT
+_THIS_FILE DB	'C:\develop3\wavfrag\work\wflib\Frag.cpp', 00H
+_DATA	ENDS
+CRT$XCU	SEGMENT
+_$S311	DD	FLAT:_$E310
+_$S316	DD	FLAT:_$E315
+CRT$XCU	ENDS
+_DATA	SEGMENT
+?onefraglen@CFrag@@2HA DD 0200H				; CFrag::onefraglen
+_DATA	ENDS
+EXTRN	__chkesp:NEAR
+;	COMDAT _$E310
+_TEXT	SEGMENT
+_$E310	PROC NEAR					; COMDAT
+	push	ebp
+	mov	ebp, esp
+	sub	esp, 64					; 00000040H
+	push	ebx
+	push	esi
+	push	edi
+	lea	edi, DWORD PTR [ebp-64]
+	mov	ecx, 16					; 00000010H
+	mov	eax, -858993460				; ccccccccH
+	rep stosd
+	call	_$E306
+	call	_$E309
+	pop	edi
+	pop	esi
+	pop	ebx
+	add	esp, 64					; 00000040H
+	cmp	ebp, esp
+	call	__chkesp
+	mov	esp, ebp
+	pop	ebp
+	ret	0
+_$E310	ENDP
+_TEXT	ENDS
+PUBLIC	??_C@_04FCPF@?4wfa?$AA@				; `string'
+EXTRN	??0CString@@QAE@PBD@Z:NEAR			; CString::CString
+;	COMDAT ??_C@_04FCPF@?4wfa?$AA@
+; File C:\develop3\wavfrag\work\wflib\Frag.cpp
+CONST	SEGMENT
+??_C@_04FCPF@?4wfa?$AA@ DB '.wfa', 00H			; `string'
+CONST	ENDS
+;	COMDAT _$E306
+_TEXT	SEGMENT
+_$E306	PROC NEAR					; COMDAT
+
+; 39   : CString CFrag::fragext = ".wfa";
+
+	push	ebp
+	mov	ebp, esp
+	sub	esp, 64					; 00000040H
+	push	ebx
+	push	esi
+	push	edi
+	lea	edi, DWORD PTR [ebp-64]
+	mov	ecx, 16					; 00000010H
+	mov	eax, -858993460				; ccccccccH
+	rep stosd
+	push	OFFSET FLAT:??_C@_04FCPF@?4wfa?$AA@	; `string'
+	mov	ecx, OFFSET FLAT:?fragext@CFrag@@2VCString@@A ; CFrag::fragext
+	call	??0CString@@QAE@PBD@Z			; CString::CString
+	pop	edi
+	pop	esi
+	pop	ebx
+	add	esp, 64					; 00000040H
+	cmp	ebp, esp
+	call	__chkesp
+	mov	esp, ebp
+	pop	ebp
+	ret	0
+_$E306	ENDP
+_TEXT	ENDS
+EXTRN	_atexit:NEAR
+;	COMDAT _$E309
+_TEXT	SEGMENT
+_$E309	PROC NEAR					; COMDAT
+	push	ebp
+	mov	ebp, esp
+	sub	esp, 64					; 00000040H
+	push	ebx
+	push	esi
+	push	edi
+	lea	edi, DWORD PTR [ebp-64]
+	mov	ecx, 16					; 00000010H
+	mov	eax, -858993460				; ccccccccH
+	rep stosd
+	push	OFFSET FLAT:_$E307
+	call	_atexit
+	add	esp, 4
+	pop	edi
+	pop	esi
+	pop	ebx
+	add	esp, 64					; 00000040H
+	cmp	ebp, esp
+	call	__chkesp
+	mov	esp, ebp
+	pop	ebp
+	ret	0
+_$E309	ENDP
+_TEXT	ENDS
+EXTRN	??1CString@@QAE@XZ:NEAR				; CString::~CString
+_BSS	SEGMENT
+_$S308	DB	01H DUP (?)
+_BSS	ENDS
+;	COMDAT _$E307
+_TEXT	SEGMENT
+_$E307	PROC NEAR					; COMDAT
+	push	ebp
+	mov	ebp, esp
+	sub	esp, 64					; 00000040H
+	push	ebx
+	push	esi
+	push	edi
+	lea	edi, DWORD PTR [ebp-64]
+	mov	ecx, 16					; 00000010H
+	mov	eax, -858993460				; ccccccccH
+	rep stosd
+	xor	eax, eax
+	mov	al, BYTE PTR _$S308
+	and	eax, 1
+	test	eax, eax
+	jne	SHORT $L78120
+	mov	cl, BYTE PTR _$S308
+	or	cl, 1
+	mov	BYTE PTR _$S308, cl
+	mov	ecx, OFFSET FLAT:?fragext@CFrag@@2VCString@@A ; CFrag::fragext
+	call	??1CString@@QAE@XZ			; CString::~CString
+$L78120:
+	pop	edi
+	pop	esi
+	pop	ebx
+	add	esp, 64					; 00000040H
+	cmp	ebp, esp
+	call	__chkesp
+	mov	esp, ebp
+	pop	ebp
+	ret	0
+_$E307	ENDP
+_TEXT	ENDS
+;	COMDAT _$E315
+_TEXT	SEGMENT
+_$E315	PROC NEAR					; COMDAT
+	push	ebp
+	mov	ebp, esp
+	sub	esp, 64					; 00000040H
+	push	ebx
+	push	esi
+	push	edi
+	lea	edi, DWORD PTR [ebp-64]
+	mov	ecx, 16					; 00000010H
+	mov	eax, -858993460				; ccccccccH
+	rep stosd
+	call	_$E312
+	call	_$E314
+	pop	edi
+	pop	esi
+	pop	ebx
+	add	esp, 64					; 00000040H
+	cmp	ebp, esp
+	call	__chkesp
+	mov	esp, ebp
+	pop	ebp
+	ret	0
+_$E315	ENDP
+_TEXT	ENDS
+PUBLIC	??_C@_04MPDF@?4wav?$AA@				; `string'
+;	COMDAT ??_C@_04MPDF@?4wav?$AA@
+; File C:\develop3\wavfrag\work\wflib\Frag.cpp
+CONST	SEGMENT
+??_C@_04MPDF@?4wav?$AA@ DB '.wav', 00H			; `string'
+CONST	ENDS
+;	COMDAT _$E312
+_TEXT	SEGMENT
+_$E312	PROC NEAR					; COMDAT
+
+; 40   : CString CFrag::wavext = ".wav";
+
+	push	ebp
+	mov	ebp, esp
+	sub	esp, 64					; 00000040H
+	push	ebx
+	push	esi
+	push	edi
+	lea	edi, DWORD PTR [ebp-64]
+	mov	ecx, 16					; 00000010H
+	mov	eax, -858993460				; ccccccccH
+	rep stosd
+	push	OFFSET FLAT:??_C@_04MPDF@?4wav?$AA@	; `string'
+	mov	ecx, OFFSET FLAT:?wavext@CFrag@@2VCString@@A ; CFrag::wavext
+	call	??0CString@@QAE@PBD@Z			; CString::CString
+	pop	edi
+	pop	esi
+	pop	ebx
+	add	esp, 64					; 00000040H
+	cmp	ebp, esp
+	call	__chkesp
+	mov	esp, ebp
+	pop	ebp
+	ret	0
+_$E312	ENDP
+_TEXT	ENDS
+;	COMDAT _$E314
+_TEXT	SEGMENT
+_$E314	PROC NEAR					; COMDAT
+	push	ebp
+	mov	ebp, esp
+	sub	esp, 64					; 00000040H
+	push	ebx
+	push	esi
+	push	edi
+	lea	edi, DWORD PTR [ebp-64]
+	mov	ecx, 16					; 00000010H
+	mov	eax, -858993460				; ccccccccH
+	rep stosd
+	push	OFFSET FLAT:_$E313
+	call	_atexit
+	add	esp, 4
+	pop	edi
+	pop	esi
+	pop	ebx
+	add	esp, 64					; 00000040H
+	cmp	ebp, esp
+	call	__chkesp
+	mov	esp, ebp
+	pop	ebp
+	ret	0
+_$E314	ENDP
+_TEXT	ENDS
+;	COMDAT _$E313
+_TEXT	SEGMENT
+_$E313	PROC NEAR					; COMDAT
+	push	ebp
+	mov	ebp, esp
+	sub	esp, 64					; 00000040H
+	push	ebx
+	push	esi
+	push	edi
+	lea	edi, DWORD PTR [ebp-64]
+	mov	ecx, 16					; 00000010H
+	mov	eax, -858993460				; ccccccccH
+	rep stosd
+	xor	eax, eax
+	mov	al, BYTE PTR _$S308
+	and	eax, 2
+	test	eax, eax
+	jne	SHORT $L78136
+	mov	cl, BYTE PTR _$S308
+	or	cl, 2
+	mov	BYTE PTR _$S308, cl
+	mov	ecx, OFFSET FLAT:?wavext@CFrag@@2VCString@@A ; CFrag::wavext
+	call	??1CString@@QAE@XZ			; CString::~CString
+$L78136:
+	pop	edi
+	pop	esi
+	pop	ebx
+	add	esp, 64					; 00000040H
+	cmp	ebp, esp
+	call	__chkesp
+	mov	esp, ebp
+	pop	ebp
+	ret	0
+_$E313	ENDP
+_TEXT	ENDS
+PUBLIC	?__LINE__Var@?1???0CFrag@@QAE@XZ@4FA		; `CFrag::CFrag'::`2'::__LINE__Var
+PUBLIC	??0CFrag@@QAE@XZ				; CFrag::CFrag
+PUBLIC	??_7CFrag@@6B@					; CFrag::`vftable'
+PUBLIC	??_GCFrag@@UAEPAXI@Z				; CFrag::`scalar deleting destructor'
+PUBLIC	??_ECFrag@@UAEPAXI@Z				; CFrag::`vector deleting destructor'
+EXTRN	??0CString@@QAE@XZ:NEAR				; CString::CString
+EXTRN	??2@YAPAXIPBDH@Z:NEAR				; operator new
+EXTRN	??3@YAXPAXPBDH@Z:NEAR				; operator delete
+EXTRN	__except_list:DWORD
+EXTRN	___CxxFrameHandler:NEAR
+EXTRN	??0CAnalRes@@QAE@XZ:NEAR			; CAnalRes::CAnalRes
+EXTRN	??1CAnalRes@@UAE@XZ:NEAR			; CAnalRes::~CAnalRes
+;	COMDAT ?__LINE__Var@?1???0CFrag@@QAE@XZ@4FA
+; File C:\develop3\wavfrag\work\wflib\Frag.cpp
+_DATA	SEGMENT
+?__LINE__Var@?1???0CFrag@@QAE@XZ@4FA DW 031H		; `CFrag::CFrag'::`2'::__LINE__Var
+_DATA	ENDS
+;	COMDAT ??_7CFrag@@6B@
+CONST	SEGMENT
+??_7CFrag@@6B@ DD FLAT:??_ECFrag@@UAEPAXI@Z		; CFrag::`vftable'
+CONST	ENDS
+;	COMDAT xdata$x
+xdata$x	SEGMENT
+__ehfuncinfo$??0CFrag@@QAE@XZ DD 019930520H
+	DD	04H
+	DD	FLAT:__unwindtable$??0CFrag@@QAE@XZ
+	DD	2 DUP(00H)
+	DD	2 DUP(00H)
+	ORG $+4
+__unwindtable$??0CFrag@@QAE@XZ DD 0ffffffffH
+	DD	FLAT:__unwindfunclet$??0CFrag@@QAE@XZ$0
+	DD	00H
+	DD	FLAT:__unwindfunclet$??0CFrag@@QAE@XZ$1
+	DD	00H
+	DD	FLAT:__unwindfunclet$??0CFrag@@QAE@XZ$2
+	DD	00H
+	DD	FLAT:__unwindfunclet$??0CFrag@@QAE@XZ$3
+xdata$x	ENDS
+;	COMDAT ??0CFrag@@QAE@XZ
+_TEXT	SEGMENT
+_this$ = -16
+$T78526 = -20
+$T78527 = -24
+$T78530 = -28
+$T78531 = -32
+$T78534 = -36
+$T78535 = -40
+__$EHRec$ = -12
+??0CFrag@@QAE@XZ PROC NEAR				; CFrag::CFrag, COMDAT
+
+; 49   : {
+
+	push	ebp
+	mov	ebp, esp
+	push	-1
+	push	__ehhandler$??0CFrag@@QAE@XZ
+	mov	eax, DWORD PTR fs:__except_list
+	push	eax
+	mov	DWORD PTR fs:__except_list, esp
+	sub	esp, 104				; 00000068H
+	push	ebx
+	push	esi
+	push	edi
+	push	ecx
+	lea	edi, DWORD PTR [ebp-116]
+	mov	ecx, 26					; 0000001aH
+	mov	eax, -858993460				; ccccccccH
+	rep stosd
+	pop	ecx
+	mov	DWORD PTR _this$[ebp], ecx
+	mov	ecx, DWORD PTR _this$[ebp]
+	add	ecx, 36					; 00000024H
+	call	??0CAnalRes@@QAE@XZ			; CAnalRes::CAnalRes
+	mov	DWORD PTR __$EHRec$[ebp+8], 0
+	mov	eax, DWORD PTR _this$[ebp]
+	mov	DWORD PTR [eax], OFFSET FLAT:??_7CFrag@@6B@ ; CFrag::`vftable'
+
+; 50   : 	magic = CFrag_Magic;
+
+	mov	ecx, DWORD PTR _this$[ebp]
+	mov	DWORD PTR [ecx+8], 14935269		; 00e3e4e5H
+
+; 51   : 	
+; 52   : 	verbose = needsave =  0;
+
+	mov	edx, DWORD PTR _this$[ebp]
+	mov	DWORD PTR [edx+12], 0
+	mov	eax, DWORD PTR _this$[ebp]
+	mov	DWORD PTR [eax+32], 0
+
+; 53   : 
+; 54   : 	idx = -1;				// Default to an invalid value
+
+	mov	ecx, DWORD PTR _this$[ebp]
+	mov	DWORD PTR [ecx+4], -1
+
+; 55   : 
+; 56   : 	name = new CString;	shortname = new CString; fname = new CString;
+
+	movsx	edx, WORD PTR ?__LINE__Var@?1???0CFrag@@QAE@XZ@4FA ; `CFrag::CFrag'::`2'::__LINE__Var
+	add	edx, 7
+	push	edx
+	push	OFFSET FLAT:_THIS_FILE
+	push	4
+	call	??2@YAPAXIPBDH@Z			; operator new
+	add	esp, 12					; 0000000cH
+	mov	DWORD PTR $T78527[ebp], eax
+	mov	BYTE PTR __$EHRec$[ebp+8], 1
+	cmp	DWORD PTR $T78527[ebp], 0
+	je	SHORT $L78528
+	mov	ecx, DWORD PTR $T78527[ebp]
+	call	??0CString@@QAE@XZ			; CString::CString
+	mov	DWORD PTR -44+[ebp], eax
+	jmp	SHORT $L78529
+$L78528:
+	mov	DWORD PTR -44+[ebp], 0
+$L78529:
+	mov	eax, DWORD PTR -44+[ebp]
+	mov	DWORD PTR $T78526[ebp], eax
+	mov	BYTE PTR __$EHRec$[ebp+8], 0
+	mov	ecx, DWORD PTR _this$[ebp]
+	mov	edx, DWORD PTR $T78526[ebp]
+	mov	DWORD PTR [ecx+20], edx
+	movsx	eax, WORD PTR ?__LINE__Var@?1???0CFrag@@QAE@XZ@4FA ; `CFrag::CFrag'::`2'::__LINE__Var
+	add	eax, 7
+	push	eax
+	push	OFFSET FLAT:_THIS_FILE
+	push	4
+	call	??2@YAPAXIPBDH@Z			; operator new
+	add	esp, 12					; 0000000cH
+	mov	DWORD PTR $T78531[ebp], eax
+	mov	BYTE PTR __$EHRec$[ebp+8], 2
+	cmp	DWORD PTR $T78531[ebp], 0
+	je	SHORT $L78532
+	mov	ecx, DWORD PTR $T78531[ebp]
+	call	??0CString@@QAE@XZ			; CString::CString
+	mov	DWORD PTR -48+[ebp], eax
+	jmp	SHORT $L78533
+$L78532:
+	mov	DWORD PTR -48+[ebp], 0
+$L78533:
+	mov	ecx, DWORD PTR -48+[ebp]
+	mov	DWORD PTR $T78530[ebp], ecx
+	mov	BYTE PTR __$EHRec$[ebp+8], 0
+	mov	edx, DWORD PTR _this$[ebp]
+	mov	eax, DWORD PTR $T78530[ebp]
+	mov	DWORD PTR [edx+24], eax
+	movsx	ecx, WORD PTR ?__LINE__Var@?1???0CFrag@@QAE@XZ@4FA ; `CFrag::CFrag'::`2'::__LINE__Var
+	add	ecx, 7
+	push	ecx
+	push	OFFSET FLAT:_THIS_FILE
+	push	4
+	call	??2@YAPAXIPBDH@Z			; operator new
+	add	esp, 12					; 0000000cH
+	mov	DWORD PTR $T78535[ebp], eax
+	mov	BYTE PTR __$EHRec$[ebp+8], 3
+	cmp	DWORD PTR $T78535[ebp], 0
+	je	SHORT $L78536
+	mov	ecx, DWORD PTR $T78535[ebp]
+	call	??0CString@@QAE@XZ			; CString::CString
+	mov	DWORD PTR -52+[ebp], eax
+	jmp	SHORT $L78537
+$L78536:
+	mov	DWORD PTR -52+[ebp], 0
+$L78537:
+	mov	edx, DWORD PTR -52+[ebp]
+	mov	DWORD PTR $T78534[ebp], edx
+	mov	BYTE PTR __$EHRec$[ebp+8], 0
+	mov	eax, DWORD PTR _this$[ebp]
+	mov	ecx, DWORD PTR $T78534[ebp]
+	mov	DWORD PTR [eax+28], ecx
+
+; 57   : }
+
+	mov	DWORD PTR __$EHRec$[ebp+8], -1
+	mov	eax, DWORD PTR _this$[ebp]
+	mov	ecx, DWORD PTR __$EHRec$[ebp]
+	mov	DWORD PTR fs:__except_list, ecx
+	pop	edi
+	pop	esi
+	pop	ebx
+	add	esp, 116				; 00000074H
+	cmp	ebp, esp
+	call	__chkesp
+	mov	esp, ebp
+	pop	ebp
+	ret	0
+_TEXT	ENDS
+;	COMDAT text$x
+text$x	SEGMENT
+__unwindfunclet$??0CFrag@@QAE@XZ$0:
+	mov	ecx, DWORD PTR _this$[ebp]
+	add	ecx, 36					; 00000024H
+	call	??1CAnalRes@@UAE@XZ			; CAnalRes::~CAnalRes
+	ret	0
+__unwindfunclet$??0CFrag@@QAE@XZ$1:
+	movsx	eax, WORD PTR ?__LINE__Var@?1???0CFrag@@QAE@XZ@4FA ; `CFrag::CFrag'::`2'::__LINE__Var
+	add	eax, 7
+	push	eax
+	push	OFFSET FLAT:_THIS_FILE
+	mov	ecx, DWORD PTR $T78527[ebp]
+	push	ecx
+	call	??3@YAXPAXPBDH@Z			; operator delete
+	add	esp, 12					; 0000000cH
+	ret	0
+__unwindfunclet$??0CFrag@@QAE@XZ$2:
+	movsx	eax, WORD PTR ?__LINE__Var@?1???0CFrag@@QAE@XZ@4FA ; `CFrag::CFrag'::`2'::__LINE__Var
+	add	eax, 7
+	push	eax
+	push	OFFSET FLAT:_THIS_FILE
+	mov	ecx, DWORD PTR $T78531[ebp]
+	push	ecx
+	call	??3@YAXPAXPBDH@Z			; operator delete
+	add	esp, 12					; 0000000cH
+	ret	0
+__unwindfunclet$??0CFrag@@QAE@XZ$3:
+	movsx	eax, WORD PTR ?__LINE__Var@?1???0CFrag@@QAE@XZ@4FA ; `CFrag::CFrag'::`2'::__LINE__Var
+	add	eax, 7
+	push	eax
+	push	OFFSET FLAT:_THIS_FILE
+	mov	ecx, DWORD PTR $T78535[ebp]
+	push	ecx
+	call	??3@YAXPAXPBDH@Z			; operator delete
+	add	esp, 12					; 0000000cH
+	ret	0
+__ehhandler$??0CFrag@@QAE@XZ:
+	mov	eax, OFFSET FLAT:__ehfuncinfo$??0CFrag@@QAE@XZ
+	jmp	___CxxFrameHandler
+text$x	ENDS
+??0CFrag@@QAE@XZ ENDP					; CFrag::CFrag
+PUBLIC	??1CFrag@@UAE@XZ				; CFrag::~CFrag
+EXTRN	??3@YAXPAX@Z:NEAR				; operator delete
+;	COMDAT ??_GCFrag@@UAEPAXI@Z
+_TEXT	SEGMENT
+___flags$ = 8
+_this$ = -4
+??_GCFrag@@UAEPAXI@Z PROC NEAR				; CFrag::`scalar deleting destructor', COMDAT
+	push	ebp
+	mov	ebp, esp
+	sub	esp, 68					; 00000044H
+	push	ebx
+	push	esi
+	push	edi
+	push	ecx
+	lea	edi, DWORD PTR [ebp-68]
+	mov	ecx, 17					; 00000011H
+	mov	eax, -858993460				; ccccccccH
+	rep stosd
+	pop	ecx
+	mov	DWORD PTR _this$[ebp], ecx
+	mov	ecx, DWORD PTR _this$[ebp]
+	call	??1CFrag@@UAE@XZ			; CFrag::~CFrag
+	mov	eax, DWORD PTR ___flags$[ebp]
+	and	eax, 1
+	test	eax, eax
+	je	SHORT $L78167
+	mov	ecx, DWORD PTR _this$[ebp]
+	push	ecx
+	call	??3@YAXPAX@Z				; operator delete
+	add	esp, 4
+$L78167:
+	mov	eax, DWORD PTR _this$[ebp]
+	pop	edi
+	pop	esi
+	pop	ebx
+	add	esp, 68					; 00000044H
+	cmp	ebp, esp
+	call	__chkesp
+	mov	esp, ebp
+	pop	ebp
+	ret	4
+??_GCFrag@@UAEPAXI@Z ENDP				; CFrag::`scalar deleting destructor'
+_TEXT	ENDS
+PUBLIC	?__LINE__Var@?1???1CFrag@@UAE@XZ@4FA		; `CFrag::~CFrag'::`2'::__LINE__Var
+PUBLIC	??_GCString@@QAEPAXI@Z				; CString::`scalar deleting destructor'
+EXTRN	?AfxAssertFailedLine@@YGHPBDH@Z:NEAR		; AfxAssertFailedLine
+;	COMDAT ?__LINE__Var@?1???1CFrag@@UAE@XZ@4FA
+; File C:\develop3\wavfrag\work\wflib\Frag.cpp
+_DATA	SEGMENT
+?__LINE__Var@?1???1CFrag@@UAE@XZ@4FA DW 03fH		; `CFrag::~CFrag'::`2'::__LINE__Var
+_DATA	ENDS
+;	COMDAT xdata$x
+xdata$x	SEGMENT
+__ehfuncinfo$??1CFrag@@UAE@XZ DD 019930520H
+	DD	01H
+	DD	FLAT:__unwindtable$??1CFrag@@UAE@XZ
+	DD	2 DUP(00H)
+	DD	2 DUP(00H)
+	ORG $+4
+__unwindtable$??1CFrag@@UAE@XZ DD 0ffffffffH
+	DD	FLAT:__unwindfunclet$??1CFrag@@UAE@XZ$0
+xdata$x	ENDS
+;	COMDAT ??1CFrag@@UAE@XZ
+_TEXT	SEGMENT
+_this$ = -16
+$T78556 = -20
+$T78557 = -24
+$T78560 = -28
+$T78561 = -32
+$T78564 = -36
+$T78565 = -40
+__$EHRec$ = -12
+??1CFrag@@UAE@XZ PROC NEAR				; CFrag::~CFrag, COMDAT
+
+; 63   : {
+
+	push	ebp
+	mov	ebp, esp
+	push	-1
+	push	__ehhandler$??1CFrag@@UAE@XZ
+	mov	eax, DWORD PTR fs:__except_list
+	push	eax
+	mov	DWORD PTR fs:__except_list, esp
+	sub	esp, 104				; 00000068H
+	push	ebx
+	push	esi
+	push	edi
+	push	ecx
+	lea	edi, DWORD PTR [ebp-116]
+	mov	ecx, 26					; 0000001aH
+	mov	eax, -858993460				; ccccccccH
+	rep stosd
+	pop	ecx
+	mov	DWORD PTR _this$[ebp], ecx
+	mov	eax, DWORD PTR _this$[ebp]
+	mov	DWORD PTR [eax], OFFSET FLAT:??_7CFrag@@6B@ ; CFrag::`vftable'
+	mov	DWORD PTR __$EHRec$[ebp+8], 0
+$L78172:
+
+; 64   : 	ASSERT(magic == CFrag_Magic);
+
+	mov	ecx, DWORD PTR _this$[ebp]
+	cmp	DWORD PTR [ecx+8], 14935269		; 00e3e4e5H
+	je	SHORT $L78175
+	movsx	edx, WORD PTR ?__LINE__Var@?1???1CFrag@@UAE@XZ@4FA ; `CFrag::~CFrag'::`2'::__LINE__Var
+	add	edx, 1
+	push	edx
+	push	OFFSET FLAT:_THIS_FILE
+	call	?AfxAssertFailedLine@@YGHPBDH@Z		; AfxAssertFailedLine
+	test	eax, eax
+	je	SHORT $L78175
+	int	3
+$L78175:
+	xor	eax, eax
+	test	eax, eax
+	jne	SHORT $L78172
+
+; 65   : 
+; 66   : 	delete name, delete shortname; delete fname;
+
+	mov	ecx, DWORD PTR _this$[ebp]
+	mov	edx, DWORD PTR [ecx+20]
+	mov	DWORD PTR $T78557[ebp], edx
+	mov	eax, DWORD PTR $T78557[ebp]
+	mov	DWORD PTR $T78556[ebp], eax
+	cmp	DWORD PTR $T78556[ebp], 0
+	je	SHORT $L78558
+	push	1
+	mov	ecx, DWORD PTR $T78556[ebp]
+	call	??_GCString@@QAEPAXI@Z			; CString::`scalar deleting destructor'
+	mov	DWORD PTR -44+[ebp], eax
+	jmp	SHORT $L78559
+$L78558:
+	mov	DWORD PTR -44+[ebp], 0
+$L78559:
+	mov	ecx, DWORD PTR _this$[ebp]
+	mov	edx, DWORD PTR [ecx+24]
+	mov	DWORD PTR $T78561[ebp], edx
+	mov	eax, DWORD PTR $T78561[ebp]
+	mov	DWORD PTR $T78560[ebp], eax
+	cmp	DWORD PTR $T78560[ebp], 0
+	je	SHORT $L78562
+	push	1
+	mov	ecx, DWORD PTR $T78560[ebp]
+	call	??_GCString@@QAEPAXI@Z			; CString::`scalar deleting destructor'
+	mov	DWORD PTR -48+[ebp], eax
+	jmp	SHORT $L78563
+$L78562:
+	mov	DWORD PTR -48+[ebp], 0
+$L78563:
+	mov	ecx, DWORD PTR _this$[ebp]
+	mov	edx, DWORD PTR [ecx+28]
+	mov	DWORD PTR $T78565[ebp], edx
+	mov	eax, DWORD PTR $T78565[ebp]
+	mov	DWORD PTR $T78564[ebp], eax
+	cmp	DWORD PTR $T78564[ebp], 0
+	je	SHORT $L78566
+	push	1
+	mov	ecx, DWORD PTR $T78564[ebp]
+	call	??_GCString@@QAEPAXI@Z			; CString::`scalar deleting destructor'
+	mov	DWORD PTR -52+[ebp], eax
+	jmp	SHORT $L78567
+$L78566:
+	mov	DWORD PTR -52+[ebp], 0
+$L78567:
+
+; 67   : }
+
+	mov	DWORD PTR __$EHRec$[ebp+8], -1
+	mov	ecx, DWORD PTR _this$[ebp]
+	add	ecx, 36					; 00000024H
+	call	??1CAnalRes@@UAE@XZ			; CAnalRes::~CAnalRes
+	mov	ecx, DWORD PTR __$EHRec$[ebp]
+	mov	DWORD PTR fs:__except_list, ecx
+	pop	edi
+	pop	esi
+	pop	ebx
+	add	esp, 116				; 00000074H
+	cmp	ebp, esp
+	call	__chkesp
+	mov	esp, ebp
+	pop	ebp
+	ret	0
+_TEXT	ENDS
+;	COMDAT text$x
+text$x	SEGMENT
+__unwindfunclet$??1CFrag@@UAE@XZ$0:
+	mov	ecx, DWORD PTR _this$[ebp]
+	add	ecx, 36					; 00000024H
+	call	??1CAnalRes@@UAE@XZ			; CAnalRes::~CAnalRes
+	ret	0
+__ehhandler$??1CFrag@@UAE@XZ:
+	mov	eax, OFFSET FLAT:__ehfuncinfo$??1CFrag@@UAE@XZ
+	jmp	___CxxFrameHandler
+text$x	ENDS
+??1CFrag@@UAE@XZ ENDP					; CFrag::~CFrag
+;	COMDAT ??_GCString@@QAEPAXI@Z
+_TEXT	SEGMENT
+___flags$ = 8
+_this$ = -4
+??_GCString@@QAEPAXI@Z PROC NEAR			; CString::`scalar deleting destructor', COMDAT
+	push	ebp
+	mov	ebp, esp
+	sub	esp, 68					; 00000044H
+	push	ebx
+	push	esi
+	push	edi
+	push	ecx
+	lea	edi, DWORD PTR [ebp-68]
+	mov	ecx, 17					; 00000011H
+	mov	eax, -858993460				; ccccccccH
+	rep stosd
+	pop	ecx
+	mov	DWORD PTR _this$[ebp], ecx
+	mov	ecx, DWORD PTR _this$[ebp]
+	call	??1CString@@QAE@XZ			; CString::~CString
+	mov	eax, DWORD PTR ___flags$[ebp]
+	and	eax, 1
+	test	eax, eax
+	je	SHORT $L78185
+	mov	ecx, DWORD PTR _this$[ebp]
+	push	ecx
+	call	??3@YAXPAX@Z				; operator delete
+	add	esp, 4
+$L78185:
+	mov	eax, DWORD PTR _this$[ebp]
+	pop	edi
+	pop	esi
+	pop	ebx
+	add	esp, 68					; 00000044H
+	cmp	ebp, esp
+	call	__chkesp
+	mov	esp, ebp
+	pop	ebp
+	ret	4
+??_GCString@@QAEPAXI@Z ENDP				; CString::`scalar deleting destructor'
+_TEXT	ENDS
+PUBLIC	??_C@_0BG@FFGF@Cannot?5load?5Wave?5?$CFs?$AN?6?$AA@ ; `string'
+PUBLIC	?__LINE__Var@?1??ParseFragWav@CFrag@@SAHPBD0H@Z@4FA@c97f9caa ; `CFrag::ParseFragWav'::`2'::__LINE__Var
+PUBLIC	??_C@_0CI@DEPE@Cannot?5create?5?1?5open?5frag?5file?5f@ ; `string'
+PUBLIC	?ParseFragWav@CFrag@@SAHPBD0H@Z			; CFrag::ParseFragWav
+EXTRN	?dsp@@3VCDsp@@A:DWORD				; dsp
+EXTRN	?ScanSpectra@CxRecog@@QAEXPADHPAVCAnalRes@@@Z:NEAR ; CxRecog::ScanSpectra
+EXTRN	??BCString@@QBEPBDXZ:NEAR			; CString::operator char const *
+EXTRN	??4CString@@QAEABV0@ABV0@@Z:NEAR		; CString::operator=
+EXTRN	??YCString@@QAEABV0@ABV0@@Z:NEAR		; CString::operator+=
+EXTRN	?aprintf@MxPad@@QAAHPBDZZ:NEAR			; MxPad::aprintf
+EXTRN	?xdllrecog@@3VCxRecog@@A:BYTE			; xdllrecog
+EXTRN	?mxpad@@3VMxPad@@A:BYTE				; mxpad
+EXTRN	__imp___stat:NEAR
+EXTRN	?GetFilename@CSupport@@QAE?AVCString@@ABV2@@Z:NEAR ; CSupport::GetFilename
+EXTRN	?support@@3VCSupport@@A:BYTE			; support
+EXTRN	??0CIntArr@@QAE@XZ:NEAR				; CIntArr::CIntArr
+EXTRN	??1CIntArr@@UAE@XZ:NEAR				; CIntArr::~CIntArr
+EXTRN	_memset:NEAR
+EXTRN	__imp__free:NEAR
+EXTRN	__imp__malloc:NEAR
+EXTRN	??0CFile@@QAE@XZ:NEAR				; CFile::CFile
+EXTRN	?ToFile@CAnalRes@@QAEHPAVCFile@@@Z:NEAR		; CAnalRes::ToFile
+EXTRN	?Open@CFile@@UAEHPBDIPAVCFileException@@@Z:NEAR	; CFile::Open
+EXTRN	??0CPtrArray@@QAE@XZ:NEAR			; CPtrArray::CPtrArray
+EXTRN	?Write@CFile@@UAEXPBXI@Z:NEAR			; CFile::Write
+EXTRN	??1CFile@@UAE@XZ:NEAR				; CFile::~CFile
+EXTRN	??1CPtrArray@@UAE@XZ:NEAR			; CPtrArray::~CPtrArray
+EXTRN	?SplitWave@CDsp@@QAEXPAFH00H@Z:NEAR		; CDsp::SplitWave
+EXTRN	?LoadWave@CDsp@@QAEHPBDPAPADPAHPAUtWAVEFORMATEX@@@Z:NEAR ; CDsp::LoadWave
+EXTRN	?NormalizeWav@CDsp@@QAEXPADH0@Z:NEAR		; CDsp::NormalizeWav
+;	COMDAT ?__LINE__Var@?1??ParseFragWav@CFrag@@SAHPBD0H@Z@4FA@c97f9caa
+; File C:\develop3\wavfrag\work\wflib\Frag.cpp
+_DATA	SEGMENT
+?__LINE__Var@?1??ParseFragWav@CFrag@@SAHPBD0H@Z@4FA@c97f9caa DW 04bH ; `CFrag::ParseFragWav'::`2'::__LINE__Var
+_DATA	ENDS
+;	COMDAT ??_C@_0BG@FFGF@Cannot?5load?5Wave?5?$CFs?$AN?6?$AA@
+CONST	SEGMENT
+??_C@_0BG@FFGF@Cannot?5load?5Wave?5?$CFs?$AN?6?$AA@ DB 'Cannot load Wave '
+	DB	'%s', 0dH, 0aH, 00H				; `string'
+CONST	ENDS
+;	COMDAT ??_C@_0CI@DEPE@Cannot?5create?5?1?5open?5frag?5file?5f@
+CONST	SEGMENT
+??_C@_0CI@DEPE@Cannot?5create?5?1?5open?5frag?5file?5f@ DB 'Cannot create'
+	DB	' / open frag file for %s', 0dH, 0aH, 00H	; `string'
+CONST	ENDS
+;	COMDAT xdata$x
+xdata$x	SEGMENT
+__ehfuncinfo$?ParseFragWav@CFrag@@SAHPBD0H@Z DD 019930520H
+	DD	08H
+	DD	FLAT:__unwindtable$?ParseFragWav@CFrag@@SAHPBD0H@Z
+	DD	2 DUP(00H)
+	DD	2 DUP(00H)
+	ORG $+4
+__unwindtable$?ParseFragWav@CFrag@@SAHPBD0H@Z DD 0ffffffffH
+	DD	FLAT:__unwindfunclet$?ParseFragWav@CFrag@@SAHPBD0H@Z$0
+	DD	00H
+	DD	FLAT:__unwindfunclet$?ParseFragWav@CFrag@@SAHPBD0H@Z$1
+	DD	01H
+	DD	FLAT:__unwindfunclet$?ParseFragWav@CFrag@@SAHPBD0H@Z$2
+	DD	01H
+	DD	FLAT:__unwindfunclet$?ParseFragWav@CFrag@@SAHPBD0H@Z$3
+	DD	03H
+	DD	FLAT:__unwindfunclet$?ParseFragWav@CFrag@@SAHPBD0H@Z$4
+	DD	04H
+	DD	FLAT:__unwindfunclet$?ParseFragWav@CFrag@@SAHPBD0H@Z$5
+	DD	05H
+	DD	FLAT:__unwindfunclet$?ParseFragWav@CFrag@@SAHPBD0H@Z$6
+	DD	06H
+	DD	FLAT:__unwindfunclet$?ParseFragWav@CFrag@@SAHPBD0H@Z$7
+xdata$x	ENDS
+;	COMDAT ?ParseFragWav@CFrag@@SAHPBD0H@Z
+_TEXT	SEGMENT
+_pname$ = 8
+_fdir$ = 12
+_force$ = 16
+_ret$ = -16
+_buff4$ = -20
+_wname$ = -24
+_fragname$ = -28
+_sbuff1$ = -64
+_sbuff2$ = -100
+_len2$78200 = -104
+_len22$78201 = -108
+_buff2$78202 = -112
+_wfx$78203 = -132
+_lptr$78208 = -136
+_rptr$78215 = -140
+_arr$78224 = -160
+_arr2$78225 = -180
+_sarr$78226 = -204
+_buff3$78227 = -208
+_res$78230 = -448
+_fp$78231 = -464
+_smagic$78235 = -468
+$T78579 = -472
+$T78580 = -476
+$T78581 = -480
+__$EHRec$ = -12
+?ParseFragWav@CFrag@@SAHPBD0H@Z PROC NEAR		; CFrag::ParseFragWav, COMDAT
+
+; 75   : {
+
+	push	ebp
+	mov	ebp, esp
+	push	-1
+	push	__ehhandler$?ParseFragWav@CFrag@@SAHPBD0H@Z
+	mov	eax, DWORD PTR fs:__except_list
+	push	eax
+	mov	DWORD PTR fs:__except_list, esp
+	sub	esp, 540				; 0000021cH
+	push	ebx
+	push	esi
+	push	edi
+	lea	edi, DWORD PTR [ebp-552]
+	mov	ecx, 135				; 00000087H
+	mov	eax, -858993460				; ccccccccH
+	rep stosd
+
+; 76   : 	int ret = true;
+
+	mov	DWORD PTR _ret$[ebp], 1
+
+; 77   : 	char *buff4 = NULL;
+
+	mov	DWORD PTR _buff4$[ebp], 0
+
+; 78   : 
+; 79   : 	//P2N("ParseFragWav pname='%s' fragdir='%s'\r\n", pname, fragdir);
+; 80   : 
+; 81   : 	CString wname = pname, fragname = fdir;
+
+	mov	eax, DWORD PTR _pname$[ebp]
+	push	eax
+	lea	ecx, DWORD PTR _wname$[ebp]
+	call	??0CString@@QAE@PBD@Z			; CString::CString
+	mov	DWORD PTR __$EHRec$[ebp+8], 0
+	mov	ecx, DWORD PTR _fdir$[ebp]
+	push	ecx
+	lea	ecx, DWORD PTR _fragname$[ebp]
+	call	??0CString@@QAE@PBD@Z			; CString::CString
+	mov	BYTE PTR __$EHRec$[ebp+8], 1
+
+; 82   : 
+; 83   : 	// Construct output name
+; 84   : 	wname = support.GetFilename(wname);
+
+	lea	edx, DWORD PTR _wname$[ebp]
+	push	edx
+	lea	eax, DWORD PTR $T78579[ebp]
+	push	eax
+	mov	ecx, OFFSET FLAT:?support@@3VCSupport@@A
+	call	?GetFilename@CSupport@@QAE?AVCString@@ABV2@@Z ; CSupport::GetFilename
+	mov	DWORD PTR -484+[ebp], eax
+	mov	ecx, DWORD PTR -484+[ebp]
+	mov	DWORD PTR -488+[ebp], ecx
+	mov	BYTE PTR __$EHRec$[ebp+8], 2
+	mov	edx, DWORD PTR -488+[ebp]
+	push	edx
+	lea	ecx, DWORD PTR _wname$[ebp]
+	call	??4CString@@QAEABV0@ABV0@@Z		; CString::operator=
+	mov	BYTE PTR __$EHRec$[ebp+8], 1
+	lea	ecx, DWORD PTR $T78579[ebp]
+	call	??1CString@@QAE@XZ			; CString::~CString
+
+; 85   : 	wname  += CFrag::fragext;	fragname += wname;
+
+	push	OFFSET FLAT:?fragext@CFrag@@2VCString@@A ; CFrag::fragext
+	lea	ecx, DWORD PTR _wname$[ebp]
+	call	??YCString@@QAEABV0@ABV0@@Z		; CString::operator+=
+	lea	eax, DWORD PTR _wname$[ebp]
+	push	eax
+	lea	ecx, DWORD PTR _fragname$[ebp]
+	call	??YCString@@QAEABV0@ABV0@@Z		; CString::operator+=
+
+; 86   : 
+; 87   : 	//AP2N("ParseFragWav wname='%s'\r\n", wname);
+; 88   : 	
+; 89   : 	// See if wave is newer 
+; 90   : 	struct _stat sbuff1; memset(&sbuff1, 0, sizeof(sbuff1));
+
+	push	36					; 00000024H
+	push	0
+	lea	ecx, DWORD PTR _sbuff1$[ebp]
+	push	ecx
+	call	_memset
+	add	esp, 12					; 0000000cH
+
+; 91   : 	struct _stat sbuff2; memset(&sbuff2, 0, sizeof(sbuff2));
+
+	push	36					; 00000024H
+	push	0
+	lea	edx, DWORD PTR _sbuff2$[ebp]
+	push	edx
+	call	_memset
+	add	esp, 12					; 0000000cH
+
+; 92   : 
+; 93   : 	_stat(pname, &sbuff1); _stat(fragname, &sbuff2);
+
+	mov	esi, esp
+	lea	eax, DWORD PTR _sbuff1$[ebp]
+	push	eax
+	mov	ecx, DWORD PTR _pname$[ebp]
+	push	ecx
+	call	DWORD PTR __imp___stat
+	add	esp, 8
+	cmp	esi, esp
+	call	__chkesp
+	mov	esi, esp
+	lea	edx, DWORD PTR _sbuff2$[ebp]
+	push	edx
+	lea	ecx, DWORD PTR _fragname$[ebp]
+	call	??BCString@@QBEPBDXZ			; CString::operator char const *
+	push	eax
+	call	DWORD PTR __imp___stat
+	add	esp, 8
+	cmp	esi, esp
+	call	__chkesp
+
+; 94   : 
+; 95   : 	//P2N("sbuff1=%d sbuff2=%d\r\n", sbuff1.st_mtime, sbuff2.st_mtime);
+; 96   : 
+; 97   : 	if((sbuff1.st_mtime > sbuff2.st_mtime) || force)
+
+	mov	eax, DWORD PTR _sbuff1$[ebp+28]
+	cmp	eax, DWORD PTR _sbuff2$[ebp+28]
+	jg	SHORT $L78199
+	cmp	DWORD PTR _force$[ebp], 0
+	je	$L78198
+$L78199:
+
+; 99   : 		int		len2, len22;
+; 100  : 		char	*buff2;
+; 101  : 
+; 102  : 		WAVEFORMATEX wfx; 
+; 103  : 
+; 104  : 		if(dsp.LoadWave(pname, &buff2, &len2, &wfx) == 0)
+
+	lea	ecx, DWORD PTR _wfx$78203[ebp]
+	push	ecx
+	lea	edx, DWORD PTR _len2$78200[ebp]
+	push	edx
+	lea	eax, DWORD PTR _buff2$78202[ebp]
+	push	eax
+	mov	ecx, DWORD PTR _pname$[ebp]
+	push	ecx
+	mov	ecx, OFFSET FLAT:?dsp@@3VCDsp@@A	; dsp
+	call	?LoadWave@CDsp@@QAEHPBDPAPADPAHPAUtWAVEFORMATEX@@@Z ; CDsp::LoadWave
+	test	eax, eax
+	jne	SHORT $L78204
+
+; 106  : 			AP2N("Cannot load Wave %s\r\n", pname);
+
+	mov	edx, DWORD PTR _pname$[ebp]
+	push	edx
+	push	OFFSET FLAT:??_C@_0BG@FFGF@Cannot?5load?5Wave?5?$CFs?$AN?6?$AA@ ; `string'
+	push	OFFSET FLAT:?mxpad@@3VMxPad@@A
+	call	?aprintf@MxPad@@QAAHPBDZZ		; MxPad::aprintf
+	add	esp, 12					; 0000000cH
+
+; 107  : 			return false;
+
+	mov	DWORD PTR $T78580[ebp], 0
+	mov	BYTE PTR __$EHRec$[ebp+8], 0
+	lea	ecx, DWORD PTR _fragname$[ebp]
+	call	??1CString@@QAE@XZ			; CString::~CString
+	mov	DWORD PTR __$EHRec$[ebp+8], -1
+	lea	ecx, DWORD PTR _wname$[ebp]
+	call	??1CString@@QAE@XZ			; CString::~CString
+	mov	eax, DWORD PTR $T78580[ebp]
+	jmp	$L78190
+$L78204:
+
+; 109  : 		
+; 110  : 		if(wfx.nChannels == 2)
+
+	mov	eax, DWORD PTR _wfx$78203[ebp+2]
+	and	eax, 65535				; 0000ffffH
+	cmp	eax, 2
+	jne	$L78207
+
+; 112  : 			//AP2N("CFrag::Load Convering to mono %d bytes\r\n", len2);
+; 113  : 		
+; 114  : 			len22 = len2 / 2;
+
+	mov	eax, DWORD PTR _len2$78200[ebp]
+	cdq
+	sub	eax, edx
+	sar	eax, 1
+	mov	DWORD PTR _len22$78201[ebp], eax
+
+; 115  : 			short *lptr = (short*)malloc(len22); ASSERT(lptr);
+
+	mov	esi, esp
+	mov	ecx, DWORD PTR _len22$78201[ebp]
+	push	ecx
+	call	DWORD PTR __imp__malloc
+	add	esp, 4
+	cmp	esi, esp
+	call	__chkesp
+	mov	DWORD PTR _lptr$78208[ebp], eax
+$L78211:
+	cmp	DWORD PTR _lptr$78208[ebp], 0
+	jne	SHORT $L78214
+	movsx	edx, WORD PTR ?__LINE__Var@?1??ParseFragWav@CFrag@@SAHPBD0H@Z@4FA@c97f9caa ; `CFrag::ParseFragWav'::`2'::__LINE__Var
+	add	edx, 40					; 00000028H
+	push	edx
+	push	OFFSET FLAT:_THIS_FILE
+	call	?AfxAssertFailedLine@@YGHPBDH@Z		; AfxAssertFailedLine
+	test	eax, eax
+	je	SHORT $L78214
+	int	3
+$L78214:
+	xor	eax, eax
+	test	eax, eax
+	jne	SHORT $L78211
+
+; 116  : 			short *rptr = (short*)malloc(len22); ASSERT(rptr);
+
+	mov	esi, esp
+	mov	ecx, DWORD PTR _len22$78201[ebp]
+	push	ecx
+	call	DWORD PTR __imp__malloc
+	add	esp, 4
+	cmp	esi, esp
+	call	__chkesp
+	mov	DWORD PTR _rptr$78215[ebp], eax
+$L78217:
+	cmp	DWORD PTR _rptr$78215[ebp], 0
+	jne	SHORT $L78220
+	movsx	edx, WORD PTR ?__LINE__Var@?1??ParseFragWav@CFrag@@SAHPBD0H@Z@4FA@c97f9caa ; `CFrag::ParseFragWav'::`2'::__LINE__Var
+	add	edx, 41					; 00000029H
+	push	edx
+	push	OFFSET FLAT:_THIS_FILE
+	call	?AfxAssertFailedLine@@YGHPBDH@Z		; AfxAssertFailedLine
+	test	eax, eax
+	je	SHORT $L78220
+	int	3
+$L78220:
+	xor	eax, eax
+	test	eax, eax
+	jne	SHORT $L78217
+
+; 117  : 
+; 118  : 			buff4 = (char*)lptr;
+
+	mov	ecx, DWORD PTR _lptr$78208[ebp]
+	mov	DWORD PTR _buff4$[ebp], ecx
+
+; 119  : 			
+; 120  : 			dsp.SplitWave((short*)buff2, len2, lptr, rptr, len22);
+
+	mov	edx, DWORD PTR _len22$78201[ebp]
+	push	edx
+	mov	eax, DWORD PTR _rptr$78215[ebp]
+	push	eax
+	mov	ecx, DWORD PTR _lptr$78208[ebp]
+	push	ecx
+	mov	edx, DWORD PTR _len2$78200[ebp]
+	push	edx
+	mov	eax, DWORD PTR _buff2$78202[ebp]
+	push	eax
+	mov	ecx, OFFSET FLAT:?dsp@@3VCDsp@@A	; dsp
+	call	?SplitWave@CDsp@@QAEXPAFH00H@Z		; CDsp::SplitWave
+
+; 121  : 			free(rptr); free(buff2);
+
+	mov	esi, esp
+	mov	ecx, DWORD PTR _rptr$78215[ebp]
+	push	ecx
+	call	DWORD PTR __imp__free
+	add	esp, 4
+	cmp	esi, esp
+	call	__chkesp
+	mov	esi, esp
+	mov	edx, DWORD PTR _buff2$78202[ebp]
+	push	edx
+	call	DWORD PTR __imp__free
+	add	esp, 4
+	cmp	esi, esp
+	call	__chkesp
+
+; 123  : 		else
+
+	jmp	SHORT $L78223
+$L78207:
+
+; 125  : 			len22 = len2;
+
+	mov	eax, DWORD PTR _len2$78200[ebp]
+	mov	DWORD PTR _len22$78201[ebp], eax
+
+; 126  : 			buff4 = buff2;
+
+	mov	ecx, DWORD PTR _buff2$78202[ebp]
+	mov	DWORD PTR _buff4$[ebp], ecx
+$L78223:
+
+; 128  : 
+; 129  : 		CPtrArray arr, arr2; CIntArr sarr;
+
+	lea	ecx, DWORD PTR _arr$78224[ebp]
+	call	??0CPtrArray@@QAE@XZ			; CPtrArray::CPtrArray
+	mov	BYTE PTR __$EHRec$[ebp+8], 3
+	lea	ecx, DWORD PTR _arr2$78225[ebp]
+	call	??0CPtrArray@@QAE@XZ			; CPtrArray::CPtrArray
+	mov	BYTE PTR __$EHRec$[ebp+8], 4
+	lea	ecx, DWORD PTR _sarr$78226[ebp]
+	call	??0CIntArr@@QAE@XZ			; CIntArr::CIntArr
+	mov	BYTE PTR __$EHRec$[ebp+8], 5
+
+; 130  : 
+; 131  : 		char *buff3 = (char*)malloc(len22);
+
+	mov	esi, esp
+	mov	edx, DWORD PTR _len22$78201[ebp]
+	push	edx
+	call	DWORD PTR __imp__malloc
+	add	esp, 4
+	cmp	esi, esp
+	call	__chkesp
+	mov	DWORD PTR _buff3$78227[ebp], eax
+
+; 132  : 		dsp.NormalizeWav(buff4, len22, buff3);
+
+	mov	eax, DWORD PTR _buff3$78227[ebp]
+	push	eax
+	mov	ecx, DWORD PTR _len22$78201[ebp]
+	push	ecx
+	mov	edx, DWORD PTR _buff4$[ebp]
+	push	edx
+	mov	ecx, OFFSET FLAT:?dsp@@3VCDsp@@A	; dsp
+	call	?NormalizeWav@CDsp@@QAEXPADH0@Z		; CDsp::NormalizeWav
+
+; 133  : 
+; 134  : 		// Show post-cut sound
+; 135  : 		if(xdllrecog._wavrec2)
+
+	cmp	DWORD PTR ?xdllrecog@@3VCxRecog@@A+28, 0
+	je	SHORT $L78229
+
+; 137  : 			//xdllrecog._wavrec2(xdllrecog.lastbuff, xdllrecog.lastbuflen);
+; 138  : 			xdllrecog._wavrec2(buff3, len22);
+
+	mov	esi, esp
+	mov	eax, DWORD PTR _len22$78201[ebp]
+	push	eax
+	mov	ecx, DWORD PTR _buff3$78227[ebp]
+	push	ecx
+	call	DWORD PTR ?xdllrecog@@3VCxRecog@@A+28
+	add	esp, 8
+	cmp	esi, esp
+	call	__chkesp
+$L78229:
+
+; 140  : 	
+; 141  : 		//////////////////////////////////////////////////////////////////
+; 142  : 		// Fresh start for arrays
+; 143  : 	
+; 144  : 		CAnalRes res;
+
+	lea	ecx, DWORD PTR _res$78230[ebp]
+	call	??0CAnalRes@@QAE@XZ			; CAnalRes::CAnalRes
+	mov	BYTE PTR __$EHRec$[ebp+8], 6
+
+; 145  : 		xdllrecog.ScanSpectra(buff3, len22, &res);
+
+	lea	edx, DWORD PTR _res$78230[ebp]
+	push	edx
+	mov	eax, DWORD PTR _len22$78201[ebp]
+	push	eax
+	mov	ecx, DWORD PTR _buff3$78227[ebp]
+	push	ecx
+	mov	ecx, OFFSET FLAT:?xdllrecog@@3VCxRecog@@A
+	call	?ScanSpectra@CxRecog@@QAEXPADHPAVCAnalRes@@@Z ; CxRecog::ScanSpectra
+
+; 146  : 				
+; 147  : 		free(buff3); free(buff4);
+
+	mov	esi, esp
+	mov	edx, DWORD PTR _buff3$78227[ebp]
+	push	edx
+	call	DWORD PTR __imp__free
+	add	esp, 4
+	cmp	esi, esp
+	call	__chkesp
+	mov	esi, esp
+	mov	eax, DWORD PTR _buff4$[ebp]
+	push	eax
+	call	DWORD PTR __imp__free
+	add	esp, 4
+	cmp	esi, esp
+	call	__chkesp
+
+; 148  : 
+; 149  : 		//int cnt = 0, pcnt = 0, mcnt = 0;
+; 150  : 
+; 151  : 		CFile fp;
+
+	lea	ecx, DWORD PTR _fp$78231[ebp]
+	call	??0CFile@@QAE@XZ			; CFile::CFile
+	mov	BYTE PTR __$EHRec$[ebp+8], 7
+
+; 152  : 		
+; 153  : 		if(!fp.Open(fragname, CFile::modeCreate | CFile::modeWrite))
+
+	push	0
+	push	4097					; 00001001H
+	lea	ecx, DWORD PTR _fragname$[ebp]
+	call	??BCString@@QBEPBDXZ			; CString::operator char const *
+	push	eax
+	lea	ecx, DWORD PTR _fp$78231[ebp]
+	call	?Open@CFile@@UAEHPBDIPAVCFileException@@@Z ; CFile::Open
+	test	eax, eax
+	jne	SHORT $L78232
+
+; 155  : 			AP2N("Cannot create / open frag file for %s\r\n", fragname);
+
+	mov	ecx, DWORD PTR _fragname$[ebp]
+	push	ecx
+	push	OFFSET FLAT:??_C@_0CI@DEPE@Cannot?5create?5?1?5open?5frag?5file?5f@ ; `string'
+	push	OFFSET FLAT:?mxpad@@3VMxPad@@A
+	call	?aprintf@MxPad@@QAAHPBDZZ		; MxPad::aprintf
+	add	esp, 12					; 0000000cH
+
+; 156  : 			ret = false;		
+
+	mov	DWORD PTR _ret$[ebp], 0
+
+; 158  : 		else
+
+	jmp	SHORT $L78234
+$L78232:
+
+; 160  : 			int smagic = CFrag_Magic;
+
+	mov	DWORD PTR _smagic$78235[ebp], 14935269	; 00e3e4e5H
+
+; 161  : 
+; 162  : 			fp.Write(&smagic, sizeof(int));
+
+	push	4
+	lea	edx, DWORD PTR _smagic$78235[ebp]
+	push	edx
+	lea	ecx, DWORD PTR _fp$78231[ebp]
+	call	?Write@CFile@@UAEXPBXI@Z		; CFile::Write
+
+; 163  : 
+; 164  : 			res.ToFile(&fp);
+
+	lea	eax, DWORD PTR _fp$78231[ebp]
+	push	eax
+	lea	ecx, DWORD PTR _res$78230[ebp]
+	call	?ToFile@CAnalRes@@QAEHPAVCFile@@@Z	; CAnalRes::ToFile
+
+; 165  : 
+; 166  : 			// Final magic for checking 
+; 167  : 			fp.Write(&smagic, sizeof(int));	
+
+	push	4
+	lea	ecx, DWORD PTR _smagic$78235[ebp]
+	push	ecx
+	lea	ecx, DWORD PTR _fp$78231[ebp]
+	call	?Write@CFile@@UAEXPBXI@Z		; CFile::Write
+$L78234:
+
+; 169  : 
+; 170  : 		//AP2N("Wrote '%s' %d (%d) scan units \r\n", pname, cnt, pcnt);	
+; 171  : 		//AP2N("Wrote %s %d buffers\r\n", pname, cnt);
+; 172  : 		}
+
+	mov	BYTE PTR __$EHRec$[ebp+8], 6
+	lea	ecx, DWORD PTR _fp$78231[ebp]
+	call	??1CFile@@UAE@XZ			; CFile::~CFile
+	mov	BYTE PTR __$EHRec$[ebp+8], 5
+	lea	ecx, DWORD PTR _res$78230[ebp]
+	call	??1CAnalRes@@UAE@XZ			; CAnalRes::~CAnalRes
+	mov	BYTE PTR __$EHRec$[ebp+8], 4
+	lea	ecx, DWORD PTR _sarr$78226[ebp]
+	call	??1CIntArr@@UAE@XZ			; CIntArr::~CIntArr
+	mov	BYTE PTR __$EHRec$[ebp+8], 3
+	lea	ecx, DWORD PTR _arr2$78225[ebp]
+	call	??1CPtrArray@@UAE@XZ			; CPtrArray::~CPtrArray
+	mov	BYTE PTR __$EHRec$[ebp+8], 1
+	lea	ecx, DWORD PTR _arr$78224[ebp]
+	call	??1CPtrArray@@UAE@XZ			; CPtrArray::~CPtrArray
+$L78198:
+
+; 173  : 
+; 174  : 	return ret;
+
+	mov	edx, DWORD PTR _ret$[ebp]
+	mov	DWORD PTR $T78581[ebp], edx
+	mov	BYTE PTR __$EHRec$[ebp+8], 0
+	lea	ecx, DWORD PTR _fragname$[ebp]
+	call	??1CString@@QAE@XZ			; CString::~CString
+	mov	DWORD PTR __$EHRec$[ebp+8], -1
+	lea	ecx, DWORD PTR _wname$[ebp]
+	call	??1CString@@QAE@XZ			; CString::~CString
+	mov	eax, DWORD PTR $T78581[ebp]
+$L78190:
+
+; 175  : }
+
+	mov	ecx, DWORD PTR __$EHRec$[ebp]
+	mov	DWORD PTR fs:__except_list, ecx
+	pop	edi
+	pop	esi
+	pop	ebx
+	add	esp, 552				; 00000228H
+	cmp	ebp, esp
+	call	__chkesp
+	mov	esp, ebp
+	pop	ebp
+	ret	0
+_TEXT	ENDS
+;	COMDAT text$x
+text$x	SEGMENT
+__unwindfunclet$?ParseFragWav@CFrag@@SAHPBD0H@Z$0:
+	lea	ecx, DWORD PTR _wname$[ebp]
+	call	??1CString@@QAE@XZ			; CString::~CString
+	ret	0
+__unwindfunclet$?ParseFragWav@CFrag@@SAHPBD0H@Z$1:
+	lea	ecx, DWORD PTR _fragname$[ebp]
+	call	??1CString@@QAE@XZ			; CString::~CString
+	ret	0
+__unwindfunclet$?ParseFragWav@CFrag@@SAHPBD0H@Z$2:
+	lea	ecx, DWORD PTR $T78579[ebp]
+	call	??1CString@@QAE@XZ			; CString::~CString
+	ret	0
+__unwindfunclet$?ParseFragWav@CFrag@@SAHPBD0H@Z$3:
+	lea	ecx, DWORD PTR _arr$78224[ebp]
+	call	??1CPtrArray@@UAE@XZ			; CPtrArray::~CPtrArray
+	ret	0
+__unwindfunclet$?ParseFragWav@CFrag@@SAHPBD0H@Z$4:
+	lea	ecx, DWORD PTR _arr2$78225[ebp]
+	call	??1CPtrArray@@UAE@XZ			; CPtrArray::~CPtrArray
+	ret	0
+__unwindfunclet$?ParseFragWav@CFrag@@SAHPBD0H@Z$5:
+	lea	ecx, DWORD PTR _sarr$78226[ebp]
+	call	??1CIntArr@@UAE@XZ			; CIntArr::~CIntArr
+	ret	0
+__unwindfunclet$?ParseFragWav@CFrag@@SAHPBD0H@Z$6:
+	lea	ecx, DWORD PTR _res$78230[ebp]
+	call	??1CAnalRes@@UAE@XZ			; CAnalRes::~CAnalRes
+	ret	0
+__unwindfunclet$?ParseFragWav@CFrag@@SAHPBD0H@Z$7:
+	lea	ecx, DWORD PTR _fp$78231[ebp]
+	call	??1CFile@@UAE@XZ			; CFile::~CFile
+	ret	0
+__ehhandler$?ParseFragWav@CFrag@@SAHPBD0H@Z:
+	mov	eax, OFFSET FLAT:__ehfuncinfo$?ParseFragWav@CFrag@@SAHPBD0H@Z
+	jmp	___CxxFrameHandler
+text$x	ENDS
+?ParseFragWav@CFrag@@SAHPBD0H@Z ENDP			; CFrag::ParseFragWav
+PUBLIC	?__LINE__Var@?1??LoadFrag@CFrag@@QAEHPBDH@Z@4FA	; `CFrag::LoadFrag'::`2'::__LINE__Var
+PUBLIC	??_C@_0M@BDNF@1234567890?9?$AA@			; `string'
+PUBLIC	??_C@_0BG@HLAC@Cannot?5load?5file?5?$CFs?$AN?6?$AA@ ; `string'
+PUBLIC	??_C@_0CE@LGCK@CFrag?3?3LoadFrag?5BAD?5magic?5?$CIstart@ ; `string'
+PUBLIC	??_C@_0CC@KACJ@CFrag?3?3LoadFrag?5BAD?5magic?5?$CIend?$CJ?$AN@ ; `string'
+PUBLIC	??_C@_0CF@FNN@CFrag?3?3LoadFrag?5empty?5buffer?5on?5@ ; `string'
+PUBLIC	?GetSize@CArrIntArr@@QAEHXZ			; CArrIntArr::GetSize
+PUBLIC	?GetData@CArrIntArr@@QAEPAVCPtrArray@@XZ	; CArrIntArr::GetData
+PUBLIC	?LoadFrag@CFrag@@QAEHPBDH@Z			; CFrag::LoadFrag
+EXTRN	?Vis@CAnalProc@@QAEXPAVCPtrArray@@0@Z:NEAR	; CAnalProc::Vis
+EXTRN	??4CString@@QAEABV0@PBD@Z:NEAR			; CString::operator=
+EXTRN	?Left@CString@@QBE?AV1@H@Z:NEAR			; CString::Left
+EXTRN	?MakeLower@CString@@QAEXXZ:NEAR			; CString::MakeLower
+EXTRN	?FindOneOf@CString@@QBEHPBD@Z:NEAR		; CString::FindOneOf
+EXTRN	?PathToFname@CSupport@@QAEXAAVCString@@@Z:NEAR	; CSupport::PathToFname
+EXTRN	?FromFile@CAnalRes@@QAEHPAVCFile@@@Z:NEAR	; CAnalRes::FromFile
+EXTRN	?Read@CFile@@UAEIPAXI@Z:NEAR			; CFile::Read
+EXTRN	?Close@CFile@@UAEXXZ:NEAR			; CFile::Close
+;	COMDAT ?__LINE__Var@?1??LoadFrag@CFrag@@QAEHPBDH@Z@4FA
+; File C:\develop3\wavfrag\work\wflib\Frag.cpp
+_DATA	SEGMENT
+?__LINE__Var@?1??LoadFrag@CFrag@@QAEHPBDH@Z@4FA DW 0b7H	; `CFrag::LoadFrag'::`2'::__LINE__Var
+_DATA	ENDS
+;	COMDAT ??_C@_0M@BDNF@1234567890?9?$AA@
+CONST	SEGMENT
+??_C@_0M@BDNF@1234567890?9?$AA@ DB '1234567890-', 00H	; `string'
+CONST	ENDS
+;	COMDAT ??_C@_0BG@HLAC@Cannot?5load?5file?5?$CFs?$AN?6?$AA@
+CONST	SEGMENT
+??_C@_0BG@HLAC@Cannot?5load?5file?5?$CFs?$AN?6?$AA@ DB 'Cannot load file '
+	DB	'%s', 0dH, 0aH, 00H				; `string'
+CONST	ENDS
+;	COMDAT ??_C@_0CE@LGCK@CFrag?3?3LoadFrag?5BAD?5magic?5?$CIstart@
+CONST	SEGMENT
+??_C@_0CE@LGCK@CFrag?3?3LoadFrag?5BAD?5magic?5?$CIstart@ DB 'CFrag::LoadF'
+	DB	'rag BAD magic (start)', 0dH, 0aH, 00H	; `string'
+CONST	ENDS
+;	COMDAT ??_C@_0CC@KACJ@CFrag?3?3LoadFrag?5BAD?5magic?5?$CIend?$CJ?$AN@
+CONST	SEGMENT
+??_C@_0CC@KACJ@CFrag?3?3LoadFrag?5BAD?5magic?5?$CIend?$CJ?$AN@ DB 'CFrag:'
+	DB	':LoadFrag BAD magic (end)', 0dH, 0aH, 00H	; `string'
+CONST	ENDS
+;	COMDAT ??_C@_0CF@FNN@CFrag?3?3LoadFrag?5empty?5buffer?5on?5@
+CONST	SEGMENT
+??_C@_0CF@FNN@CFrag?3?3LoadFrag?5empty?5buffer?5on?5@ DB 'CFrag::LoadFrag'
+	DB	' empty buffer on %s', 0dH, 0aH, 00H		; `string'
+CONST	ENDS
+;	COMDAT xdata$x
+xdata$x	SEGMENT
+__ehfuncinfo$?LoadFrag@CFrag@@QAEHPBDH@Z DD 019930520H
+	DD	03H
+	DD	FLAT:__unwindtable$?LoadFrag@CFrag@@QAEHPBDH@Z
+	DD	2 DUP(00H)
+	DD	2 DUP(00H)
+	ORG $+4
+__unwindtable$?LoadFrag@CFrag@@QAEHPBDH@Z DD 0ffffffffH
+	DD	FLAT:__unwindfunclet$?LoadFrag@CFrag@@QAEHPBDH@Z$0
+	DD	0ffffffffH
+	DD	FLAT:__unwindfunclet$?LoadFrag@CFrag@@QAEHPBDH@Z$1
+	DD	0ffffffffH
+	DD	FLAT:__unwindfunclet$?LoadFrag@CFrag@@QAEHPBDH@Z$2
+xdata$x	ENDS
+;	COMDAT ?LoadFrag@CFrag@@QAEHPBDH@Z
+_TEXT	SEGMENT
+_str$ = 8
+_this$ = -16
+_idxx$ = -20
+_fp$ = -36
+_sss$ = -40
+_ppp$ = -44
+_vvv$ = -48
+_xmagic$ = -52
+$T78598 = -56
+$T78599 = -60
+$T78600 = -64
+$T78601 = -68
+__$EHRec$ = -12
+?LoadFrag@CFrag@@QAEHPBDH@Z PROC NEAR			; CFrag::LoadFrag, COMDAT
+
+; 183  : {
+
+	push	ebp
+	mov	ebp, esp
+	push	-1
+	push	__ehhandler$?LoadFrag@CFrag@@QAEHPBDH@Z
+	mov	eax, DWORD PTR fs:__except_list
+	push	eax
+	mov	DWORD PTR fs:__except_list, esp
+	sub	esp, 136				; 00000088H
+	push	ebx
+	push	esi
+	push	edi
+	push	ecx
+	lea	edi, DWORD PTR [ebp-148]
+	mov	ecx, 34					; 00000022H
+	mov	eax, -858993460				; ccccccccH
+	rep stosd
+	pop	ecx
+	mov	DWORD PTR _this$[ebp], ecx
+$L78245:
+
+; 184  : 	ASSERT(magic == CFrag_Magic);
+
+	mov	eax, DWORD PTR _this$[ebp]
+	cmp	DWORD PTR [eax+8], 14935269		; 00e3e4e5H
+	je	SHORT $L78248
+	movsx	ecx, WORD PTR ?__LINE__Var@?1??LoadFrag@CFrag@@QAEHPBDH@Z@4FA ; `CFrag::LoadFrag'::`2'::__LINE__Var
+	add	ecx, 1
+	push	ecx
+	push	OFFSET FLAT:_THIS_FILE
+	call	?AfxAssertFailedLine@@YGHPBDH@Z		; AfxAssertFailedLine
+	test	eax, eax
+	je	SHORT $L78248
+	int	3
+$L78248:
+	xor	edx, edx
+	test	edx, edx
+	jne	SHORT $L78245
+
+; 185  : 
+; 186  : 	//AP2N("CFrag::LoadFrag '%s'\r\n", str);
+; 187  : 
+; 188  : 	*fname = str; *name = str;
+
+	mov	eax, DWORD PTR _str$[ebp]
+	push	eax
+	mov	ecx, DWORD PTR _this$[ebp]
+	mov	ecx, DWORD PTR [ecx+28]
+	call	??4CString@@QAEABV0@PBD@Z		; CString::operator=
+	mov	edx, DWORD PTR _str$[ebp]
+	push	edx
+	mov	eax, DWORD PTR _this$[ebp]
+	mov	ecx, DWORD PTR [eax+20]
+	call	??4CString@@QAEABV0@PBD@Z		; CString::operator=
+
+; 189  : 	
+; 190  : 	support.PathToFname(*name); *name = support.GetFilename(*name);
+
+	mov	ecx, DWORD PTR _this$[ebp]
+	mov	edx, DWORD PTR [ecx+20]
+	push	edx
+	mov	ecx, OFFSET FLAT:?support@@3VCSupport@@A
+	call	?PathToFname@CSupport@@QAEXAAVCString@@@Z ; CSupport::PathToFname
+	mov	eax, DWORD PTR _this$[ebp]
+	mov	ecx, DWORD PTR [eax+20]
+	push	ecx
+	lea	edx, DWORD PTR $T78598[ebp]
+	push	edx
+	mov	ecx, OFFSET FLAT:?support@@3VCSupport@@A
+	call	?GetFilename@CSupport@@QAE?AVCString@@ABV2@@Z ; CSupport::GetFilename
+	mov	DWORD PTR -72+[ebp], eax
+	mov	eax, DWORD PTR -72+[ebp]
+	mov	DWORD PTR -76+[ebp], eax
+	mov	DWORD PTR __$EHRec$[ebp+8], 0
+	mov	ecx, DWORD PTR -76+[ebp]
+	push	ecx
+	mov	edx, DWORD PTR _this$[ebp]
+	mov	ecx, DWORD PTR [edx+20]
+	call	??4CString@@QAEABV0@ABV0@@Z		; CString::operator=
+	mov	DWORD PTR __$EHRec$[ebp+8], -1
+	lea	ecx, DWORD PTR $T78598[ebp]
+	call	??1CString@@QAE@XZ			; CString::~CString
+
+; 191  : 
+; 192  : 	int idxx = name->FindOneOf("1234567890-");
+
+	push	OFFSET FLAT:??_C@_0M@BDNF@1234567890?9?$AA@ ; `string'
+	mov	eax, DWORD PTR _this$[ebp]
+	mov	ecx, DWORD PTR [eax+20]
+	call	?FindOneOf@CString@@QBEHPBD@Z		; CString::FindOneOf
+	mov	DWORD PTR _idxx$[ebp], eax
+
+; 193  : 	
+; 194  : 	if(idxx >= 0)
+
+	cmp	DWORD PTR _idxx$[ebp], 0
+	jl	SHORT $L78252
+
+; 195  : 		*shortname = name->Left(idxx);
+
+	mov	ecx, DWORD PTR _idxx$[ebp]
+	push	ecx
+	lea	edx, DWORD PTR $T78599[ebp]
+	push	edx
+	mov	eax, DWORD PTR _this$[ebp]
+	mov	ecx, DWORD PTR [eax+20]
+	call	?Left@CString@@QBE?AV1@H@Z		; CString::Left
+	mov	DWORD PTR -80+[ebp], eax
+	mov	ecx, DWORD PTR -80+[ebp]
+	mov	DWORD PTR -84+[ebp], ecx
+	mov	DWORD PTR __$EHRec$[ebp+8], 1
+	mov	edx, DWORD PTR -84+[ebp]
+	push	edx
+	mov	eax, DWORD PTR _this$[ebp]
+	mov	ecx, DWORD PTR [eax+24]
+	call	??4CString@@QAEABV0@ABV0@@Z		; CString::operator=
+	mov	DWORD PTR __$EHRec$[ebp+8], -1
+	lea	ecx, DWORD PTR $T78599[ebp]
+	call	??1CString@@QAE@XZ			; CString::~CString
+
+; 196  : 	else
+
+	jmp	SHORT $L78254
+$L78252:
+
+; 197  : 		*shortname = *name;
+
+	mov	ecx, DWORD PTR _this$[ebp]
+	mov	edx, DWORD PTR [ecx+20]
+	push	edx
+	mov	eax, DWORD PTR _this$[ebp]
+	mov	ecx, DWORD PTR [eax+24]
+	call	??4CString@@QAEABV0@ABV0@@Z		; CString::operator=
+$L78254:
+
+; 198  : 
+; 199  : 	shortname->MakeLower();
+
+	mov	ecx, DWORD PTR _this$[ebp]
+	mov	ecx, DWORD PTR [ecx+24]
+	call	?MakeLower@CString@@QAEXXZ		; CString::MakeLower
+
+; 200  : 	name->MakeLower();
+
+	mov	edx, DWORD PTR _this$[ebp]
+	mov	ecx, DWORD PTR [edx+20]
+	call	?MakeLower@CString@@QAEXXZ		; CString::MakeLower
+
+; 201  : 
+; 202  : 	//AP2N("CFrag::LoadFrag for '%s'\r\n", *name);
+; 203  : 
+; 204  : 	CFile fp;		
+
+	lea	ecx, DWORD PTR _fp$[ebp]
+	call	??0CFile@@QAE@XZ			; CFile::CFile
+	mov	DWORD PTR __$EHRec$[ebp+8], 2
+
+; 205  : 	if(!fp.Open(str, CFile::modeRead))
+
+	push	0
+	push	0
+	mov	eax, DWORD PTR _str$[ebp]
+	push	eax
+	lea	ecx, DWORD PTR _fp$[ebp]
+	call	?Open@CFile@@UAEHPBDIPAVCFileException@@@Z ; CFile::Open
+	test	eax, eax
+	jne	SHORT $L78256
+
+; 207  : 		AP2N("Cannot load file %s\r\n", str);
+
+	mov	ecx, DWORD PTR _str$[ebp]
+	push	ecx
+	push	OFFSET FLAT:??_C@_0BG@HLAC@Cannot?5load?5file?5?$CFs?$AN?6?$AA@ ; `string'
+	push	OFFSET FLAT:?mxpad@@3VMxPad@@A
+	call	?aprintf@MxPad@@QAAHPBDZZ		; MxPad::aprintf
+	add	esp, 12					; 0000000cH
+
+; 208  : 		return false;
+
+	mov	DWORD PTR $T78600[ebp], 0
+	mov	DWORD PTR __$EHRec$[ebp+8], -1
+	lea	ecx, DWORD PTR _fp$[ebp]
+	call	??1CFile@@UAE@XZ			; CFile::~CFile
+	mov	eax, DWORD PTR $T78600[ebp]
+	jmp	$L78243
+$L78256:
+
+; 210  : 
+; 211  : 	// Get saved entries
+; 212  : 	//int cnt = 0, pcnt = 0, vcnt = 0;
+; 213  : 	int sss = 0, ppp = 0, vvv = 0, xmagic = 0; 
+
+	mov	DWORD PTR _sss$[ebp], 0
+	mov	DWORD PTR _ppp$[ebp], 0
+	mov	DWORD PTR _vvv$[ebp], 0
+	mov	DWORD PTR _xmagic$[ebp], 0
+
+; 214  : 	
+; 215  : 	fp.Read(&xmagic, sizeof(int));
+
+	push	4
+	lea	edx, DWORD PTR _xmagic$[ebp]
+	push	edx
+	lea	ecx, DWORD PTR _fp$[ebp]
+	call	?Read@CFile@@UAEIPAXI@Z			; CFile::Read
+
+; 216  : 	if(xmagic != magic)
+
+	mov	eax, DWORD PTR _this$[ebp]
+	mov	ecx, DWORD PTR _xmagic$[ebp]
+	cmp	ecx, DWORD PTR [eax+8]
+	je	SHORT $L78264
+
+; 218  : 		AP2N("CFrag::LoadFrag BAD magic (start)\r\n");
+
+	push	OFFSET FLAT:??_C@_0CE@LGCK@CFrag?3?3LoadFrag?5BAD?5magic?5?$CIstart@ ; `string'
+	push	OFFSET FLAT:?mxpad@@3VMxPad@@A
+	call	?aprintf@MxPad@@QAAHPBDZZ		; MxPad::aprintf
+	add	esp, 8
+$L78264:
+
+; 220  : 
+; 221  : 	res.FromFile(&fp);
+
+	lea	edx, DWORD PTR _fp$[ebp]
+	push	edx
+	mov	ecx, DWORD PTR _this$[ebp]
+	add	ecx, 36					; 00000024H
+	call	?FromFile@CAnalRes@@QAEHPAVCFile@@@Z	; CAnalRes::FromFile
+
+; 222  : 	
+; 223  : 	fp.Read(&xmagic, sizeof(int));
+
+	push	4
+	lea	eax, DWORD PTR _xmagic$[ebp]
+	push	eax
+	lea	ecx, DWORD PTR _fp$[ebp]
+	call	?Read@CFile@@UAEIPAXI@Z			; CFile::Read
+
+; 224  : 	if(xmagic != magic)
+
+	mov	ecx, DWORD PTR _this$[ebp]
+	mov	edx, DWORD PTR _xmagic$[ebp]
+	cmp	edx, DWORD PTR [ecx+8]
+	je	SHORT $L78267
+
+; 226  : 		AP2N("CFrag::LoadFrag BAD magic (end)\r\n");
+
+	push	OFFSET FLAT:??_C@_0CC@KACJ@CFrag?3?3LoadFrag?5BAD?5magic?5?$CIend?$CJ?$AN@ ; `string'
+	push	OFFSET FLAT:?mxpad@@3VMxPad@@A
+	call	?aprintf@MxPad@@QAAHPBDZZ		; MxPad::aprintf
+	add	esp, 8
+$L78267:
+
+; 228  : 			
+; 229  : 	fp.Close();
+
+	lea	ecx, DWORD PTR _fp$[ebp]
+	call	?Close@CFile@@UAEXXZ			; CFile::Close
+
+; 230  : 
+; 231  : 	if(res.raw.GetSize() == 0)
+
+	mov	ecx, DWORD PTR _this$[ebp]
+	add	ecx, 60					; 0000003cH
+	call	?GetSize@CArrIntArr@@QAEHXZ		; CArrIntArr::GetSize
+	test	eax, eax
+	jne	SHORT $L78269
+
+; 233  : 		AP2N("CFrag::LoadFrag empty buffer on %s\r\n", *name);
+
+	mov	eax, DWORD PTR _this$[ebp]
+	mov	ecx, DWORD PTR [eax+20]
+	mov	edx, DWORD PTR [ecx]
+	push	edx
+	push	OFFSET FLAT:??_C@_0CF@FNN@CFrag?3?3LoadFrag?5empty?5buffer?5on?5@ ; `string'
+	push	OFFSET FLAT:?mxpad@@3VMxPad@@A
+	call	?aprintf@MxPad@@QAAHPBDZZ		; MxPad::aprintf
+	add	esp, 12					; 0000000cH
+$L78269:
+
+; 239  : 
+; 240  : 	//AP2N("Loaded '%s' %d buffers %d entries each\r\n", *name, cnt, sss);
+; 241  : 
+; 242  : 	// Dumper for loads
+; 243  : #if 0
+; 244  : 	AP2N("CFrag::LoadFrag  peak Dump: %s\r\n", *name);
+; 245  : 	for(int loopd = 0; loopd < res.peak.GetSize(); loopd++)
+; 246  : 		{
+; 247  : 		CIntArr *tmp = (CIntArr*)res.peak.GetAt(loopd);
+; 248  : 	
+; 249  : 		for(int loopd2 = 0; loopd2 < tmp->GetSize(); loopd2++)
+; 250  : 			AP2N("%d  ", tmp->GetAt(loopd2));
+; 251  : 
+; 252  : 		AP2N("\r\n");
+; 253  : 		}
+; 254  : #endif
+; 255  : 
+; 256  : #if 0
+; 257  : 	AP2N("CFrag::LoadFrag lo/hi Dump: %s\r\n", *name);
+; 258  : 	
+; 259  : 	for(int loopd3 = 0; loopd3 < res.high.GetSize(); loopd3++)
+; 260  : 		AP2N("%d/%d  ", res.low.GetAt(loopd3), res.high.GetAt(loopd3));
+; 261  : 	AP2N("\r\n");
+; 262  : #endif
+; 263  : 
+; 264  : 	// Visualizer for loads
+; 265  : 	//xdllrecog.analproc.VisRaw(res.raw.GetData());
+; 266  : 	xdllrecog.analproc.Vis(res.all.GetData(), res.vall.GetData());
+
+	mov	ecx, DWORD PTR _this$[ebp]
+	add	ecx, 144				; 00000090H
+	call	?GetData@CArrIntArr@@QAEPAVCPtrArray@@XZ ; CArrIntArr::GetData
+	push	eax
+	mov	ecx, DWORD PTR _this$[ebp]
+	add	ecx, 116				; 00000074H
+	call	?GetData@CArrIntArr@@QAEPAVCPtrArray@@XZ ; CArrIntArr::GetData
+	push	eax
+	mov	ecx, OFFSET FLAT:?xdllrecog@@3VCxRecog@@A+44
+	call	?Vis@CAnalProc@@QAEXPAVCPtrArray@@0@Z	; CAnalProc::Vis
+
+; 267  : 
+; 268  : 	//res.sig.DumpAll("Sig: ");
+; 269  : 	
+; 270  : 	return true;
+
+	mov	DWORD PTR $T78601[ebp], 1
+	mov	DWORD PTR __$EHRec$[ebp+8], -1
+	lea	ecx, DWORD PTR _fp$[ebp]
+	call	??1CFile@@UAE@XZ			; CFile::~CFile
+	mov	eax, DWORD PTR $T78601[ebp]
+$L78243:
+
+; 271  : }
+
+	mov	ecx, DWORD PTR __$EHRec$[ebp]
+	mov	DWORD PTR fs:__except_list, ecx
+	pop	edi
+	pop	esi
+	pop	ebx
+	add	esp, 148				; 00000094H
+	cmp	ebp, esp
+	call	__chkesp
+	mov	esp, ebp
+	pop	ebp
+	ret	8
+_TEXT	ENDS
+;	COMDAT text$x
+text$x	SEGMENT
+__unwindfunclet$?LoadFrag@CFrag@@QAEHPBDH@Z$0:
+	lea	ecx, DWORD PTR $T78598[ebp]
+	call	??1CString@@QAE@XZ			; CString::~CString
+	ret	0
+__unwindfunclet$?LoadFrag@CFrag@@QAEHPBDH@Z$1:
+	lea	ecx, DWORD PTR $T78599[ebp]
+	call	??1CString@@QAE@XZ			; CString::~CString
+	ret	0
+__unwindfunclet$?LoadFrag@CFrag@@QAEHPBDH@Z$2:
+	lea	ecx, DWORD PTR _fp$[ebp]
+	call	??1CFile@@UAE@XZ			; CFile::~CFile
+	ret	0
+__ehhandler$?LoadFrag@CFrag@@QAEHPBDH@Z:
+	mov	eax, OFFSET FLAT:__ehfuncinfo$?LoadFrag@CFrag@@QAEHPBDH@Z
+	jmp	___CxxFrameHandler
+text$x	ENDS
+?LoadFrag@CFrag@@QAEHPBDH@Z ENDP			; CFrag::LoadFrag
+EXTRN	?GetSize@CPtrArray@@QBEHXZ:NEAR			; CPtrArray::GetSize
+;	COMDAT ?GetSize@CArrIntArr@@QAEHXZ
+_TEXT	SEGMENT
+_this$ = -4
+?GetSize@CArrIntArr@@QAEHXZ PROC NEAR			; CArrIntArr::GetSize, COMDAT
+
+; 52   : 	inline int			GetSize() { return arrdata.GetSize(); }
+
+	push	ebp
+	mov	ebp, esp
+	sub	esp, 68					; 00000044H
+	push	ebx
+	push	esi
+	push	edi
+	push	ecx
+	lea	edi, DWORD PTR [ebp-68]
+	mov	ecx, 17					; 00000011H
+	mov	eax, -858993460				; ccccccccH
+	rep stosd
+	pop	ecx
+	mov	DWORD PTR _this$[ebp], ecx
+	mov	ecx, DWORD PTR _this$[ebp]
+	add	ecx, 8
+	call	?GetSize@CPtrArray@@QBEHXZ		; CPtrArray::GetSize
+	pop	edi
+	pop	esi
+	pop	ebx
+	add	esp, 68					; 00000044H
+	cmp	ebp, esp
+	call	__chkesp
+	mov	esp, ebp
+	pop	ebp
+	ret	0
+?GetSize@CArrIntArr@@QAEHXZ ENDP			; CArrIntArr::GetSize
+_TEXT	ENDS
+;	COMDAT ?GetData@CArrIntArr@@QAEPAVCPtrArray@@XZ
+_TEXT	SEGMENT
+_this$ = -4
+?GetData@CArrIntArr@@QAEPAVCPtrArray@@XZ PROC NEAR	; CArrIntArr::GetData, COMDAT
+
+; 53   : 	inline CPtrArray*	GetData() { return &arrdata; }
+
+	push	ebp
+	mov	ebp, esp
+	sub	esp, 68					; 00000044H
+	push	ebx
+	push	esi
+	push	edi
+	push	ecx
+	lea	edi, DWORD PTR [ebp-68]
+	mov	ecx, 17					; 00000011H
+	mov	eax, -858993460				; ccccccccH
+	rep stosd
+	pop	ecx
+	mov	DWORD PTR _this$[ebp], ecx
+	mov	eax, DWORD PTR _this$[ebp]
+	add	eax, 8
+	pop	edi
+	pop	esi
+	pop	ebx
+	mov	esp, ebp
+	pop	ebp
+	ret	0
+?GetData@CArrIntArr@@QAEPAVCPtrArray@@XZ ENDP		; CArrIntArr::GetData
+_TEXT	ENDS
+PUBLIC	??_C@_0CE@DJCF@name?$DN?8?$CFs?8?5shortname?$DN?8?$CFs?8?5frags?$DN?$CF@ ; `string'
+PUBLIC	?Dump@CFrag@@QAEXXZ				; CFrag::Dump
+;	COMDAT ??_C@_0CE@DJCF@name?$DN?8?$CFs?8?5shortname?$DN?8?$CFs?8?5frags?$DN?$CF@
+; File C:\develop3\wavfrag\work\wflib\Frag.cpp
+CONST	SEGMENT
+??_C@_0CE@DJCF@name?$DN?8?$CFs?8?5shortname?$DN?8?$CFs?8?5frags?$DN?$CF@ DB 'n'
+	DB	'ame=''%s'' shortname=''%s'' frags=%d', 0dH, 0aH, 00H ; `string'
+CONST	ENDS
+;	COMDAT ?Dump@CFrag@@QAEXXZ
+_TEXT	SEGMENT
+_this$ = -4
+?Dump@CFrag@@QAEXXZ PROC NEAR				; CFrag::Dump, COMDAT
+
+; 277  : {
+
+	push	ebp
+	mov	ebp, esp
+	sub	esp, 68					; 00000044H
+	push	ebx
+	push	esi
+	push	edi
+	push	ecx
+	lea	edi, DWORD PTR [ebp-68]
+	mov	ecx, 17					; 00000011H
+	mov	eax, -858993460				; ccccccccH
+	rep stosd
+	pop	ecx
+	mov	DWORD PTR _this$[ebp], ecx
+
+; 278  : 	AP2N("name='%s' shortname='%s' frags=%d\r\n", *name, *shortname, res.raw.GetSize());
+
+	mov	ecx, DWORD PTR _this$[ebp]
+	add	ecx, 60					; 0000003cH
+	call	?GetSize@CArrIntArr@@QAEHXZ		; CArrIntArr::GetSize
+	push	eax
+	mov	eax, DWORD PTR _this$[ebp]
+	mov	ecx, DWORD PTR [eax+24]
+	mov	edx, DWORD PTR [ecx]
+	push	edx
+	mov	eax, DWORD PTR _this$[ebp]
+	mov	ecx, DWORD PTR [eax+20]
+	mov	edx, DWORD PTR [ecx]
+	push	edx
+	push	OFFSET FLAT:??_C@_0CE@DJCF@name?$DN?8?$CFs?8?5shortname?$DN?8?$CFs?8?5frags?$DN?$CF@ ; `string'
+	push	OFFSET FLAT:?mxpad@@3VMxPad@@A
+	call	?aprintf@MxPad@@QAAHPBDZZ		; MxPad::aprintf
+	add	esp, 20					; 00000014H
+
+; 279  : }
+
+	pop	edi
+	pop	esi
+	pop	ebx
+	add	esp, 68					; 00000044H
+	cmp	ebp, esp
+	call	__chkesp
+	mov	esp, ebp
+	pop	ebp
+	ret	0
+?Dump@CFrag@@QAEXXZ ENDP				; CFrag::Dump
+_TEXT	ENDS
+PUBLIC	??_C@_0CB@LHEA@CFrag?3?3LoadFrag?5lo?1hi?5Dump?3?5?$CFs?$AN?6@ ; `string'
+PUBLIC	?DumpLoHi@CFrag@@QAEXXZ				; CFrag::DumpLoHi
+;	COMDAT ??_C@_0CB@LHEA@CFrag?3?3LoadFrag?5lo?1hi?5Dump?3?5?$CFs?$AN?6@
+; File C:\develop3\wavfrag\work\wflib\Frag.cpp
+CONST	SEGMENT
+??_C@_0CB@LHEA@CFrag?3?3LoadFrag?5lo?1hi?5Dump?3?5?$CFs?$AN?6@ DB 'CFrag:'
+	DB	':LoadFrag lo/hi Dump: %s', 0dH, 0aH, 00H	; `string'
+CONST	ENDS
+;	COMDAT ?DumpLoHi@CFrag@@QAEXXZ
+_TEXT	SEGMENT
+_this$ = -4
+?DumpLoHi@CFrag@@QAEXXZ PROC NEAR			; CFrag::DumpLoHi, COMDAT
+
+; 285  : {
+
+	push	ebp
+	mov	ebp, esp
+	sub	esp, 68					; 00000044H
+	push	ebx
+	push	esi
+	push	edi
+	push	ecx
+	lea	edi, DWORD PTR [ebp-68]
+	mov	ecx, 17					; 00000011H
+	mov	eax, -858993460				; ccccccccH
+	rep stosd
+	pop	ecx
+	mov	DWORD PTR _this$[ebp], ecx
+
+; 286  : 	AP2N("CFrag::LoadFrag lo/hi Dump: %s\r\n", *name);
+
+	mov	eax, DWORD PTR _this$[ebp]
+	mov	ecx, DWORD PTR [eax+20]
+	mov	edx, DWORD PTR [ecx]
+	push	edx
+	push	OFFSET FLAT:??_C@_0CB@LHEA@CFrag?3?3LoadFrag?5lo?1hi?5Dump?3?5?$CFs?$AN?6@ ; `string'
+	push	OFFSET FLAT:?mxpad@@3VMxPad@@A
+	call	?aprintf@MxPad@@QAAHPBDZZ		; MxPad::aprintf
+	add	esp, 12					; 0000000cH
+
+; 287  : 
+; 288  : #if 0
+; 289  : 	for(int loopd3 = 0; loopd3 < res.higharr.GetSize(); loopd3++)
+; 290  : 		AP2N("%d/%d  ", res.lowarr.GetAt(loopd3), res.higharr.GetAt(loopd3));
+; 291  : 	AP2N("\r\n");
+; 292  : #endif
+; 293  : 
+; 294  : }
+
+	pop	edi
+	pop	esi
+	pop	ebx
+	add	esp, 68					; 00000044H
+	cmp	ebp, esp
+	call	__chkesp
+	mov	esp, ebp
+	pop	ebp
+	ret	0
+?DumpLoHi@CFrag@@QAEXXZ ENDP				; CFrag::DumpLoHi
+_TEXT	ENDS
+PUBLIC	?Add@CIntArr@@QAEHH@Z				; CIntArr::Add
+PUBLIC	?CmpFrags@CFrag@@QAEHPAVCAnalRes@@HPAVCCmpRes@@@Z ; CFrag::CmpFrags
+PUBLIC	?xHitFrags@CFrag@@IAEHPAVCAnalRes@@HHH@Z	; CFrag::xHitFrags
+EXTRN	??0CIntArrRec@@QAE@XZ:NEAR			; CIntArrRec::CIntArrRec
+EXTRN	??1CIntArrRec@@UAE@XZ:NEAR			; CIntArrRec::~CIntArrRec
+EXTRN	?Avg@CIntArrRec@@QAEHXZ:NEAR			; CIntArrRec::Avg
+;	COMDAT xdata$x
+; File C:\develop3\wavfrag\work\wflib\Frag.cpp
+xdata$x	SEGMENT
+__ehfuncinfo$?CmpFrags@CFrag@@QAEHPAVCAnalRes@@HPAVCCmpRes@@@Z DD 019930520H
+	DD	01H
+	DD	FLAT:__unwindtable$?CmpFrags@CFrag@@QAEHPAVCAnalRes@@HPAVCCmpRes@@@Z
+	DD	2 DUP(00H)
+	DD	2 DUP(00H)
+	ORG $+4
+__unwindtable$?CmpFrags@CFrag@@QAEHPAVCAnalRes@@HPAVCCmpRes@@@Z DD 0ffffffffH
+	DD	FLAT:__unwindfunclet$?CmpFrags@CFrag@@QAEHPAVCAnalRes@@HPAVCCmpRes@@@Z$0
+xdata$x	ENDS
+;	COMDAT ?CmpFrags@CFrag@@QAEHPAVCAnalRes@@HPAVCCmpRes@@@Z
+_TEXT	SEGMENT
+_parr$ = 8
+_offs$ = 12
+_pres$ = 16
+_this$ = -16
+_ret$ = -20
+_arrlen$ = -24
+_reflen$ = -28
+_sum$ = -32
+_wobble$ = -36
+_arr$ = -60
+_loopr$ = -64
+_diff$78301 = -68
+_offs2$78302 = -72
+_ss$78303 = -76
+_ee$78304 = -80
+_loopw$78305 = -84
+_hit$78309 = -88
+$T78625 = -92
+__$EHRec$ = -12
+?CmpFrags@CFrag@@QAEHPAVCAnalRes@@HPAVCCmpRes@@@Z PROC NEAR ; CFrag::CmpFrags, COMDAT
+
+; 303  : {	
+
+	push	ebp
+	mov	ebp, esp
+	push	-1
+	push	__ehhandler$?CmpFrags@CFrag@@QAEHPAVCAnalRes@@HPAVCCmpRes@@@Z
+	mov	eax, DWORD PTR fs:__except_list
+	push	eax
+	mov	DWORD PTR fs:__except_list, esp
+	sub	esp, 152				; 00000098H
+	push	ebx
+	push	esi
+	push	edi
+	push	ecx
+	lea	edi, DWORD PTR [ebp-164]
+	mov	ecx, 38					; 00000026H
+	mov	eax, -858993460				; ccccccccH
+	rep stosd
+	pop	ecx
+	mov	DWORD PTR _this$[ebp], ecx
+
+; 304  : 	//AP2N("CFrag::CmpFrags %s:  ", *name);
+; 305  : 
+; 306  : 	int ret = 0;		// Maximizers default to small returns
+
+	mov	DWORD PTR _ret$[ebp], 0
+
+; 307  : 		
+; 308  : 	// Reset result output
+; 309  : 	pres->nfund = pres->nharm = pres->nhiss = 0;
+
+	mov	eax, DWORD PTR _pres$[ebp]
+	mov	DWORD PTR [eax+16], 0
+	mov	ecx, DWORD PTR _pres$[ebp]
+	mov	DWORD PTR [ecx+12], 0
+	mov	edx, DWORD PTR _pres$[ebp]
+	mov	DWORD PTR [edx+8], 0
+
+; 310  : 
+; 311  : 	int arrlen = parr->all.GetSize(), reflen = res.all.GetSize();
+
+	mov	ecx, DWORD PTR _parr$[ebp]
+	add	ecx, 80					; 00000050H
+	call	?GetSize@CArrIntArr@@QAEHXZ		; CArrIntArr::GetSize
+	mov	DWORD PTR _arrlen$[ebp], eax
+	mov	ecx, DWORD PTR _this$[ebp]
+	add	ecx, 116				; 00000074H
+	call	?GetSize@CArrIntArr@@QAEHXZ		; CArrIntArr::GetSize
+	mov	DWORD PTR _reflen$[ebp], eax
+
+; 312  : 	
+; 313  : 	// No array ... bail out
+; 314  : 	if(reflen == 0)
+
+	cmp	DWORD PTR _reflen$[ebp], 0
+	jne	SHORT $L78290
+
+; 316  : 		//AP2N("CFrag::CmpFrags zero length ref array in %s\r\n", *fname);
+; 317  : 		return ret;
+
+	mov	eax, DWORD PTR _ret$[ebp]
+	jmp	$L78286
+$L78290:
+
+; 319  : 
+; 320  : 	// Passes the end ... bail out
+; 321  : 	if(arrlen <= offs + reflen)
+
+	mov	eax, DWORD PTR _offs$[ebp]
+	add	eax, DWORD PTR _reflen$[ebp]
+	cmp	DWORD PTR _arrlen$[ebp], eax
+	jg	SHORT $L78291
+
+; 323  : 		//AP2N("CFrag::CmpFrags passes the end at %s\r\n", *fname);
+; 324  : 		return ret;	
+
+	mov	eax, DWORD PTR _ret$[ebp]
+	jmp	$L78286
+$L78291:
+
+; 326  : 
+; 327  : #ifdef _DEBUG
+; 328  : 
+; 329  : 	// Visualizer, only print some of the data
+; 330  : 	if(offs == 15)
+
+	cmp	DWORD PTR _offs$[ebp], 15		; 0000000fH
+	jne	SHORT $L78292
+
+; 331  : 		verbose = true;
+
+	mov	ecx, DWORD PTR _this$[ebp]
+	mov	DWORD PTR [ecx+32], 1
+
+; 332  : 	else
+
+	jmp	SHORT $L78293
+$L78292:
+
+; 333  : 		verbose = false;
+
+	mov	edx, DWORD PTR _this$[ebp]
+	mov	DWORD PTR [edx+32], 0
+$L78293:
+
+; 334  : 
+; 335  : #endif
+; 336  : 
+; 337  : 	int sum = 0, wobble = 0;
+
+	mov	DWORD PTR _sum$[ebp], 0
+	mov	DWORD PTR _wobble$[ebp], 0
+
+; 338  : 
+; 339  : 	CIntArrRec	arr;
+
+	lea	ecx, DWORD PTR _arr$[ebp]
+	call	??0CIntArrRec@@QAE@XZ			; CIntArrRec::CIntArrRec
+	mov	DWORD PTR __$EHRec$[ebp+8], 0
+
+; 340  : 
+; 341  : 	// Walk reference
+; 342  : 	for(int loopr = 0; loopr < reflen; loopr++)
+
+	mov	DWORD PTR _loopr$[ebp], 0
+	jmp	SHORT $L78298
+$L78299:
+	mov	eax, DWORD PTR _loopr$[ebp]
+	add	eax, 1
+	mov	DWORD PTR _loopr$[ebp], eax
+$L78298:
+	mov	ecx, DWORD PTR _loopr$[ebp]
+	cmp	ecx, DWORD PTR _reflen$[ebp]
+	jge	$L78300
+
+; 344  : 		int diff = 0, offs2 = loopr + offs;			
+
+	mov	DWORD PTR _diff$78301[ebp], 0
+	mov	edx, DWORD PTR _loopr$[ebp]
+	add	edx, DWORD PTR _offs$[ebp]
+	mov	DWORD PTR _offs2$78302[ebp], edx
+
+; 345  : 		int ss = MAX(0, offs2 - wobble), ee = MIN(arrlen, offs2 + wobble + 1);
+
+	mov	eax, DWORD PTR _offs2$78302[ebp]
+	sub	eax, DWORD PTR _wobble$[ebp]
+	test	eax, eax
+	jge	SHORT $L78621
+	mov	DWORD PTR -96+[ebp], 0
+	jmp	SHORT $L78622
+$L78621:
+	mov	ecx, DWORD PTR _offs2$78302[ebp]
+	sub	ecx, DWORD PTR _wobble$[ebp]
+	mov	DWORD PTR -96+[ebp], ecx
+$L78622:
+	mov	edx, DWORD PTR -96+[ebp]
+	mov	DWORD PTR _ss$78303[ebp], edx
+	mov	eax, DWORD PTR _wobble$[ebp]
+	mov	ecx, DWORD PTR _offs2$78302[ebp]
+	lea	edx, DWORD PTR [ecx+eax+1]
+	cmp	DWORD PTR _arrlen$[ebp], edx
+	jge	SHORT $L78623
+	mov	eax, DWORD PTR _arrlen$[ebp]
+	mov	DWORD PTR -100+[ebp], eax
+	jmp	SHORT $L78624
+$L78623:
+	mov	ecx, DWORD PTR _wobble$[ebp]
+	mov	edx, DWORD PTR _offs2$78302[ebp]
+	lea	eax, DWORD PTR [edx+ecx+1]
+	mov	DWORD PTR -100+[ebp], eax
+$L78624:
+	mov	ecx, DWORD PTR -100+[ebp]
+	mov	DWORD PTR _ee$78304[ebp], ecx
+
+; 346  : 			
+; 347  : 		// Wobble into array
+; 348  : 		for(int loopw = ss; loopw < ee; loopw++)
+
+	mov	edx, DWORD PTR _ss$78303[ebp]
+	mov	DWORD PTR _loopw$78305[ebp], edx
+	jmp	SHORT $L78306
+$L78307:
+	mov	eax, DWORD PTR _loopw$78305[ebp]
+	add	eax, 1
+	mov	DWORD PTR _loopw$78305[ebp], eax
+$L78306:
+	mov	ecx, DWORD PTR _loopw$78305[ebp]
+	cmp	ecx, DWORD PTR _ee$78304[ebp]
+	jge	SHORT $L78308
+
+; 350  : 			int hit = xHitFrags(parr, loopw, loopr, xdllrecog.Strictness);
+
+	mov	edx, DWORD PTR ?xdllrecog@@3VCxRecog@@A+76
+	push	edx
+	mov	eax, DWORD PTR _loopr$[ebp]
+	push	eax
+	mov	ecx, DWORD PTR _loopw$78305[ebp]
+	push	ecx
+	mov	edx, DWORD PTR _parr$[ebp]
+	push	edx
+	mov	ecx, DWORD PTR _this$[ebp]
+	call	?xHitFrags@CFrag@@IAEHPAVCAnalRes@@HHH@Z ; CFrag::xHitFrags
+	mov	DWORD PTR _hit$78309[ebp], eax
+
+; 351  : 
+; 352  : 			// What to propagate over to the compare
+; 353  : 			arr.Add(hit);
+
+	mov	eax, DWORD PTR _hit$78309[ebp]
+	push	eax
+	lea	ecx, DWORD PTR _arr$[ebp]
+	call	?Add@CIntArr@@QAEHH@Z			; CIntArr::Add
+
+; 354  : 			}		
+
+	jmp	SHORT $L78307
+$L78308:
+
+; 355  : 		//sum += parr->sig.GetAt(offs2);
+; 356  : 		}
+
+	jmp	$L78299
+$L78300:
+
+; 357  : 
+; 358  : 	// No need to smooth, avarage not effected by much
+; 359  : 	//arr.Smooth();
+; 360  : 	ret = arr.Avg();
+
+	lea	ecx, DWORD PTR _arr$[ebp]
+	call	?Avg@CIntArrRec@@QAEHXZ			; CIntArrRec::Avg
+	mov	DWORD PTR _ret$[ebp], eax
+
+; 361  : 
+; 362  : 	// Length neutral (not used)
+; 363  : 	//sum /= reflen; sum /= 10;	ret *= sum;
+; 364  : 	//int len = sqrt(reflen); if(len) ret /= len;
+; 365  : 
+; 366  : #ifdef _DEBUG
+; 367  : 
+; 368  : 	//if(verbose)
+; 369  : 	//	{
+; 370  : 	//	xdllrecog._plotrec(arr.GetData(), arr.GetSize(), 0);
+; 371  : 	//	xdllrecog._plotrec(NULL, 0, 0);
+; 372  : 	//	}
+; 373  : 
+; 374  : 	// Animate for observation
+; 375  : 	//Sleep(2);
+; 376  : 
+; 377  : #endif
+; 378  : 
+; 379  : 	return (ret);
+
+	mov	ecx, DWORD PTR _ret$[ebp]
+	mov	DWORD PTR $T78625[ebp], ecx
+	mov	DWORD PTR __$EHRec$[ebp+8], -1
+	lea	ecx, DWORD PTR _arr$[ebp]
+	call	??1CIntArrRec@@UAE@XZ			; CIntArrRec::~CIntArrRec
+	mov	eax, DWORD PTR $T78625[ebp]
+$L78286:
+
+; 380  : }
+
+	mov	ecx, DWORD PTR __$EHRec$[ebp]
+	mov	DWORD PTR fs:__except_list, ecx
+	pop	edi
+	pop	esi
+	pop	ebx
+	add	esp, 164				; 000000a4H
+	cmp	ebp, esp
+	call	__chkesp
+	mov	esp, ebp
+	pop	ebp
+	ret	12					; 0000000cH
+_TEXT	ENDS
+;	COMDAT text$x
+text$x	SEGMENT
+__unwindfunclet$?CmpFrags@CFrag@@QAEHPAVCAnalRes@@HPAVCCmpRes@@@Z$0:
+	lea	ecx, DWORD PTR _arr$[ebp]
+	call	??1CIntArrRec@@UAE@XZ			; CIntArrRec::~CIntArrRec
+	ret	0
+__ehhandler$?CmpFrags@CFrag@@QAEHPAVCAnalRes@@HPAVCCmpRes@@@Z:
+	mov	eax, OFFSET FLAT:__ehfuncinfo$?CmpFrags@CFrag@@QAEHPAVCAnalRes@@HPAVCCmpRes@@@Z
+	jmp	___CxxFrameHandler
+text$x	ENDS
+?CmpFrags@CFrag@@QAEHPAVCAnalRes@@HPAVCCmpRes@@@Z ENDP	; CFrag::CmpFrags
+EXTRN	?SetAtGrow@CIntArr@@QAEXHH@Z:NEAR		; CIntArr::SetAtGrow
+;	COMDAT ?Add@CIntArr@@QAEHH@Z
+_TEXT	SEGMENT
+_newElement$ = 8
+_this$ = -4
+_nIndex$ = -8
+?Add@CIntArr@@QAEHH@Z PROC NEAR				; CIntArr::Add, COMDAT
+
+; 214  : 		{ int nIndex = m_nSize;
+
+	push	ebp
+	mov	ebp, esp
+	sub	esp, 72					; 00000048H
+	push	ebx
+	push	esi
+	push	edi
+	push	ecx
+	lea	edi, DWORD PTR [ebp-72]
+	mov	ecx, 18					; 00000012H
+	mov	eax, -858993460				; ccccccccH
+	rep stosd
+	pop	ecx
+	mov	DWORD PTR _this$[ebp], ecx
+	mov	eax, DWORD PTR _this$[ebp]
+	mov	ecx, DWORD PTR [eax+12]
+	mov	DWORD PTR _nIndex$[ebp], ecx
+
+; 215  : 			SetAtGrow(nIndex, newElement);
+
+	mov	edx, DWORD PTR _newElement$[ebp]
+	push	edx
+	mov	eax, DWORD PTR _nIndex$[ebp]
+	push	eax
+	mov	ecx, DWORD PTR _this$[ebp]
+	call	?SetAtGrow@CIntArr@@QAEXHH@Z		; CIntArr::SetAtGrow
+
+; 216  : 			return nIndex; }
+
+	mov	eax, DWORD PTR _nIndex$[ebp]
+	pop	edi
+	pop	esi
+	pop	ebx
+	add	esp, 72					; 00000048H
+	cmp	ebp, esp
+	call	__chkesp
+	mov	esp, ebp
+	pop	ebp
+	ret	4
+?Add@CIntArr@@QAEHH@Z ENDP				; CIntArr::Add
+_TEXT	ENDS
+PUBLIC	?GetSize@CIntArr@@QBEHXZ			; CIntArr::GetSize
+PUBLIC	?GetAt@CIntArr@@QBEHH@Z				; CIntArr::GetAt
+EXTRN	?GetAt@CArrIntArr@@QAEPAVCIntArrRec@@H@Z:NEAR	; CArrIntArr::GetAt
+;	COMDAT ?xHitFrags@CFrag@@IAEHPAVCAnalRes@@HHH@Z
+_TEXT	SEGMENT
+_parr$ = 8
+_offs$ = 12
+_loopr$ = 16
+_this$ = -4
+_ret$ = -8
+_ref$ = -12
+_tmp$ = -16
+_tlen$ = -20
+_rlen$ = -24
+_cnt$ = -28
+_wobble$ = -32
+_divi$ = -36
+_decrem$ = -40
+_subit$ = -44
+_cnt2$ = -48
+_rloop$ = -52
+_rval$78337 = -56
+_match$78339 = -60
+_lim$78340 = -64
+_ss$78341 = -68
+_ee$78342 = -72
+_tloop$78343 = -76
+_tval$78347 = -80
+?xHitFrags@CFrag@@IAEHPAVCAnalRes@@HHH@Z PROC NEAR	; CFrag::xHitFrags, COMDAT
+
+; 396  : {
+
+	push	ebp
+	mov	ebp, esp
+	sub	esp, 152				; 00000098H
+	push	ebx
+	push	esi
+	push	edi
+	push	ecx
+	lea	edi, DWORD PTR [ebp-152]
+	mov	ecx, 38					; 00000026H
+	mov	eax, -858993460				; ccccccccH
+	rep stosd
+	pop	ecx
+	mov	DWORD PTR _this$[ebp], ecx
+
+; 397  : 	int ret = 0;			// Default to no match
+
+	mov	DWORD PTR _ret$[ebp], 0
+
+; 398  : 	
+; 399  : 	// Estabilish pounteres to current data
+; 400  : 	CIntArr *ref = (CIntArr *)res.all.GetAt(loopr);							
+
+	mov	eax, DWORD PTR _loopr$[ebp]
+	push	eax
+	mov	ecx, DWORD PTR _this$[ebp]
+	add	ecx, 116				; 00000074H
+	call	?GetAt@CArrIntArr@@QAEPAVCIntArrRec@@H@Z ; CArrIntArr::GetAt
+	mov	DWORD PTR _ref$[ebp], eax
+
+; 401  : 	CIntArr *tmp = (CIntArr *)parr->all.GetAt(offs);
+
+	mov	ecx, DWORD PTR _offs$[ebp]
+	push	ecx
+	mov	ecx, DWORD PTR _parr$[ebp]
+	add	ecx, 80					; 00000050H
+	call	?GetAt@CArrIntArr@@QAEPAVCIntArrRec@@H@Z ; CArrIntArr::GetAt
+	mov	DWORD PTR _tmp$[ebp], eax
+
+; 402  : 
+; 403  : 	// Volume of compare (dead end)
+; 404  : 	//CIntArr *vtmp = (CIntArr *)parr->vall.GetAt(offs);
+; 405  : 	
+; 406  : 	int tlen = tmp->GetSize(), rlen = ref->GetSize();
+
+	mov	ecx, DWORD PTR _tmp$[ebp]
+	call	?GetSize@CIntArr@@QBEHXZ		; CIntArr::GetSize
+	mov	DWORD PTR _tlen$[ebp], eax
+	mov	ecx, DWORD PTR _ref$[ebp]
+	call	?GetSize@CIntArr@@QBEHXZ		; CIntArr::GetSize
+	mov	DWORD PTR _rlen$[ebp], eax
+
+; 407  : 	
+; 408  : 	// Safety measures for index 0 access or overmach by low count
+; 409  : 	if(tlen < 2)
+
+	cmp	DWORD PTR _tlen$[ebp], 2
+	jge	SHORT $L78325
+
+; 411  : 		//AP2N("CFrag::xHitFrags zero tlen\r\n");
+; 412  : 		return ret;
+
+	mov	eax, DWORD PTR _ret$[ebp]
+	jmp	$L78317
+$L78325:
+
+; 414  : 	if(rlen < 2)
+
+	cmp	DWORD PTR _rlen$[ebp], 2
+	jge	SHORT $L78326
+
+; 416  : 		//AP2N("CFrag::xHitFrags zero rlen\r\n");
+; 417  : 		return ret;
+
+	mov	eax, DWORD PTR _ret$[ebp]
+	jmp	$L78317
+$L78326:
+
+; 419  : 
+; 420  : 	//////////////////////////////////////////////////////////////////////
+; 421  : 	// Estabilish compare parameters. Determined experimentally.
+; 422  : 	
+; 423  : 	int cnt = 1000, wobble = 2,  divi = 10;
+
+	mov	DWORD PTR _cnt$[ebp], 1000		; 000003e8H
+	mov	DWORD PTR _wobble$[ebp], 2
+	mov	DWORD PTR _divi$[ebp], 10		; 0000000aH
+
+; 424  : 	int decrem = cnt / (rlen * 3), subit = cnt / 3, cnt2 = 0;
+
+	mov	ecx, DWORD PTR _rlen$[ebp]
+	imul	ecx, 3
+	mov	eax, DWORD PTR _cnt$[ebp]
+	cdq
+	idiv	ecx
+	mov	DWORD PTR _decrem$[ebp], eax
+	mov	eax, DWORD PTR _cnt$[ebp]
+	cdq
+	mov	ecx, 3
+	idiv	ecx
+	mov	DWORD PTR _subit$[ebp], eax
+	mov	DWORD PTR _cnt2$[ebp], 0
+
+; 425  : 
+; 426  : 	//////////////////////////////////////////////////////////////////////
+; 427  : 	// Compare with vertical wobble
+; 428  : 
+; 429  : 	for(int rloop = 0; rloop < rlen; rloop++)
+
+	mov	DWORD PTR _rloop$[ebp], 0
+	jmp	SHORT $L78334
+$L78335:
+	mov	edx, DWORD PTR _rloop$[ebp]
+	add	edx, 1
+	mov	DWORD PTR _rloop$[ebp], edx
+$L78334:
+	mov	eax, DWORD PTR _rloop$[ebp]
+	cmp	eax, DWORD PTR _rlen$[ebp]
+	jge	$L78336
+
+; 431  : 		int rval = ref->GetAt(rloop); 
+
+	mov	ecx, DWORD PTR _rloop$[ebp]
+	push	ecx
+	mov	ecx, DWORD PTR _ref$[ebp]
+	call	?GetAt@CIntArr@@QBEHH@Z			; CIntArr::GetAt
+	mov	DWORD PTR _rval$78337[ebp], eax
+
+; 432  : 
+; 433  : 		if(rval == 0)						// Empty 
+
+	cmp	DWORD PTR _rval$78337[ebp], 0
+	jne	SHORT $L78338
+
+; 434  : 			continue;
+
+	jmp	SHORT $L78335
+$L78338:
+
+; 435  : 
+; 436  : 		int match = false, lim = rval / divi;
+
+	mov	DWORD PTR _match$78339[ebp], 0
+	mov	eax, DWORD PTR _rval$78337[ebp]
+	cdq
+	idiv	DWORD PTR _divi$[ebp]
+	mov	DWORD PTR _lim$78340[ebp], eax
+
+; 437  : 
+; 438  : 		// Fetch offsets into vertical wobble, contain them into arr
+; 439  : 		int ss = rloop - wobble; ss = MAX(0, ss);
+
+	mov	edx, DWORD PTR _rloop$[ebp]
+	sub	edx, DWORD PTR _wobble$[ebp]
+	mov	DWORD PTR _ss$78341[ebp], edx
+	xor	eax, eax
+	cmp	DWORD PTR _ss$78341[ebp], 0
+	setl	al
+	dec	eax
+	and	eax, DWORD PTR _ss$78341[ebp]
+	mov	DWORD PTR _ss$78341[ebp], eax
+
+; 440  : 		int ee = rloop + wobble + 1; ee = MIN(tlen, ee);
+
+	mov	ecx, DWORD PTR _wobble$[ebp]
+	mov	edx, DWORD PTR _rloop$[ebp]
+	lea	eax, DWORD PTR [edx+ecx+1]
+	mov	DWORD PTR _ee$78342[ebp], eax
+	mov	ecx, DWORD PTR _tlen$[ebp]
+	cmp	ecx, DWORD PTR _ee$78342[ebp]
+	jge	SHORT $L78637
+	mov	edx, DWORD PTR _tlen$[ebp]
+	mov	DWORD PTR -84+[ebp], edx
+	jmp	SHORT $L78638
+$L78637:
+	mov	eax, DWORD PTR _ee$78342[ebp]
+	mov	DWORD PTR -84+[ebp], eax
+$L78638:
+	mov	ecx, DWORD PTR -84+[ebp]
+	mov	DWORD PTR _ee$78342[ebp], ecx
+
+; 441  : 
+; 442  : 		// Actual search
+; 443  : 		for(int tloop = ss; tloop < ee; tloop++)
+
+	mov	edx, DWORD PTR _ss$78341[ebp]
+	mov	DWORD PTR _tloop$78343[ebp], edx
+	jmp	SHORT $L78344
+$L78345:
+	mov	eax, DWORD PTR _tloop$78343[ebp]
+	add	eax, 1
+	mov	DWORD PTR _tloop$78343[ebp], eax
+$L78344:
+	mov	ecx, DWORD PTR _tloop$78343[ebp]
+	cmp	ecx, DWORD PTR _ee$78342[ebp]
+	jge	SHORT $L78346
+
+; 445  : 			int tval = tmp->GetAt(tloop);
+
+	mov	edx, DWORD PTR _tloop$78343[ebp]
+	push	edx
+	mov	ecx, DWORD PTR _tmp$[ebp]
+	call	?GetAt@CIntArr@@QBEHH@Z			; CIntArr::GetAt
+	mov	DWORD PTR _tval$78347[ebp], eax
+
+; 446  : 		
+; 447  : 			// Compare freq indexes
+; 448  : 			if(ABS(tval - rval) <= lim)			
+
+	mov	eax, DWORD PTR _tval$78347[ebp]
+	sub	eax, DWORD PTR _rval$78337[ebp]
+	test	eax, eax
+	jge	SHORT $L78639
+	mov	ecx, DWORD PTR _tval$78347[ebp]
+	sub	ecx, DWORD PTR _rval$78337[ebp]
+	neg	ecx
+	mov	DWORD PTR -88+[ebp], ecx
+	jmp	SHORT $L78640
+$L78639:
+	mov	edx, DWORD PTR _tval$78347[ebp]
+	sub	edx, DWORD PTR _rval$78337[ebp]
+	mov	DWORD PTR -88+[ebp], edx
+$L78640:
+	mov	eax, DWORD PTR -88+[ebp]
+	cmp	eax, DWORD PTR _lim$78340[ebp]
+	jg	SHORT $L78348
+
+; 450  : 				match = true;				
+
+	mov	DWORD PTR _match$78339[ebp], 1
+
+; 451  : 				break;			// Found, search no more
+
+	jmp	SHORT $L78346
+$L78348:
+
+; 453  : 			}
+
+	jmp	SHORT $L78345
+$L78346:
+
+; 454  : 
+; 455  : 		// Evaluate search
+; 456  : 		if(match)
+
+	cmp	DWORD PTR _match$78339[ebp], 0
+	je	SHORT $L78349
+
+; 458  : 			ret += cnt;		// Reward for match
+
+	mov	ecx, DWORD PTR _ret$[ebp]
+	add	ecx, DWORD PTR _cnt$[ebp]
+	mov	DWORD PTR _ret$[ebp], ecx
+
+; 460  : 		else
+
+	jmp	SHORT $L78350
+$L78349:
+
+; 462  : 			ret -= subit;	// Penalty for mismatch
+
+	mov	edx, DWORD PTR _ret$[ebp]
+	sub	edx, DWORD PTR _subit$[ebp]
+	mov	DWORD PTR _ret$[ebp], edx
+$L78350:
+
+; 464  : 
+; 465  : 		// Diminish count as we head towards the end
+; 466  : 		cnt -= decrem; 
+
+	mov	eax, DWORD PTR _cnt$[ebp]
+	sub	eax, DWORD PTR _decrem$[ebp]
+	mov	DWORD PTR _cnt$[ebp], eax
+
+; 467  : 		
+; 468  : 		// Count actual data (filter out zeros)
+; 469  : 		cnt2++;
+
+	mov	ecx, DWORD PTR _cnt2$[ebp]
+	add	ecx, 1
+	mov	DWORD PTR _cnt2$[ebp], ecx
+
+; 470  : 		}
+
+	jmp	$L78335
+$L78336:
+
+; 471  : 
+; 472  : 	// Kill negatives, so squaring it will not create false match
+; 473  : 	ret = MAX(ret, 0); 	
+
+	xor	edx, edx
+	cmp	DWORD PTR _ret$[ebp], 0
+	setle	dl
+	dec	edx
+	and	edx, DWORD PTR _ret$[ebp]
+	mov	DWORD PTR _ret$[ebp], edx
+
+; 474  : 	
+; 475  : 	// Adjust the output to count neutral
+; 476  : 	if(cnt2)
+
+	cmp	DWORD PTR _cnt2$[ebp], 0
+	je	SHORT $L78351
+
+; 477  : 		ret /= cnt2;
+
+	mov	eax, DWORD PTR _ret$[ebp]
+	cdq
+	idiv	DWORD PTR _cnt2$[ebp]
+	mov	DWORD PTR _ret$[ebp], eax
+$L78351:
+
+; 478  : 		
+; 479  : 	//if(verbose)
+; 480  : 	//	AP2N("    xHitFrags tlen=%d rlen=%d ret=%d\r\n", tlen, rlen, ret);
+; 481  : 
+; 482  : 	return ret; 
+
+	mov	eax, DWORD PTR _ret$[ebp]
+$L78317:
+
+; 483  : }
+
+	pop	edi
+	pop	esi
+	pop	ebx
+	add	esp, 152				; 00000098H
+	cmp	ebp, esp
+	call	__chkesp
+	mov	esp, ebp
+	pop	ebp
+	ret	16					; 00000010H
+?xHitFrags@CFrag@@IAEHPAVCAnalRes@@HHH@Z ENDP		; CFrag::xHitFrags
+_TEXT	ENDS
+PUBLIC	??_C@_0CB@EKNB@c?3?2develop3?2common?2work?2intarr?4h@ ; `string'
+;	COMDAT ??_C@_0CB@EKNB@c?3?2develop3?2common?2work?2intarr?4h@
+; File c:\develop3\common\work\intarr.h
+CONST	SEGMENT
+??_C@_0CB@EKNB@c?3?2develop3?2common?2work?2intarr?4h@ DB 'c:\develop3\co'
+	DB	'mmon\work\intarr.h', 00H			; `string'
+CONST	ENDS
+;	COMDAT ?GetSize@CIntArr@@QBEHXZ
+_TEXT	SEGMENT
+_this$ = -4
+?GetSize@CIntArr@@QBEHXZ PROC NEAR			; CIntArr::GetSize, COMDAT
+
+; 164  : 		{ ASSERT(magic == CIntArr_Magic); return m_nSize; }
+
+	push	ebp
+	mov	ebp, esp
+	sub	esp, 68					; 00000044H
+	push	ebx
+	push	esi
+	push	edi
+	push	ecx
+	lea	edi, DWORD PTR [ebp-68]
+	mov	ecx, 17					; 00000011H
+	mov	eax, -858993460				; ccccccccH
+	rep stosd
+	pop	ecx
+	mov	DWORD PTR _this$[ebp], ecx
+$L73419:
+	mov	eax, DWORD PTR _this$[ebp]
+	cmp	DWORD PTR [eax+4], 89273140		; 05523334H
+	je	SHORT $L73422
+	push	164					; 000000a4H
+	push	OFFSET FLAT:??_C@_0CB@EKNB@c?3?2develop3?2common?2work?2intarr?4h@ ; `string'
+	call	?AfxAssertFailedLine@@YGHPBDH@Z		; AfxAssertFailedLine
+	test	eax, eax
+	je	SHORT $L73422
+	int	3
+$L73422:
+	xor	ecx, ecx
+	test	ecx, ecx
+	jne	SHORT $L73419
+	mov	edx, DWORD PTR _this$[ebp]
+	mov	eax, DWORD PTR [edx+12]
+	pop	edi
+	pop	esi
+	pop	ebx
+	add	esp, 68					; 00000044H
+	cmp	ebp, esp
+	call	__chkesp
+	mov	esp, ebp
+	pop	ebp
+	ret	0
+?GetSize@CIntArr@@QBEHXZ ENDP				; CIntArr::GetSize
+_TEXT	ENDS
+;	COMDAT ?GetAt@CIntArr@@QBEHH@Z
+_TEXT	SEGMENT
+_nIndex$ = 8
+_this$ = -4
+?GetAt@CIntArr@@QBEHH@Z PROC NEAR			; CIntArr::GetAt, COMDAT
+
+; 189  : 		{	
+
+	push	ebp
+	mov	ebp, esp
+	sub	esp, 68					; 00000044H
+	push	ebx
+	push	esi
+	push	edi
+	push	ecx
+	lea	edi, DWORD PTR [ebp-68]
+	mov	ecx, 17					; 00000011H
+	mov	eax, -858993460				; ccccccccH
+	rep stosd
+	pop	ecx
+	mov	DWORD PTR _this$[ebp], ecx
+$L73430:
+
+; 190  : 			ASSERT(magic == CIntArr_Magic);
+
+	mov	eax, DWORD PTR _this$[ebp]
+	cmp	DWORD PTR [eax+4], 89273140		; 05523334H
+	je	SHORT $L73433
+	push	190					; 000000beH
+	push	OFFSET FLAT:??_C@_0CB@EKNB@c?3?2develop3?2common?2work?2intarr?4h@ ; `string'
+	call	?AfxAssertFailedLine@@YGHPBDH@Z		; AfxAssertFailedLine
+	test	eax, eax
+	je	SHORT $L73433
+	int	3
+$L73433:
+	xor	ecx, ecx
+	test	ecx, ecx
+	jne	SHORT $L73430
+$L73432:
+
+; 191  : 			ASSERT(nIndex >= 0 && nIndex < m_nSize);
+
+	cmp	DWORD PTR _nIndex$[ebp], 0
+	jl	SHORT $L73438
+	mov	edx, DWORD PTR _this$[ebp]
+	mov	eax, DWORD PTR _nIndex$[ebp]
+	cmp	eax, DWORD PTR [edx+12]
+	jl	SHORT $L73437
+$L73438:
+	push	191					; 000000bfH
+	push	OFFSET FLAT:??_C@_0CB@EKNB@c?3?2develop3?2common?2work?2intarr?4h@ ; `string'
+	call	?AfxAssertFailedLine@@YGHPBDH@Z		; AfxAssertFailedLine
+	test	eax, eax
+	je	SHORT $L73437
+	int	3
+$L73437:
+	xor	ecx, ecx
+	test	ecx, ecx
+	jne	SHORT $L73432
+
+; 192  :  			return m_pData[nIndex]; }
+
+	mov	edx, DWORD PTR _this$[ebp]
+	mov	eax, DWORD PTR [edx+8]
+	mov	ecx, DWORD PTR _nIndex$[ebp]
+	mov	eax, DWORD PTR [eax+ecx*4]
+	pop	edi
+	pop	esi
+	pop	ebx
+	add	esp, 68					; 00000044H
+	cmp	ebp, esp
+	call	__chkesp
+	mov	esp, ebp
+	pop	ebp
+	ret	4
+?GetAt@CIntArr@@QBEHH@Z ENDP				; CIntArr::GetAt
+_TEXT	ENDS
+END

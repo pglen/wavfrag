@@ -1,0 +1,173 @@
+List of diphones as theorized by wavefrag
+
+Phoneme Pair	Example		Translation
+
+w+ah			one			w+ah ah ah+n
+ah+n
+
+_a_ b c d _e_ f g h _i_ j k l m n _o_  p q r s +sh+ t _u_ v w x y z
+
+#A
+				bay
+				c say
+				day
+				fay
+				gay
+				hay
+				jay
+				kay
+				lay
+				may
+				nay
+				pay
+				quay
+				ray
+				say
+				tame
+				vane
+				way
+				xay
+				yeah
+				za
+
+#E
+				bee
+				c sea
+				dee
+				fee
+				gees
+				heap
+				jeep
+				keep
+				leap
+				meet
+				neat
+				pete
+				qee
+				reef
+				seep
+				teeth
+				veto
+				weap
+				yield
+				zig (zag)
+
+#I
+				buy
+				c sigh
+				die
+				fight
+				giant
+				hidrant
+				jive
+				kite
+				lite
+				might
+				night
+				pilot
+				quite
+				right
+				sight
+				tight
+				vital
+				white
+				xi
+				yite
+				zite
+
+#O
+				boat
+				coal
+				doze
+				fog
+				goes
+				hose
+				job
+				koal
+				lola
+				motor
+				note
+				poridge
+				qoute
+				romance
+				soul
+				tort
+				volt
+				wozniak
+				xorro
+				yoghurt
+				zodiac
+
+#U
+				boot
+				cue
+				due
+				fuel
+				gulash
+				hu
+				jujitsu
+				kunta
+				lula
+				mutate
+				nuevo
+				punta
+				qurt
+				ruler
+				sutable
+				tutenkamon
+				vu
+				whush
+				xu
+				yunta
+				zulu
+
+
+# This section lists all the vowel originated
+
+
+AA			ARGUE       AA R G Y UW
+AE			ABSOLUTE    AE B S AX L UW T
+AH			HUT			HH AH T
+AO			ALMOST      AO L M OW S T
+AW			COW			K AW
+AY			HIDE		HH AY D
+AX			ABANDON     AX B AE N D IH N
+AXR			ALTAR     	AO L T AXR
+B			BABY        B EY B IY
+CH			CHEESE		CH IY Z
+D			DISC        D IH S K
+DH			WEATHER     W EH DH AXR
+EH			EXAM       	EH G Z AE M
+ER			HURT		HH ER T
+EY			ATE			EY T
+EL      	ELEMENT     EH L AX M IH N T
+ER      	ANCHOR      AE NG K ER
+F			FEE			F IY
+G			GREEN		G R IY N
+HH			HAIR        HH EY R
+IH			HILL        HH IH L
+IY			EVIL      	IY V AX L
+JH			BRIDGE     	B R IH JH
+K			KEY			K IY
+L			LEE			L IY
+M			ME			M IY
+N			KNEE		N IY
+NG			PING		P IH NG
+OW			OAT			OW T
+OY			TOY			T OY
+P			PEE			P IY
+R			READ		R IY D
+S			SEA			S IY
+SH			SHE			SH IY
+T			TEA			T IY
+TH			THETA		TH EY T AH
+UH			HOOD		HH UH D
+UW			UNDO       	AX N D UW
+V			VEE			V IY
+W			WEB        	W EH B
+Y			YIELD		Y IY L D
+Z			ZEE			Z IY
+ZH			SEIZURE		S IY ZH ER
+
+
+

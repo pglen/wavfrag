@@ -1,0 +1,452 @@
+\hypertarget{wflib_8h}{\section{wflib.\-h File Reference}
+\label{wflib_8h}\index{wflib.\-h@{wflib.\-h}}
+}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{wflib_8h_a04f24f8cb8df37b828ec454107aeb686}{W\-F\-L\-\_\-\-D\-L\-L}~\-\_\-\-\_\-declspec(dllexport)
+\begin{DoxyCompactList}\small\item\em Shorthand for export define. \end{DoxyCompactList}\item 
+\#define \hyperlink{wflib_8h_a50a88b13633a8142e9172fb5124d729a}{C\-C\-H\-A\-R}~const char
+\begin{DoxyCompactList}\small\item\em Shorthand for constant character. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef void($\ast$ \hyperlink{group__aaa_ga7e349c93ace11348420a92541037633f}{P\-F\-U\-N\-C\-S\-I} )(\hyperlink{wflib_8h_a50a88b13633a8142e9172fb5124d729a}{C\-C\-H\-A\-R} $\ast$str, int len)
+\item 
+typedef void($\ast$ \hyperlink{group__aaa_gabd2ffb59694ebdbd52d3b3e6d542aa6a}{P\-F\-U\-N\-C\-V} )(void $\ast$ptr)
+\item 
+typedef void($\ast$ \hyperlink{group__aaa_ga795a6adf3616634e5b08bd6fee1712b1}{P\-F\-U\-N\-C\-P\-I\-I} )(int $\ast$ptr, int len)
+\item 
+typedef void($\ast$ \hyperlink{group__aaa_ga251b4a18d7e619691556a3bf65c3ba38}{P\-F\-U\-N\-C\-P\-I\-I\-I} )(int $\ast$ptr, int len, int idx)
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{wflib_8h_a04f24f8cb8df37b828ec454107aeb686}{W\-F\-L\-\_\-\-D\-L\-L} int \hyperlink{group__bbb_gaf409a004b41e173a02c524f6b51b7b5f}{W\-F\-L\-\_\-\-Version} ()
+\begin{DoxyCompactList}\small\item\em Return the running version of the Lib. \end{DoxyCompactList}\item 
+\hyperlink{wflib_8h_a04f24f8cb8df37b828ec454107aeb686}{W\-F\-L\-\_\-\-D\-L\-L} int \hyperlink{group__bbb_ga5a916aa06fb56ecdf6adbf6a07f51280}{W\-F\-L\-\_\-\-Get\-Lic\-Status} (int flag)
+\begin{DoxyCompactList}\small\item\em Return number of days used. \end{DoxyCompactList}\item 
+\hyperlink{wflib_8h_a04f24f8cb8df37b828ec454107aeb686}{W\-F\-L\-\_\-\-D\-L\-L} void \hyperlink{group__bbb_ga1d79ef5600c97a0b86f51cb695f9f509}{W\-F\-L\-\_\-\-Abort} ()
+\begin{DoxyCompactList}\small\item\em Abort current operation (noop) \end{DoxyCompactList}\item 
+\hyperlink{wflib_8h_a04f24f8cb8df37b828ec454107aeb686}{W\-F\-L\-\_\-\-D\-L\-L} void \hyperlink{group__ccc_ga7e6b81098fd88f9f3e9679db155833cd}{W\-F\-L\-\_\-\-Set\-Wav\-Dir} (\hyperlink{wflib_8h_a50a88b13633a8142e9172fb5124d729a}{C\-C\-H\-A\-R} $\ast$dir)
+\begin{DoxyCompactList}\small\item\em Waves go here. \end{DoxyCompactList}\item 
+\hyperlink{wflib_8h_a04f24f8cb8df37b828ec454107aeb686}{W\-F\-L\-\_\-\-D\-L\-L} void \hyperlink{group__ccc_ga5b605148cb65b914c4a570f4a3e172e1}{W\-F\-L\-\_\-\-Get\-Wav\-Dir} (char $\ast$dir, int len)
+\begin{DoxyCompactList}\small\item\em Query wavdir. \end{DoxyCompactList}\item 
+\hyperlink{wflib_8h_a04f24f8cb8df37b828ec454107aeb686}{W\-F\-L\-\_\-\-D\-L\-L} void \hyperlink{group__ccc_ga5a83f22068683ab00b40ff331ba1a75f}{W\-F\-L\-\_\-\-Set\-Frag\-Dir} (\hyperlink{wflib_8h_a50a88b13633a8142e9172fb5124d729a}{C\-C\-H\-A\-R} $\ast$dir)
+\begin{DoxyCompactList}\small\item\em Frags go here. \end{DoxyCompactList}\item 
+\hyperlink{wflib_8h_a04f24f8cb8df37b828ec454107aeb686}{W\-F\-L\-\_\-\-D\-L\-L} void \hyperlink{group__ccc_gad4363f2c411203e50c8aa296a795855e}{W\-F\-L\-\_\-\-Get\-Frag\-Dir} (char $\ast$dir, int len)
+\begin{DoxyCompactList}\small\item\em Query fragdir. \end{DoxyCompactList}\item 
+\hyperlink{wflib_8h_a04f24f8cb8df37b828ec454107aeb686}{W\-F\-L\-\_\-\-D\-L\-L} void \hyperlink{group__ddd_ga7474d1e144d78b0eef5d486e60c8b439}{W\-F\-L\-\_\-\-Set\-Train\-Str} (\hyperlink{wflib_8h_a50a88b13633a8142e9172fb5124d729a}{C\-C\-H\-A\-R} $\ast$pname)
+\begin{DoxyCompactList}\small\item\em Set current str to train. \end{DoxyCompactList}\item 
+\hyperlink{wflib_8h_a04f24f8cb8df37b828ec454107aeb686}{W\-F\-L\-\_\-\-D\-L\-L} void \hyperlink{group__ddd_ga1ea068942b4780bab9e0f3a6b4ed74fe}{W\-F\-L\-\_\-\-Clear\-Training} (\hyperlink{wflib_8h_a50a88b13633a8142e9172fb5124d729a}{C\-C\-H\-A\-R} $\ast$pname)
+\begin{DoxyCompactList}\small\item\em Clear string. Pass N\-U\-L\-L for clearing all training. \end{DoxyCompactList}\item 
+\hyperlink{wflib_8h_a04f24f8cb8df37b828ec454107aeb686}{W\-F\-L\-\_\-\-D\-L\-L} void \hyperlink{group__ddd_ga216f3cfebb61b508abc8ee78d93ebd73}{W\-F\-L\-\_\-\-Clear\-Train\-Item} (\hyperlink{wflib_8h_a50a88b13633a8142e9172fb5124d729a}{C\-C\-H\-A\-R} $\ast$pname, \hyperlink{wflib_8h_a50a88b13633a8142e9172fb5124d729a}{C\-C\-H\-A\-R} $\ast$pitem)
+\begin{DoxyCompactList}\small\item\em Clear O\-N\-E traing item from pname. \end{DoxyCompactList}\item 
+\hyperlink{wflib_8h_a04f24f8cb8df37b828ec454107aeb686}{W\-F\-L\-\_\-\-D\-L\-L} int \hyperlink{group__ddd_ga8d939f96fbe278991755c888779299b0}{W\-F\-L\-\_\-\-Get\-Coll\-Name} (int idx, char $\ast$str, int maxlen)
+\begin{DoxyCompactList}\small\item\em Get name of entry by index. \end{DoxyCompactList}\item 
+\hyperlink{wflib_8h_a04f24f8cb8df37b828ec454107aeb686}{W\-F\-L\-\_\-\-D\-L\-L} int \hyperlink{group__ddd_gaab70092332a780691e1b947ac450e187}{W\-F\-L\-\_\-\-Get\-Coll\-Str} (int idx, int idx2, char $\ast$str, int maxlen)
+\begin{DoxyCompactList}\small\item\em List sub entries by two indexes. \end{DoxyCompactList}\item 
+\hyperlink{wflib_8h_a04f24f8cb8df37b828ec454107aeb686}{W\-F\-L\-\_\-\-D\-L\-L} void \hyperlink{group__ddd_ga300ace9163bae9b1310e6678ea392d4d}{W\-F\-L\-\_\-\-Load\-Str\-Coll} (\hyperlink{wflib_8h_a50a88b13633a8142e9172fb5124d729a}{C\-C\-H\-A\-R} $\ast$fname)
+\begin{DoxyCompactList}\small\item\em Load str coll from file. \end{DoxyCompactList}\item 
+\hyperlink{wflib_8h_a04f24f8cb8df37b828ec454107aeb686}{W\-F\-L\-\_\-\-D\-L\-L} void \hyperlink{group__ddd_gab2ec5674ad043c6e54e0279b0d2e181b}{W\-F\-L\-\_\-\-Save\-Str\-Coll} (\hyperlink{wflib_8h_a50a88b13633a8142e9172fb5124d729a}{C\-C\-H\-A\-R} $\ast$fname)
+\begin{DoxyCompactList}\small\item\em Save str coll to file. \end{DoxyCompactList}\item 
+\hyperlink{wflib_8h_a04f24f8cb8df37b828ec454107aeb686}{W\-F\-L\-\_\-\-D\-L\-L} int \hyperlink{group__eee_gaeade7c6a1621ed2180be0e00d8040678}{W\-F\-L\-\_\-\-Wave\-In\-Open} (int dev)
+\begin{DoxyCompactList}\small\item\em Dev=0 for default. \end{DoxyCompactList}\item 
+\hyperlink{wflib_8h_a04f24f8cb8df37b828ec454107aeb686}{W\-F\-L\-\_\-\-D\-L\-L} void \hyperlink{group__eee_ga9f568eae6cc662e6eea8798c12c2f859}{W\-F\-L\-\_\-\-Wave\-In\-Close} ()
+\begin{DoxyCompactList}\small\item\em Close device. \end{DoxyCompactList}\item 
+\hyperlink{wflib_8h_a04f24f8cb8df37b828ec454107aeb686}{W\-F\-L\-\_\-\-D\-L\-L} void \hyperlink{group__eee_gaf03a14a34efbfbd846f8a91cfb433521}{W\-F\-L\-\_\-\-Wave\-Start} ()
+\begin{DoxyCompactList}\small\item\em Start recording. \end{DoxyCompactList}\item 
+\hyperlink{wflib_8h_a04f24f8cb8df37b828ec454107aeb686}{W\-F\-L\-\_\-\-D\-L\-L} void \hyperlink{group__eee_ga569271a5d7751e7c1e203d8a43a14484}{W\-F\-L\-\_\-\-Wave\-Stop} ()
+\begin{DoxyCompactList}\small\item\em Stop recording. \end{DoxyCompactList}\item 
+\hyperlink{wflib_8h_a04f24f8cb8df37b828ec454107aeb686}{W\-F\-L\-\_\-\-D\-L\-L} int \hyperlink{group__eee_ga3226d844c6cd3219e3f175fa9273ff48}{W\-F\-L\-\_\-\-Wave\-Is\-Rec} ()
+\begin{DoxyCompactList}\small\item\em Is it recording? \end{DoxyCompactList}\item 
+\hyperlink{wflib_8h_a04f24f8cb8df37b828ec454107aeb686}{W\-F\-L\-\_\-\-D\-L\-L} void \hyperlink{group__eee_ga0cfb3df52a80c158d32a9a14e348c585}{W\-F\-L\-\_\-\-Wave\-Connect} (\hyperlink{group__aaa_ga7e349c93ace11348420a92541037633f}{P\-F\-U\-N\-C\-S\-I} ptrfunc)
+\item 
+\hyperlink{wflib_8h_a04f24f8cb8df37b828ec454107aeb686}{W\-F\-L\-\_\-\-D\-L\-L} void \hyperlink{wflib_8h_af3b62a7a99080faa1c73187d1f0841fc}{W\-F\-L\-\_\-\-Feed\-Sound} (const char $\ast$buff, int len)
+\item 
+\hyperlink{wflib_8h_a04f24f8cb8df37b828ec454107aeb686}{W\-F\-L\-\_\-\-D\-L\-L} void \hyperlink{wflib_8h_a65d6505e82a63a8c7dfba32c1339ff78}{W\-F\-L\-\_\-\-Emit} ()
+\item 
+\hyperlink{wflib_8h_a04f24f8cb8df37b828ec454107aeb686}{W\-F\-L\-\_\-\-D\-L\-L} void \hyperlink{wflib_8h_a7adbc040aa71e82526c0b6566e888c78}{W\-F\-L\-\_\-\-Shut\-Down} ()
+\item 
+\hyperlink{wflib_8h_a04f24f8cb8df37b828ec454107aeb686}{W\-F\-L\-\_\-\-D\-L\-L} void \hyperlink{wflib_8h_a6a2b5860c42617407f001fec79613743}{W\-F\-L\-\_\-\-Scan\-Buffer} (const char $\ast$buff, int len, C\-Ptr\-Array $\ast$parr)
+\item 
+\hyperlink{wflib_8h_a04f24f8cb8df37b828ec454107aeb686}{W\-F\-L\-\_\-\-D\-L\-L} void \hyperlink{wflib_8h_afef2b6d524710fa50407f638905e869d}{W\-F\-L\-\_\-\-Get\-Last\-Wav} (char $\ast$$\ast$ptr, int $\ast$plen)
+\item 
+\hyperlink{wflib_8h_a04f24f8cb8df37b828ec454107aeb686}{W\-F\-L\-\_\-\-D\-L\-L} int \hyperlink{wflib_8h_a1d2141439629ee7aa69fb9c4ea482dbd}{W\-F\-L\-\_\-\-Add\-Frag\-Speaker} (const char $\ast$name)
+\item 
+\hyperlink{wflib_8h_a04f24f8cb8df37b828ec454107aeb686}{W\-F\-L\-\_\-\-D\-L\-L} int \hyperlink{wflib_8h_a3a0d974aa366dde9ace12ed72b950d91}{W\-F\-L\-\_\-\-Del\-Frag\-Speaker} (const char $\ast$name)
+\item 
+\hyperlink{wflib_8h_a04f24f8cb8df37b828ec454107aeb686}{W\-F\-L\-\_\-\-D\-L\-L} int \hyperlink{wflib_8h_aa74dd2b367f5560a5558c3b8d226ed1d}{W\-F\-L\-\_\-\-Get\-Frag\-Speaker} (int idx, char $\ast$str, int maxlen)
+\item 
+\hyperlink{wflib_8h_a04f24f8cb8df37b828ec454107aeb686}{W\-F\-L\-\_\-\-D\-L\-L} int \hyperlink{wflib_8h_a3d3bdc7df97a8ca7f6727442231cf0ed}{W\-F\-L\-\_\-\-Set\-Curr\-Speaker} (const char $\ast$str)
+\item 
+\hyperlink{wflib_8h_a04f24f8cb8df37b828ec454107aeb686}{W\-F\-L\-\_\-\-D\-L\-L} int \hyperlink{wflib_8h_a1b299eeee5e2717b86059e020c6b1fc9}{W\-F\-L\-\_\-\-Get\-Curr\-Speaker} (char $\ast$str, int maxlen)
+\item 
+\hyperlink{wflib_8h_a04f24f8cb8df37b828ec454107aeb686}{W\-F\-L\-\_\-\-D\-L\-L} int \hyperlink{wflib_8h_ac0e7149dcb6de692bf93bc53baa59333}{W\-F\-L\-\_\-\-Load\-All\-Frags} (\hyperlink{wflib_8h_a50a88b13633a8142e9172fb5124d729a}{C\-C\-H\-A\-R} $\ast$fname)
+\item 
+\hyperlink{wflib_8h_a04f24f8cb8df37b828ec454107aeb686}{W\-F\-L\-\_\-\-D\-L\-L} int \hyperlink{wflib_8h_a143a34437fe2a5eeea119738eb0cb581}{W\-F\-L\-\_\-\-Save\-All\-Frags} (\hyperlink{wflib_8h_a50a88b13633a8142e9172fb5124d729a}{C\-C\-H\-A\-R} $\ast$fname)
+\item 
+\hyperlink{wflib_8h_a04f24f8cb8df37b828ec454107aeb686}{W\-F\-L\-\_\-\-D\-L\-L} int \hyperlink{wflib_8h_ab6e0a21344b8d9bc80ab4d29a7029489}{W\-F\-L\-\_\-\-Compile\-Frags} ()
+\item 
+\hyperlink{wflib_8h_a04f24f8cb8df37b828ec454107aeb686}{W\-F\-L\-\_\-\-D\-L\-L} void \hyperlink{wflib_8h_a16f5811467e33d8c854d854393ce91d4}{W\-F\-L\-\_\-\-Stop\-Compile} ()
+\item 
+\hyperlink{wflib_8h_a04f24f8cb8df37b828ec454107aeb686}{W\-F\-L\-\_\-\-D\-L\-L} int \hyperlink{wflib_8h_a280d3cd3887f9d38bf706f8bac1a7b59}{W\-F\-L\-\_\-\-Parse\-All\-Frag\-Waves} ()
+\item 
+\hyperlink{wflib_8h_a04f24f8cb8df37b828ec454107aeb686}{W\-F\-L\-\_\-\-D\-L\-L} int \hyperlink{wflib_8h_ad3126d436e6b3ffa044bc3d6922a9ec0}{W\-F\-L\-\_\-\-Parse\-Frag\-Wav} (\hyperlink{wflib_8h_a50a88b13633a8142e9172fb5124d729a}{C\-C\-H\-A\-R} $\ast$pname)
+\item 
+\hyperlink{wflib_8h_a04f24f8cb8df37b828ec454107aeb686}{W\-F\-L\-\_\-\-D\-L\-L} int \hyperlink{wflib_8h_a096dfd63fe5483e00201480b37acaafd}{W\-F\-L\-\_\-\-Save\-Wav\-And\-Frag} (\hyperlink{wflib_8h_a50a88b13633a8142e9172fb5124d729a}{C\-C\-H\-A\-R} $\ast$name, char $\ast$pwavdat, int len)
+\item 
+\hyperlink{wflib_8h_a04f24f8cb8df37b828ec454107aeb686}{W\-F\-L\-\_\-\-D\-L\-L} int \hyperlink{wflib_8h_a422f0cce3a2afdf3bbc6adb201d47bd3}{W\-F\-L\-\_\-\-Load\-Frag} (\hyperlink{wflib_8h_a50a88b13633a8142e9172fb5124d729a}{C\-C\-H\-A\-R} $\ast$fname)
+\item 
+\hyperlink{wflib_8h_a04f24f8cb8df37b828ec454107aeb686}{W\-F\-L\-\_\-\-D\-L\-L} int \hyperlink{wflib_8h_a7eadc549bb2ed5830d3bfd169f7cc168}{W\-F\-L\-\_\-\-Del\-Frag\-Word} (\hyperlink{wflib_8h_a50a88b13633a8142e9172fb5124d729a}{C\-C\-H\-A\-R} $\ast$pword)
+\item 
+\hyperlink{wflib_8h_a04f24f8cb8df37b828ec454107aeb686}{W\-F\-L\-\_\-\-D\-L\-L} int \hyperlink{wflib_8h_aa1333fc887f0e8d40f00f05556d4dd5c}{W\-F\-L\-\_\-\-Del\-Frag\-Entry} (\hyperlink{wflib_8h_a50a88b13633a8142e9172fb5124d729a}{C\-C\-H\-A\-R} $\ast$pword, \hyperlink{wflib_8h_a50a88b13633a8142e9172fb5124d729a}{C\-C\-H\-A\-R} $\ast$pentry)
+\item 
+\hyperlink{wflib_8h_a04f24f8cb8df37b828ec454107aeb686}{W\-F\-L\-\_\-\-D\-L\-L} int \hyperlink{wflib_8h_a0709e3564c30a7276927bc009a9c38bc}{W\-F\-L\-\_\-\-Get\-Frag\-Name} (int idx, char $\ast$ptr, int strlim)
+\item 
+\hyperlink{wflib_8h_a04f24f8cb8df37b828ec454107aeb686}{W\-F\-L\-\_\-\-D\-L\-L} int \hyperlink{wflib_8h_a55956b7421fe80f2fe2594481a3ed451}{W\-F\-L\-\_\-\-Get\-Frag\-Size} (int idx)
+\item 
+\hyperlink{wflib_8h_a04f24f8cb8df37b828ec454107aeb686}{W\-F\-L\-\_\-\-D\-L\-L} int \hyperlink{wflib_8h_a15f37bf41a2848e4ec7c52d6b522fa72}{W\-F\-L\-\_\-\-Get\-Frag\-Context} (int idx)
+\item 
+\hyperlink{wflib_8h_a04f24f8cb8df37b828ec454107aeb686}{W\-F\-L\-\_\-\-D\-L\-L} int \hyperlink{wflib_8h_a01b0e6255fdbb8984bbcd4fa641af52e}{W\-F\-L\-\_\-\-Get\-Frag\-Str} (int idx, char $\ast$ptr, int strlim)
+\item 
+\hyperlink{wflib_8h_a04f24f8cb8df37b828ec454107aeb686}{W\-F\-L\-\_\-\-D\-L\-L} int \hyperlink{wflib_8h_a28d9a3eaf30d546d21f6d01e051f67ec}{W\-F\-L\-\_\-\-Get\-Frag\-Entry} (\hyperlink{wflib_8h_a50a88b13633a8142e9172fb5124d729a}{C\-C\-H\-A\-R} $\ast$pword, int idx, char $\ast$ptr, int strlim)
+\item 
+\hyperlink{wflib_8h_a04f24f8cb8df37b828ec454107aeb686}{W\-F\-L\-\_\-\-D\-L\-L} int \hyperlink{wflib_8h_ac785649a74c5b8817eaac0e1f07674ee}{W\-F\-L\-\_\-\-Set\-Strict} (int flag)
+\item 
+\hyperlink{wflib_8h_a04f24f8cb8df37b828ec454107aeb686}{W\-F\-L\-\_\-\-D\-L\-L} int \hyperlink{wflib_8h_a31caf8145bcc63e3f6f962bb31e60085}{W\-F\-L\-\_\-\-Set\-Noisetresh} (int tresh)
+\item 
+\hyperlink{wflib_8h_a04f24f8cb8df37b828ec454107aeb686}{W\-F\-L\-\_\-\-D\-L\-L} int \hyperlink{wflib_8h_a6adb030e4527ce4595541c148d1461df}{W\-F\-L\-\_\-\-Set\-No\-Prompt} (int flag)
+\item 
+\hyperlink{wflib_8h_a04f24f8cb8df37b828ec454107aeb686}{W\-F\-L\-\_\-\-D\-L\-L} int \hyperlink{wflib_8h_aee5c6626729b3e7843528796e8e214b4}{W\-F\-L\-\_\-\-Set\-Sil\-Speed} (int val)
+\item 
+\hyperlink{wflib_8h_a04f24f8cb8df37b828ec454107aeb686}{W\-F\-L\-\_\-\-D\-L\-L} int \hyperlink{wflib_8h_a61b01e7982fe7ad987f5c9c11ccec602}{W\-F\-L\-\_\-\-Set\-Str\-Callback} (\hyperlink{group__aaa_ga7e349c93ace11348420a92541037633f}{P\-F\-U\-N\-C\-S\-I} func)
+\item 
+\hyperlink{wflib_8h_a04f24f8cb8df37b828ec454107aeb686}{W\-F\-L\-\_\-\-D\-L\-L} int \hyperlink{wflib_8h_a8ea452b146405a04d3ec504996f957df}{W\-F\-L\-\_\-\-Set\-Frag\-Callback} (\hyperlink{group__aaa_ga7e349c93ace11348420a92541037633f}{P\-F\-U\-N\-C\-S\-I} func)
+\item 
+\hyperlink{wflib_8h_a04f24f8cb8df37b828ec454107aeb686}{W\-F\-L\-\_\-\-D\-L\-L} int \hyperlink{wflib_8h_a0f756b3842ced78d35df3a5503b8d2d6}{W\-F\-L\-\_\-\-Set\-Frag\-Callback2} (\hyperlink{group__aaa_ga7e349c93ace11348420a92541037633f}{P\-F\-U\-N\-C\-S\-I} func)
+\item 
+\hyperlink{wflib_8h_a04f24f8cb8df37b828ec454107aeb686}{W\-F\-L\-\_\-\-D\-L\-L} int \hyperlink{wflib_8h_a6fed1c0bf376f97b67496d548ad963e6}{W\-F\-L\-\_\-\-Set\-Wav\-Callback} (\hyperlink{group__aaa_ga7e349c93ace11348420a92541037633f}{P\-F\-U\-N\-C\-S\-I} func)
+\item 
+\hyperlink{wflib_8h_a04f24f8cb8df37b828ec454107aeb686}{W\-F\-L\-\_\-\-D\-L\-L} int \hyperlink{wflib_8h_a2d0b777c25ef2e7c1321848e861289ca}{W\-F\-L\-\_\-\-Set\-Wav\-Callback2} (\hyperlink{group__aaa_ga7e349c93ace11348420a92541037633f}{P\-F\-U\-N\-C\-S\-I} func)
+\item 
+\hyperlink{wflib_8h_a04f24f8cb8df37b828ec454107aeb686}{W\-F\-L\-\_\-\-D\-L\-L} int \hyperlink{wflib_8h_a85f58e0ee0de5a1430ca73134d1da1c1}{W\-F\-L\-\_\-\-Set\-Spect\-Callback} (\hyperlink{group__aaa_ga795a6adf3616634e5b08bd6fee1712b1}{P\-F\-U\-N\-C\-P\-I\-I} func)
+\item 
+\hyperlink{wflib_8h_a04f24f8cb8df37b828ec454107aeb686}{W\-F\-L\-\_\-\-D\-L\-L} int \hyperlink{wflib_8h_a81893ff5b6c3ec75ab6f0f1e5cc48a4c}{W\-F\-L\-\_\-\-Set\-Spect\-Callback2} (\hyperlink{group__aaa_ga795a6adf3616634e5b08bd6fee1712b1}{P\-F\-U\-N\-C\-P\-I\-I} func)
+\item 
+\hyperlink{wflib_8h_a04f24f8cb8df37b828ec454107aeb686}{W\-F\-L\-\_\-\-D\-L\-L} int \hyperlink{wflib_8h_aea4ef36a9e90ed54c48370f40d8e2cdd}{W\-F\-L\-\_\-\-Set\-Led\-Callback} (\hyperlink{group__aaa_ga7e349c93ace11348420a92541037633f}{P\-F\-U\-N\-C\-S\-I} func)
+\item 
+\hyperlink{wflib_8h_a04f24f8cb8df37b828ec454107aeb686}{W\-F\-L\-\_\-\-D\-L\-L} int \hyperlink{wflib_8h_ac0f4540d79ae125712fdaf13e2a2edd7}{W\-F\-L\-\_\-\-Set\-Perf\-Callback} (\hyperlink{group__aaa_ga7e349c93ace11348420a92541037633f}{P\-F\-U\-N\-C\-S\-I} func)
+\item 
+\hyperlink{wflib_8h_a04f24f8cb8df37b828ec454107aeb686}{W\-F\-L\-\_\-\-D\-L\-L} int \hyperlink{wflib_8h_a71a20b0259f5fe3924c4888c2d2813c3}{W\-F\-L\-\_\-\-Set\-Plot\-Callback} (\hyperlink{group__aaa_ga251b4a18d7e619691556a3bf65c3ba38}{P\-F\-U\-N\-C\-P\-I\-I\-I} func)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{wflib_8h_a50a88b13633a8142e9172fb5124d729a}{\index{wflib.\-h@{wflib.\-h}!C\-C\-H\-A\-R@{C\-C\-H\-A\-R}}
+\index{C\-C\-H\-A\-R@{C\-C\-H\-A\-R}!wflib.h@{wflib.\-h}}
+\subsubsection[{C\-C\-H\-A\-R}]{\setlength{\rightskip}{0pt plus 5cm}\#define C\-C\-H\-A\-R~const char}}\label{wflib_8h_a50a88b13633a8142e9172fb5124d729a}
+
+
+Shorthand for constant character. 
+
+\hypertarget{wflib_8h_a04f24f8cb8df37b828ec454107aeb686}{\index{wflib.\-h@{wflib.\-h}!W\-F\-L\-\_\-\-D\-L\-L@{W\-F\-L\-\_\-\-D\-L\-L}}
+\index{W\-F\-L\-\_\-\-D\-L\-L@{W\-F\-L\-\_\-\-D\-L\-L}!wflib.h@{wflib.\-h}}
+\subsubsection[{W\-F\-L\-\_\-\-D\-L\-L}]{\setlength{\rightskip}{0pt plus 5cm}\#define W\-F\-L\-\_\-\-D\-L\-L~\-\_\-\-\_\-declspec(dllexport)}}\label{wflib_8h_a04f24f8cb8df37b828ec454107aeb686}
+
+
+Shorthand for export define. 
+
+
+
+\subsection{Function Documentation}
+\hypertarget{wflib_8h_a1d2141439629ee7aa69fb9c4ea482dbd}{\index{wflib.\-h@{wflib.\-h}!W\-F\-L\-\_\-\-Add\-Frag\-Speaker@{W\-F\-L\-\_\-\-Add\-Frag\-Speaker}}
+\index{W\-F\-L\-\_\-\-Add\-Frag\-Speaker@{W\-F\-L\-\_\-\-Add\-Frag\-Speaker}!wflib.h@{wflib.\-h}}
+\subsubsection[{W\-F\-L\-\_\-\-Add\-Frag\-Speaker}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\-F\-L\-\_\-\-D\-L\-L} int W\-F\-L\-\_\-\-Add\-Frag\-Speaker (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name}
+\end{DoxyParamCaption}
+)}}\label{wflib_8h_a1d2141439629ee7aa69fb9c4ea482dbd}
+\hypertarget{wflib_8h_ab6e0a21344b8d9bc80ab4d29a7029489}{\index{wflib.\-h@{wflib.\-h}!W\-F\-L\-\_\-\-Compile\-Frags@{W\-F\-L\-\_\-\-Compile\-Frags}}
+\index{W\-F\-L\-\_\-\-Compile\-Frags@{W\-F\-L\-\_\-\-Compile\-Frags}!wflib.h@{wflib.\-h}}
+\subsubsection[{W\-F\-L\-\_\-\-Compile\-Frags}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\-F\-L\-\_\-\-D\-L\-L} int W\-F\-L\-\_\-\-Compile\-Frags (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{wflib_8h_ab6e0a21344b8d9bc80ab4d29a7029489}
+\hypertarget{wflib_8h_aa1333fc887f0e8d40f00f05556d4dd5c}{\index{wflib.\-h@{wflib.\-h}!W\-F\-L\-\_\-\-Del\-Frag\-Entry@{W\-F\-L\-\_\-\-Del\-Frag\-Entry}}
+\index{W\-F\-L\-\_\-\-Del\-Frag\-Entry@{W\-F\-L\-\_\-\-Del\-Frag\-Entry}!wflib.h@{wflib.\-h}}
+\subsubsection[{W\-F\-L\-\_\-\-Del\-Frag\-Entry}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\-F\-L\-\_\-\-D\-L\-L} int W\-F\-L\-\_\-\-Del\-Frag\-Entry (
+\begin{DoxyParamCaption}
+\item[{{\bf C\-C\-H\-A\-R} $\ast$}]{pword, }
+\item[{{\bf C\-C\-H\-A\-R} $\ast$}]{pentry}
+\end{DoxyParamCaption}
+)}}\label{wflib_8h_aa1333fc887f0e8d40f00f05556d4dd5c}
+\hypertarget{wflib_8h_a3a0d974aa366dde9ace12ed72b950d91}{\index{wflib.\-h@{wflib.\-h}!W\-F\-L\-\_\-\-Del\-Frag\-Speaker@{W\-F\-L\-\_\-\-Del\-Frag\-Speaker}}
+\index{W\-F\-L\-\_\-\-Del\-Frag\-Speaker@{W\-F\-L\-\_\-\-Del\-Frag\-Speaker}!wflib.h@{wflib.\-h}}
+\subsubsection[{W\-F\-L\-\_\-\-Del\-Frag\-Speaker}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\-F\-L\-\_\-\-D\-L\-L} int W\-F\-L\-\_\-\-Del\-Frag\-Speaker (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{name}
+\end{DoxyParamCaption}
+)}}\label{wflib_8h_a3a0d974aa366dde9ace12ed72b950d91}
+\hypertarget{wflib_8h_a7eadc549bb2ed5830d3bfd169f7cc168}{\index{wflib.\-h@{wflib.\-h}!W\-F\-L\-\_\-\-Del\-Frag\-Word@{W\-F\-L\-\_\-\-Del\-Frag\-Word}}
+\index{W\-F\-L\-\_\-\-Del\-Frag\-Word@{W\-F\-L\-\_\-\-Del\-Frag\-Word}!wflib.h@{wflib.\-h}}
+\subsubsection[{W\-F\-L\-\_\-\-Del\-Frag\-Word}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\-F\-L\-\_\-\-D\-L\-L} int W\-F\-L\-\_\-\-Del\-Frag\-Word (
+\begin{DoxyParamCaption}
+\item[{{\bf C\-C\-H\-A\-R} $\ast$}]{pword}
+\end{DoxyParamCaption}
+)}}\label{wflib_8h_a7eadc549bb2ed5830d3bfd169f7cc168}
+\hypertarget{wflib_8h_a65d6505e82a63a8c7dfba32c1339ff78}{\index{wflib.\-h@{wflib.\-h}!W\-F\-L\-\_\-\-Emit@{W\-F\-L\-\_\-\-Emit}}
+\index{W\-F\-L\-\_\-\-Emit@{W\-F\-L\-\_\-\-Emit}!wflib.h@{wflib.\-h}}
+\subsubsection[{W\-F\-L\-\_\-\-Emit}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\-F\-L\-\_\-\-D\-L\-L} void W\-F\-L\-\_\-\-Emit (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{wflib_8h_a65d6505e82a63a8c7dfba32c1339ff78}
+\hypertarget{wflib_8h_af3b62a7a99080faa1c73187d1f0841fc}{\index{wflib.\-h@{wflib.\-h}!W\-F\-L\-\_\-\-Feed\-Sound@{W\-F\-L\-\_\-\-Feed\-Sound}}
+\index{W\-F\-L\-\_\-\-Feed\-Sound@{W\-F\-L\-\_\-\-Feed\-Sound}!wflib.h@{wflib.\-h}}
+\subsubsection[{W\-F\-L\-\_\-\-Feed\-Sound}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\-F\-L\-\_\-\-D\-L\-L} void W\-F\-L\-\_\-\-Feed\-Sound (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{buff, }
+\item[{int}]{len}
+\end{DoxyParamCaption}
+)}}\label{wflib_8h_af3b62a7a99080faa1c73187d1f0841fc}
+\hypertarget{wflib_8h_a1b299eeee5e2717b86059e020c6b1fc9}{\index{wflib.\-h@{wflib.\-h}!W\-F\-L\-\_\-\-Get\-Curr\-Speaker@{W\-F\-L\-\_\-\-Get\-Curr\-Speaker}}
+\index{W\-F\-L\-\_\-\-Get\-Curr\-Speaker@{W\-F\-L\-\_\-\-Get\-Curr\-Speaker}!wflib.h@{wflib.\-h}}
+\subsubsection[{W\-F\-L\-\_\-\-Get\-Curr\-Speaker}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\-F\-L\-\_\-\-D\-L\-L} int W\-F\-L\-\_\-\-Get\-Curr\-Speaker (
+\begin{DoxyParamCaption}
+\item[{char $\ast$}]{str, }
+\item[{int}]{maxlen}
+\end{DoxyParamCaption}
+)}}\label{wflib_8h_a1b299eeee5e2717b86059e020c6b1fc9}
+\hypertarget{wflib_8h_a15f37bf41a2848e4ec7c52d6b522fa72}{\index{wflib.\-h@{wflib.\-h}!W\-F\-L\-\_\-\-Get\-Frag\-Context@{W\-F\-L\-\_\-\-Get\-Frag\-Context}}
+\index{W\-F\-L\-\_\-\-Get\-Frag\-Context@{W\-F\-L\-\_\-\-Get\-Frag\-Context}!wflib.h@{wflib.\-h}}
+\subsubsection[{W\-F\-L\-\_\-\-Get\-Frag\-Context}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\-F\-L\-\_\-\-D\-L\-L} int W\-F\-L\-\_\-\-Get\-Frag\-Context (
+\begin{DoxyParamCaption}
+\item[{int}]{idx}
+\end{DoxyParamCaption}
+)}}\label{wflib_8h_a15f37bf41a2848e4ec7c52d6b522fa72}
+\hypertarget{wflib_8h_a28d9a3eaf30d546d21f6d01e051f67ec}{\index{wflib.\-h@{wflib.\-h}!W\-F\-L\-\_\-\-Get\-Frag\-Entry@{W\-F\-L\-\_\-\-Get\-Frag\-Entry}}
+\index{W\-F\-L\-\_\-\-Get\-Frag\-Entry@{W\-F\-L\-\_\-\-Get\-Frag\-Entry}!wflib.h@{wflib.\-h}}
+\subsubsection[{W\-F\-L\-\_\-\-Get\-Frag\-Entry}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\-F\-L\-\_\-\-D\-L\-L} int W\-F\-L\-\_\-\-Get\-Frag\-Entry (
+\begin{DoxyParamCaption}
+\item[{{\bf C\-C\-H\-A\-R} $\ast$}]{pword, }
+\item[{int}]{idx, }
+\item[{char $\ast$}]{ptr, }
+\item[{int}]{strlim}
+\end{DoxyParamCaption}
+)}}\label{wflib_8h_a28d9a3eaf30d546d21f6d01e051f67ec}
+\hypertarget{wflib_8h_a0709e3564c30a7276927bc009a9c38bc}{\index{wflib.\-h@{wflib.\-h}!W\-F\-L\-\_\-\-Get\-Frag\-Name@{W\-F\-L\-\_\-\-Get\-Frag\-Name}}
+\index{W\-F\-L\-\_\-\-Get\-Frag\-Name@{W\-F\-L\-\_\-\-Get\-Frag\-Name}!wflib.h@{wflib.\-h}}
+\subsubsection[{W\-F\-L\-\_\-\-Get\-Frag\-Name}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\-F\-L\-\_\-\-D\-L\-L} int W\-F\-L\-\_\-\-Get\-Frag\-Name (
+\begin{DoxyParamCaption}
+\item[{int}]{idx, }
+\item[{char $\ast$}]{ptr, }
+\item[{int}]{strlim}
+\end{DoxyParamCaption}
+)}}\label{wflib_8h_a0709e3564c30a7276927bc009a9c38bc}
+\hypertarget{wflib_8h_a55956b7421fe80f2fe2594481a3ed451}{\index{wflib.\-h@{wflib.\-h}!W\-F\-L\-\_\-\-Get\-Frag\-Size@{W\-F\-L\-\_\-\-Get\-Frag\-Size}}
+\index{W\-F\-L\-\_\-\-Get\-Frag\-Size@{W\-F\-L\-\_\-\-Get\-Frag\-Size}!wflib.h@{wflib.\-h}}
+\subsubsection[{W\-F\-L\-\_\-\-Get\-Frag\-Size}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\-F\-L\-\_\-\-D\-L\-L} int W\-F\-L\-\_\-\-Get\-Frag\-Size (
+\begin{DoxyParamCaption}
+\item[{int}]{idx}
+\end{DoxyParamCaption}
+)}}\label{wflib_8h_a55956b7421fe80f2fe2594481a3ed451}
+\hypertarget{wflib_8h_aa74dd2b367f5560a5558c3b8d226ed1d}{\index{wflib.\-h@{wflib.\-h}!W\-F\-L\-\_\-\-Get\-Frag\-Speaker@{W\-F\-L\-\_\-\-Get\-Frag\-Speaker}}
+\index{W\-F\-L\-\_\-\-Get\-Frag\-Speaker@{W\-F\-L\-\_\-\-Get\-Frag\-Speaker}!wflib.h@{wflib.\-h}}
+\subsubsection[{W\-F\-L\-\_\-\-Get\-Frag\-Speaker}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\-F\-L\-\_\-\-D\-L\-L} int W\-F\-L\-\_\-\-Get\-Frag\-Speaker (
+\begin{DoxyParamCaption}
+\item[{int}]{idx, }
+\item[{char $\ast$}]{str, }
+\item[{int}]{maxlen}
+\end{DoxyParamCaption}
+)}}\label{wflib_8h_aa74dd2b367f5560a5558c3b8d226ed1d}
+\hypertarget{wflib_8h_a01b0e6255fdbb8984bbcd4fa641af52e}{\index{wflib.\-h@{wflib.\-h}!W\-F\-L\-\_\-\-Get\-Frag\-Str@{W\-F\-L\-\_\-\-Get\-Frag\-Str}}
+\index{W\-F\-L\-\_\-\-Get\-Frag\-Str@{W\-F\-L\-\_\-\-Get\-Frag\-Str}!wflib.h@{wflib.\-h}}
+\subsubsection[{W\-F\-L\-\_\-\-Get\-Frag\-Str}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\-F\-L\-\_\-\-D\-L\-L} int W\-F\-L\-\_\-\-Get\-Frag\-Str (
+\begin{DoxyParamCaption}
+\item[{int}]{idx, }
+\item[{char $\ast$}]{ptr, }
+\item[{int}]{strlim}
+\end{DoxyParamCaption}
+)}}\label{wflib_8h_a01b0e6255fdbb8984bbcd4fa641af52e}
+\hypertarget{wflib_8h_afef2b6d524710fa50407f638905e869d}{\index{wflib.\-h@{wflib.\-h}!W\-F\-L\-\_\-\-Get\-Last\-Wav@{W\-F\-L\-\_\-\-Get\-Last\-Wav}}
+\index{W\-F\-L\-\_\-\-Get\-Last\-Wav@{W\-F\-L\-\_\-\-Get\-Last\-Wav}!wflib.h@{wflib.\-h}}
+\subsubsection[{W\-F\-L\-\_\-\-Get\-Last\-Wav}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\-F\-L\-\_\-\-D\-L\-L} void W\-F\-L\-\_\-\-Get\-Last\-Wav (
+\begin{DoxyParamCaption}
+\item[{char $\ast$$\ast$}]{ptr, }
+\item[{int $\ast$}]{plen}
+\end{DoxyParamCaption}
+)}}\label{wflib_8h_afef2b6d524710fa50407f638905e869d}
+\hypertarget{wflib_8h_ac0e7149dcb6de692bf93bc53baa59333}{\index{wflib.\-h@{wflib.\-h}!W\-F\-L\-\_\-\-Load\-All\-Frags@{W\-F\-L\-\_\-\-Load\-All\-Frags}}
+\index{W\-F\-L\-\_\-\-Load\-All\-Frags@{W\-F\-L\-\_\-\-Load\-All\-Frags}!wflib.h@{wflib.\-h}}
+\subsubsection[{W\-F\-L\-\_\-\-Load\-All\-Frags}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\-F\-L\-\_\-\-D\-L\-L} int W\-F\-L\-\_\-\-Load\-All\-Frags (
+\begin{DoxyParamCaption}
+\item[{{\bf C\-C\-H\-A\-R} $\ast$}]{fname}
+\end{DoxyParamCaption}
+)}}\label{wflib_8h_ac0e7149dcb6de692bf93bc53baa59333}
+\hypertarget{wflib_8h_a422f0cce3a2afdf3bbc6adb201d47bd3}{\index{wflib.\-h@{wflib.\-h}!W\-F\-L\-\_\-\-Load\-Frag@{W\-F\-L\-\_\-\-Load\-Frag}}
+\index{W\-F\-L\-\_\-\-Load\-Frag@{W\-F\-L\-\_\-\-Load\-Frag}!wflib.h@{wflib.\-h}}
+\subsubsection[{W\-F\-L\-\_\-\-Load\-Frag}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\-F\-L\-\_\-\-D\-L\-L} int W\-F\-L\-\_\-\-Load\-Frag (
+\begin{DoxyParamCaption}
+\item[{{\bf C\-C\-H\-A\-R} $\ast$}]{fname}
+\end{DoxyParamCaption}
+)}}\label{wflib_8h_a422f0cce3a2afdf3bbc6adb201d47bd3}
+\hypertarget{wflib_8h_a280d3cd3887f9d38bf706f8bac1a7b59}{\index{wflib.\-h@{wflib.\-h}!W\-F\-L\-\_\-\-Parse\-All\-Frag\-Waves@{W\-F\-L\-\_\-\-Parse\-All\-Frag\-Waves}}
+\index{W\-F\-L\-\_\-\-Parse\-All\-Frag\-Waves@{W\-F\-L\-\_\-\-Parse\-All\-Frag\-Waves}!wflib.h@{wflib.\-h}}
+\subsubsection[{W\-F\-L\-\_\-\-Parse\-All\-Frag\-Waves}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\-F\-L\-\_\-\-D\-L\-L} int W\-F\-L\-\_\-\-Parse\-All\-Frag\-Waves (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{wflib_8h_a280d3cd3887f9d38bf706f8bac1a7b59}
+\hypertarget{wflib_8h_ad3126d436e6b3ffa044bc3d6922a9ec0}{\index{wflib.\-h@{wflib.\-h}!W\-F\-L\-\_\-\-Parse\-Frag\-Wav@{W\-F\-L\-\_\-\-Parse\-Frag\-Wav}}
+\index{W\-F\-L\-\_\-\-Parse\-Frag\-Wav@{W\-F\-L\-\_\-\-Parse\-Frag\-Wav}!wflib.h@{wflib.\-h}}
+\subsubsection[{W\-F\-L\-\_\-\-Parse\-Frag\-Wav}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\-F\-L\-\_\-\-D\-L\-L} int W\-F\-L\-\_\-\-Parse\-Frag\-Wav (
+\begin{DoxyParamCaption}
+\item[{{\bf C\-C\-H\-A\-R} $\ast$}]{pname}
+\end{DoxyParamCaption}
+)}}\label{wflib_8h_ad3126d436e6b3ffa044bc3d6922a9ec0}
+\hypertarget{wflib_8h_a143a34437fe2a5eeea119738eb0cb581}{\index{wflib.\-h@{wflib.\-h}!W\-F\-L\-\_\-\-Save\-All\-Frags@{W\-F\-L\-\_\-\-Save\-All\-Frags}}
+\index{W\-F\-L\-\_\-\-Save\-All\-Frags@{W\-F\-L\-\_\-\-Save\-All\-Frags}!wflib.h@{wflib.\-h}}
+\subsubsection[{W\-F\-L\-\_\-\-Save\-All\-Frags}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\-F\-L\-\_\-\-D\-L\-L} int W\-F\-L\-\_\-\-Save\-All\-Frags (
+\begin{DoxyParamCaption}
+\item[{{\bf C\-C\-H\-A\-R} $\ast$}]{fname}
+\end{DoxyParamCaption}
+)}}\label{wflib_8h_a143a34437fe2a5eeea119738eb0cb581}
+\hypertarget{wflib_8h_a096dfd63fe5483e00201480b37acaafd}{\index{wflib.\-h@{wflib.\-h}!W\-F\-L\-\_\-\-Save\-Wav\-And\-Frag@{W\-F\-L\-\_\-\-Save\-Wav\-And\-Frag}}
+\index{W\-F\-L\-\_\-\-Save\-Wav\-And\-Frag@{W\-F\-L\-\_\-\-Save\-Wav\-And\-Frag}!wflib.h@{wflib.\-h}}
+\subsubsection[{W\-F\-L\-\_\-\-Save\-Wav\-And\-Frag}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\-F\-L\-\_\-\-D\-L\-L} int W\-F\-L\-\_\-\-Save\-Wav\-And\-Frag (
+\begin{DoxyParamCaption}
+\item[{{\bf C\-C\-H\-A\-R} $\ast$}]{name, }
+\item[{char $\ast$}]{pwavdat, }
+\item[{int}]{len}
+\end{DoxyParamCaption}
+)}}\label{wflib_8h_a096dfd63fe5483e00201480b37acaafd}
+\hypertarget{wflib_8h_a6a2b5860c42617407f001fec79613743}{\index{wflib.\-h@{wflib.\-h}!W\-F\-L\-\_\-\-Scan\-Buffer@{W\-F\-L\-\_\-\-Scan\-Buffer}}
+\index{W\-F\-L\-\_\-\-Scan\-Buffer@{W\-F\-L\-\_\-\-Scan\-Buffer}!wflib.h@{wflib.\-h}}
+\subsubsection[{W\-F\-L\-\_\-\-Scan\-Buffer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\-F\-L\-\_\-\-D\-L\-L} void W\-F\-L\-\_\-\-Scan\-Buffer (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{buff, }
+\item[{int}]{len, }
+\item[{C\-Ptr\-Array $\ast$}]{parr}
+\end{DoxyParamCaption}
+)}}\label{wflib_8h_a6a2b5860c42617407f001fec79613743}
+\hypertarget{wflib_8h_a3d3bdc7df97a8ca7f6727442231cf0ed}{\index{wflib.\-h@{wflib.\-h}!W\-F\-L\-\_\-\-Set\-Curr\-Speaker@{W\-F\-L\-\_\-\-Set\-Curr\-Speaker}}
+\index{W\-F\-L\-\_\-\-Set\-Curr\-Speaker@{W\-F\-L\-\_\-\-Set\-Curr\-Speaker}!wflib.h@{wflib.\-h}}
+\subsubsection[{W\-F\-L\-\_\-\-Set\-Curr\-Speaker}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\-F\-L\-\_\-\-D\-L\-L} int W\-F\-L\-\_\-\-Set\-Curr\-Speaker (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{str}
+\end{DoxyParamCaption}
+)}}\label{wflib_8h_a3d3bdc7df97a8ca7f6727442231cf0ed}
+\hypertarget{wflib_8h_a8ea452b146405a04d3ec504996f957df}{\index{wflib.\-h@{wflib.\-h}!W\-F\-L\-\_\-\-Set\-Frag\-Callback@{W\-F\-L\-\_\-\-Set\-Frag\-Callback}}
+\index{W\-F\-L\-\_\-\-Set\-Frag\-Callback@{W\-F\-L\-\_\-\-Set\-Frag\-Callback}!wflib.h@{wflib.\-h}}
+\subsubsection[{W\-F\-L\-\_\-\-Set\-Frag\-Callback}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\-F\-L\-\_\-\-D\-L\-L} int W\-F\-L\-\_\-\-Set\-Frag\-Callback (
+\begin{DoxyParamCaption}
+\item[{{\bf P\-F\-U\-N\-C\-S\-I}}]{func}
+\end{DoxyParamCaption}
+)}}\label{wflib_8h_a8ea452b146405a04d3ec504996f957df}
+\hypertarget{wflib_8h_a0f756b3842ced78d35df3a5503b8d2d6}{\index{wflib.\-h@{wflib.\-h}!W\-F\-L\-\_\-\-Set\-Frag\-Callback2@{W\-F\-L\-\_\-\-Set\-Frag\-Callback2}}
+\index{W\-F\-L\-\_\-\-Set\-Frag\-Callback2@{W\-F\-L\-\_\-\-Set\-Frag\-Callback2}!wflib.h@{wflib.\-h}}
+\subsubsection[{W\-F\-L\-\_\-\-Set\-Frag\-Callback2}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\-F\-L\-\_\-\-D\-L\-L} int W\-F\-L\-\_\-\-Set\-Frag\-Callback2 (
+\begin{DoxyParamCaption}
+\item[{{\bf P\-F\-U\-N\-C\-S\-I}}]{func}
+\end{DoxyParamCaption}
+)}}\label{wflib_8h_a0f756b3842ced78d35df3a5503b8d2d6}
+\hypertarget{wflib_8h_aea4ef36a9e90ed54c48370f40d8e2cdd}{\index{wflib.\-h@{wflib.\-h}!W\-F\-L\-\_\-\-Set\-Led\-Callback@{W\-F\-L\-\_\-\-Set\-Led\-Callback}}
+\index{W\-F\-L\-\_\-\-Set\-Led\-Callback@{W\-F\-L\-\_\-\-Set\-Led\-Callback}!wflib.h@{wflib.\-h}}
+\subsubsection[{W\-F\-L\-\_\-\-Set\-Led\-Callback}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\-F\-L\-\_\-\-D\-L\-L} int W\-F\-L\-\_\-\-Set\-Led\-Callback (
+\begin{DoxyParamCaption}
+\item[{{\bf P\-F\-U\-N\-C\-S\-I}}]{func}
+\end{DoxyParamCaption}
+)}}\label{wflib_8h_aea4ef36a9e90ed54c48370f40d8e2cdd}
+\hypertarget{wflib_8h_a31caf8145bcc63e3f6f962bb31e60085}{\index{wflib.\-h@{wflib.\-h}!W\-F\-L\-\_\-\-Set\-Noisetresh@{W\-F\-L\-\_\-\-Set\-Noisetresh}}
+\index{W\-F\-L\-\_\-\-Set\-Noisetresh@{W\-F\-L\-\_\-\-Set\-Noisetresh}!wflib.h@{wflib.\-h}}
+\subsubsection[{W\-F\-L\-\_\-\-Set\-Noisetresh}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\-F\-L\-\_\-\-D\-L\-L} int W\-F\-L\-\_\-\-Set\-Noisetresh (
+\begin{DoxyParamCaption}
+\item[{int}]{tresh}
+\end{DoxyParamCaption}
+)}}\label{wflib_8h_a31caf8145bcc63e3f6f962bb31e60085}
+\hypertarget{wflib_8h_a6adb030e4527ce4595541c148d1461df}{\index{wflib.\-h@{wflib.\-h}!W\-F\-L\-\_\-\-Set\-No\-Prompt@{W\-F\-L\-\_\-\-Set\-No\-Prompt}}
+\index{W\-F\-L\-\_\-\-Set\-No\-Prompt@{W\-F\-L\-\_\-\-Set\-No\-Prompt}!wflib.h@{wflib.\-h}}
+\subsubsection[{W\-F\-L\-\_\-\-Set\-No\-Prompt}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\-F\-L\-\_\-\-D\-L\-L} int W\-F\-L\-\_\-\-Set\-No\-Prompt (
+\begin{DoxyParamCaption}
+\item[{int}]{flag}
+\end{DoxyParamCaption}
+)}}\label{wflib_8h_a6adb030e4527ce4595541c148d1461df}
+\hypertarget{wflib_8h_ac0f4540d79ae125712fdaf13e2a2edd7}{\index{wflib.\-h@{wflib.\-h}!W\-F\-L\-\_\-\-Set\-Perf\-Callback@{W\-F\-L\-\_\-\-Set\-Perf\-Callback}}
+\index{W\-F\-L\-\_\-\-Set\-Perf\-Callback@{W\-F\-L\-\_\-\-Set\-Perf\-Callback}!wflib.h@{wflib.\-h}}
+\subsubsection[{W\-F\-L\-\_\-\-Set\-Perf\-Callback}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\-F\-L\-\_\-\-D\-L\-L} int W\-F\-L\-\_\-\-Set\-Perf\-Callback (
+\begin{DoxyParamCaption}
+\item[{{\bf P\-F\-U\-N\-C\-S\-I}}]{func}
+\end{DoxyParamCaption}
+)}}\label{wflib_8h_ac0f4540d79ae125712fdaf13e2a2edd7}
+\hypertarget{wflib_8h_a71a20b0259f5fe3924c4888c2d2813c3}{\index{wflib.\-h@{wflib.\-h}!W\-F\-L\-\_\-\-Set\-Plot\-Callback@{W\-F\-L\-\_\-\-Set\-Plot\-Callback}}
+\index{W\-F\-L\-\_\-\-Set\-Plot\-Callback@{W\-F\-L\-\_\-\-Set\-Plot\-Callback}!wflib.h@{wflib.\-h}}
+\subsubsection[{W\-F\-L\-\_\-\-Set\-Plot\-Callback}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\-F\-L\-\_\-\-D\-L\-L} int W\-F\-L\-\_\-\-Set\-Plot\-Callback (
+\begin{DoxyParamCaption}
+\item[{{\bf P\-F\-U\-N\-C\-P\-I\-I\-I}}]{func}
+\end{DoxyParamCaption}
+)}}\label{wflib_8h_a71a20b0259f5fe3924c4888c2d2813c3}
+\hypertarget{wflib_8h_aee5c6626729b3e7843528796e8e214b4}{\index{wflib.\-h@{wflib.\-h}!W\-F\-L\-\_\-\-Set\-Sil\-Speed@{W\-F\-L\-\_\-\-Set\-Sil\-Speed}}
+\index{W\-F\-L\-\_\-\-Set\-Sil\-Speed@{W\-F\-L\-\_\-\-Set\-Sil\-Speed}!wflib.h@{wflib.\-h}}
+\subsubsection[{W\-F\-L\-\_\-\-Set\-Sil\-Speed}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\-F\-L\-\_\-\-D\-L\-L} int W\-F\-L\-\_\-\-Set\-Sil\-Speed (
+\begin{DoxyParamCaption}
+\item[{int}]{val}
+\end{DoxyParamCaption}
+)}}\label{wflib_8h_aee5c6626729b3e7843528796e8e214b4}
+\hypertarget{wflib_8h_a85f58e0ee0de5a1430ca73134d1da1c1}{\index{wflib.\-h@{wflib.\-h}!W\-F\-L\-\_\-\-Set\-Spect\-Callback@{W\-F\-L\-\_\-\-Set\-Spect\-Callback}}
+\index{W\-F\-L\-\_\-\-Set\-Spect\-Callback@{W\-F\-L\-\_\-\-Set\-Spect\-Callback}!wflib.h@{wflib.\-h}}
+\subsubsection[{W\-F\-L\-\_\-\-Set\-Spect\-Callback}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\-F\-L\-\_\-\-D\-L\-L} int W\-F\-L\-\_\-\-Set\-Spect\-Callback (
+\begin{DoxyParamCaption}
+\item[{{\bf P\-F\-U\-N\-C\-P\-I\-I}}]{func}
+\end{DoxyParamCaption}
+)}}\label{wflib_8h_a85f58e0ee0de5a1430ca73134d1da1c1}
+\hypertarget{wflib_8h_a81893ff5b6c3ec75ab6f0f1e5cc48a4c}{\index{wflib.\-h@{wflib.\-h}!W\-F\-L\-\_\-\-Set\-Spect\-Callback2@{W\-F\-L\-\_\-\-Set\-Spect\-Callback2}}
+\index{W\-F\-L\-\_\-\-Set\-Spect\-Callback2@{W\-F\-L\-\_\-\-Set\-Spect\-Callback2}!wflib.h@{wflib.\-h}}
+\subsubsection[{W\-F\-L\-\_\-\-Set\-Spect\-Callback2}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\-F\-L\-\_\-\-D\-L\-L} int W\-F\-L\-\_\-\-Set\-Spect\-Callback2 (
+\begin{DoxyParamCaption}
+\item[{{\bf P\-F\-U\-N\-C\-P\-I\-I}}]{func}
+\end{DoxyParamCaption}
+)}}\label{wflib_8h_a81893ff5b6c3ec75ab6f0f1e5cc48a4c}
+\hypertarget{wflib_8h_a61b01e7982fe7ad987f5c9c11ccec602}{\index{wflib.\-h@{wflib.\-h}!W\-F\-L\-\_\-\-Set\-Str\-Callback@{W\-F\-L\-\_\-\-Set\-Str\-Callback}}
+\index{W\-F\-L\-\_\-\-Set\-Str\-Callback@{W\-F\-L\-\_\-\-Set\-Str\-Callback}!wflib.h@{wflib.\-h}}
+\subsubsection[{W\-F\-L\-\_\-\-Set\-Str\-Callback}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\-F\-L\-\_\-\-D\-L\-L} int W\-F\-L\-\_\-\-Set\-Str\-Callback (
+\begin{DoxyParamCaption}
+\item[{{\bf P\-F\-U\-N\-C\-S\-I}}]{func}
+\end{DoxyParamCaption}
+)}}\label{wflib_8h_a61b01e7982fe7ad987f5c9c11ccec602}
+\hypertarget{wflib_8h_ac785649a74c5b8817eaac0e1f07674ee}{\index{wflib.\-h@{wflib.\-h}!W\-F\-L\-\_\-\-Set\-Strict@{W\-F\-L\-\_\-\-Set\-Strict}}
+\index{W\-F\-L\-\_\-\-Set\-Strict@{W\-F\-L\-\_\-\-Set\-Strict}!wflib.h@{wflib.\-h}}
+\subsubsection[{W\-F\-L\-\_\-\-Set\-Strict}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\-F\-L\-\_\-\-D\-L\-L} int W\-F\-L\-\_\-\-Set\-Strict (
+\begin{DoxyParamCaption}
+\item[{int}]{flag}
+\end{DoxyParamCaption}
+)}}\label{wflib_8h_ac785649a74c5b8817eaac0e1f07674ee}
+\hypertarget{wflib_8h_a6fed1c0bf376f97b67496d548ad963e6}{\index{wflib.\-h@{wflib.\-h}!W\-F\-L\-\_\-\-Set\-Wav\-Callback@{W\-F\-L\-\_\-\-Set\-Wav\-Callback}}
+\index{W\-F\-L\-\_\-\-Set\-Wav\-Callback@{W\-F\-L\-\_\-\-Set\-Wav\-Callback}!wflib.h@{wflib.\-h}}
+\subsubsection[{W\-F\-L\-\_\-\-Set\-Wav\-Callback}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\-F\-L\-\_\-\-D\-L\-L} int W\-F\-L\-\_\-\-Set\-Wav\-Callback (
+\begin{DoxyParamCaption}
+\item[{{\bf P\-F\-U\-N\-C\-S\-I}}]{func}
+\end{DoxyParamCaption}
+)}}\label{wflib_8h_a6fed1c0bf376f97b67496d548ad963e6}
+\hypertarget{wflib_8h_a2d0b777c25ef2e7c1321848e861289ca}{\index{wflib.\-h@{wflib.\-h}!W\-F\-L\-\_\-\-Set\-Wav\-Callback2@{W\-F\-L\-\_\-\-Set\-Wav\-Callback2}}
+\index{W\-F\-L\-\_\-\-Set\-Wav\-Callback2@{W\-F\-L\-\_\-\-Set\-Wav\-Callback2}!wflib.h@{wflib.\-h}}
+\subsubsection[{W\-F\-L\-\_\-\-Set\-Wav\-Callback2}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\-F\-L\-\_\-\-D\-L\-L} int W\-F\-L\-\_\-\-Set\-Wav\-Callback2 (
+\begin{DoxyParamCaption}
+\item[{{\bf P\-F\-U\-N\-C\-S\-I}}]{func}
+\end{DoxyParamCaption}
+)}}\label{wflib_8h_a2d0b777c25ef2e7c1321848e861289ca}
+\hypertarget{wflib_8h_a7adbc040aa71e82526c0b6566e888c78}{\index{wflib.\-h@{wflib.\-h}!W\-F\-L\-\_\-\-Shut\-Down@{W\-F\-L\-\_\-\-Shut\-Down}}
+\index{W\-F\-L\-\_\-\-Shut\-Down@{W\-F\-L\-\_\-\-Shut\-Down}!wflib.h@{wflib.\-h}}
+\subsubsection[{W\-F\-L\-\_\-\-Shut\-Down}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\-F\-L\-\_\-\-D\-L\-L} void W\-F\-L\-\_\-\-Shut\-Down (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{wflib_8h_a7adbc040aa71e82526c0b6566e888c78}
+\hypertarget{wflib_8h_a16f5811467e33d8c854d854393ce91d4}{\index{wflib.\-h@{wflib.\-h}!W\-F\-L\-\_\-\-Stop\-Compile@{W\-F\-L\-\_\-\-Stop\-Compile}}
+\index{W\-F\-L\-\_\-\-Stop\-Compile@{W\-F\-L\-\_\-\-Stop\-Compile}!wflib.h@{wflib.\-h}}
+\subsubsection[{W\-F\-L\-\_\-\-Stop\-Compile}]{\setlength{\rightskip}{0pt plus 5cm}{\bf W\-F\-L\-\_\-\-D\-L\-L} void W\-F\-L\-\_\-\-Stop\-Compile (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{wflib_8h_a16f5811467e33d8c854d854393ce91d4}

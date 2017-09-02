@@ -1,0 +1,807 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\wavfrag.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU1 MENU DISCARDABLE 
+BEGIN
+    POPUP "RClick"
+    BEGIN
+        MENUITEM "White",                       ID_RCLICK_WHITE
+        MENUITEM "Gray",                        ID_RCLICK_GRAY
+        MENUITEM "DarkGray",                    ID_RCLICK_DARKGRAY
+        MENUITEM "Black",                       ID_RCLICK_BLACK
+        MENUITEM SEPARATOR
+        MENUITEM "Windows Default",             ID_RCLICK_WINDOWSDEFAULT
+        MENUITEM "Custom",                      ID_RCLICK_CUSTOM
+        MENUITEM SEPARATOR
+        MENUITEM "Exit",                        ID_RCLICK_EXIT
+    END
+END
+
+IDR_TASKBAR_MENU MENU DISCARDABLE 
+BEGIN
+    POPUP "q"
+    BEGIN
+        MENUITEM "Start Listening",             ID_Q_STARTLISTENING
+        MENUITEM "Stop Listening",              ID_Q_STOPLISTENING
+        MENUITEM "Exit WavFrag",                ID_Q_EXITWAVFRAG
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\wavfrag.ico"
+IDI_ICON1               ICON    DISCARDABLE     "res\\icon1.ico"
+IDI_ICON2               ICON    DISCARDABLE     "res\\icon2.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  0, 0, 235, 55
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About wavfrag"
+FONT 8, "MS Sans Serif"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "wavfrag Version 1.0",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2010",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "OK",IDOK,178,7,50,14,WS_GROUP
+END
+
+IDD_WAVFRAG_DIALOG DIALOGEX 0, 0, 603, 399
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Wave Frag Voice Command Center"
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Static",IDC_WAV,9,6,285,132,SS_SUNKEN | WS_TABSTOP
+    LTEXT           "Static",IDC_PICK,124,139,353,41,SS_SUNKEN
+    PUSHBUTTON      "Pl&ay",IDC_BUTTON4,0,177,50,14,NOT WS_VISIBLE | 
+                    WS_DISABLED
+    PUSHBUTTON      "Scan",IDC_BUTTON3,66,162,50,14
+    CONTROL         "Use Strict Reco&gnition",IDC_CHECK3,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,162,385,87,10
+    CONTROL         "Ena&ble Actions*",IDC_CHECK2,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,83,385,66,10
+    PUSHBUTTON      "&Help",IDC_BUTTON17,435,381,50,14
+    PUSHBUTTON      "&Clear Plots",IDC_BUTTON7,12,162,50,14
+    CONTROL         "Tab1",IDC_TAB1,"SysTabControl32",WS_TABSTOP,183,187,322,
+                    173
+    LTEXT           "&Input:",IDC_IN,486,145,19,8
+    COMBOBOX        IDC_COMBO1,510,143,81,58,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Output:",IDC_OUT,483,163,24,8
+    COMBOBOX        IDC_COMBO2,510,161,81,55,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+    PUSHBUTTON      "&Record",IDC_BUTTON1,535,183,50,14
+    PUSHBUTTON      "&Stop",IDC_BUTTON2,535,201,50,14
+    LTEXT           "Tresh",IDC_LAB_TRESH,527,224,19,8
+    CONTROL         "Slider1",IDC_SLIDER1,"msctls_trackbar32",TBS_VERT | 
+                    TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,527,235,19,51
+    LTEXT           "Vol",IDC_VOL,553,224,11,8
+    CONTROL         "Slider1",IDC_SLIDER2,"msctls_trackbar32",TBS_VERT | 
+                    TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,551,239,19,115
+    LTEXT           "Static",IDC_LED,573,220,14,14,SS_SUNKEN
+    CONTROL         "Progress1",IDC_PROGRESS1,"msctls_progress32",
+                    PBS_VERTICAL | WS_BORDER,574,245,13,108
+    DEFPUSHBUTTON   "E&xit",IDOK,541,381,50,14
+    LTEXT           "log",IDC_LOG,349,318,21,38,SS_SUNKEN
+    LTEXT           "log2",IDC_LOG2,427,318,21,38,SS_SUNKEN
+    LTEXT           "log3",IDC_LOG3,479,318,21,38,SS_SUNKEN
+    LTEXT           "log4",IDC_LOG4,375,318,21,38,SS_SUNKEN
+    LTEXT           "vis",IDC_LOG5,453,318,21,38,SS_SUNKEN
+    PUSHBUTTON      "Cancel",IDCANCEL,553,101,50,14,NOT WS_VISIBLE | 
+                    WS_DISABLED
+    CONTROL         "Save History",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,336,385,56,10
+    CONTROL         "Listen on Start",IDC_CHECK4,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,262,385,61,10
+    CONTROL         "Slider1",IDC_SLIDER3,"msctls_trackbar32",TBS_VERT | 
+                    TBS_BOTH | TBS_NOTICKS | WS_TABSTOP,529,303,19,51
+    LTEXT           "Delay",IDC_DELAY,527,291,19,8
+    LTEXT           "Static",IDC_WAV2,307,6,285,132,SS_SUNKEN | WS_TABSTOP
+    COMBOBOX        IDC_COMBO7,9,364,583,97,CBS_DROPDOWN | CBS_AUTOHSCROLL | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "R&ecog",IDC_BUTTON23,66,145,50,14
+    LTEXT           "log6",IDC_LOG6,401,318,21,38,SS_SUNKEN
+    CONTROL         "Enable Ballons",IDC_CHECK8,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,7,385,63,10
+    PUSHBUTTON      "One Mon",IDC_BUTTON28,13,145,50,14
+    PUSHBUTTON      "Phonemes",IDC_BUTTON30,488,381,50,14
+    CONTROL         "Tab2",IDC_TAB2,"SysTabControl32",0x0,7,187,170,173
+END
+
+IDD_DIALOG1 DIALOG DISCARDABLE  0, 0, 186, 90
+STYLE DS_MODALFRAME | WS_POPUP
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,129,7,50,14,NOT WS_VISIBLE | WS_DISABLED
+    PUSHBUTTON      "Cancel",IDCANCEL,128,26,50,14,NOT WS_VISIBLE | 
+                    WS_DISABLED
+END
+
+IDD_DIALOG2 DIALOG DISCARDABLE  0, 0, 651, 434
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Plot Dialog"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,0,9,65,19,NOT WS_VISIBLE | WS_DISABLED
+    PUSHBUTTON      "Cancel",IDCANCEL,0,33,63,18,NOT WS_VISIBLE
+    LTEXT           "",IDC_PLOT4,11,220,629,65,SS_NOTIFY | SS_SUNKEN
+    LTEXT           "",IDC_PLOT3,11,149,629,65,SS_NOTIFY | SS_SUNKEN
+    LTEXT           "",IDC_PLOT5,11,291,629,65,SS_NOTIFY | SS_SUNKEN
+    LTEXT           "",IDC_PLOT1,11,7,629,65,SS_NOTIFY | SS_SUNKEN
+    LTEXT           "",IDC_PLOT2,11,78,629,65,SS_NOTIFY | SS_SUNKEN
+    LTEXT           "",IDC_PLOT6,11,362,629,65,SS_NOTIFY | SS_SUNKEN
+    LTEXT           "",IDC_PLOT7,0,375,629,25,SS_NOTIFY | SS_SUNKEN | NOT 
+                    WS_VISIBLE | WS_DISABLED
+END
+
+IDD_DIALOG_GETTEXT DIALOGEX 0, 0, 350, 44
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "Enter Text Below"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    EDITTEXT        ID_EDIT_GETTEXT,47,17,227,13,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,291,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,291,23,50,14
+    ICON            IDI_ICON2,IDC_ICON1,14,14,21,20
+END
+
+IDD_DIALOG_COMM DIALOG DISCARDABLE  0, 0, 529, 249
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Command Configuration"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "Static",IDC_STATIC,7,7,112,18,NOT WS_VISIBLE
+    DEFPUSHBUTTON   "OK",IDOK,472,7,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,472,24,50,14
+    LTEXT           "Action",IDC_ACTION,59,7,407,28,SS_SUNKEN
+    COMBOBOX        IDC_COMBO1,156,44,85,76,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "",IDC_STATIC,13,65,155,112
+    CONTROL         "Execute Command",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,31,79,75,10
+    CONTROL         "Send String to Active Window",IDC_RADIO2,"Button",
+                    BS_AUTORADIOBUTTON,209,78,111,10
+    CONTROL         "Put Wavfrag to Sleep",IDC_RADIO4,"Button",
+                    BS_AUTORADIOBUTTON,190,162,84,10
+    CONTROL         "Wake Up Wavefrag",IDC_RADIO5,"Button",
+                    BS_AUTORADIOBUTTON,294,162,80,10
+    CONTROL         "Show an image",IDC_RADIO3,"Button",BS_AUTORADIOBUTTON,
+                    365,78,65,10
+    CONTROL         "Close WavFrag",IDC_RADIO6,"Button",BS_AUTORADIOBUTTON,
+                    398,162,65,10
+    CONTROL         "Minimize WavFrag",IDC_RADIO7,"Button",
+                    BS_AUTORADIOBUTTON,190,182,74,10
+    CONTROL         "Maximize WavFrag",IDC_RADIO8,"Button",
+                    BS_AUTORADIOBUTTON,294,182,76,10
+    CONTROL         "No on Messagebox",IDC_RADIO9,"Button",
+                    BS_AUTORADIOBUTTON,190,202,80,10
+    CONTROL         "Next Image",IDC_RADIO10,"Button",BS_AUTORADIOBUTTON,369,
+                    135,55,10
+    CONTROL         "Yes on Messagebox",IDC_RADIO11,"Button",
+                    BS_AUTORADIOBUTTON,294,202,80,10
+    CONTROL         "Close Image",IDC_RADIO12,"Button",BS_AUTORADIOBUTTON,
+                    443,78,55,10
+    CONTROL         "Prev Image",IDC_RADIO13,"Button",BS_AUTORADIOBUTTON,435,
+                    135,55,10
+    CONTROL         "Shutdown Computer",IDC_RADIO14,"Button",
+                    BS_AUTORADIOBUTTON,398,202,80,10
+    CONTROL         "Close Currently Active Program",IDC_RADIO15,"Button",
+                    BS_AUTORADIOBUTTON,398,222,113,10
+    CONTROL         "Activate next program",IDC_RADIO16,"Button",
+                    BS_AUTORADIOBUTTON,294,222,85,10
+    CONTROL         "Activate prev program",IDC_RADIO17,"Button",
+                    BS_AUTORADIOBUTTON,190,222,85,10
+    CONTROL         "Enable  Actions",IDC_RADIO18,"Button",
+                    BS_AUTORADIOBUTTON,398,182,65,10
+    CONTROL         "Close Last Opened",IDC_RADIO19,"Button",
+                    BS_AUTORADIOBUTTON | NOT WS_VISIBLE | WS_DISABLED,7,57,
+                    76,10
+    CONTROL         "Open Document",IDC_RADIO20,"Button",BS_AUTORADIOBUTTON,
+                    31,186,68,10
+    LTEXT           "Command:",IDC_STATIC,23,91,34,8
+    EDITTEXT        IDC_EDIT2,22,104,135,15,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse",IDC_BUTTON1,115,86,42,14
+    LTEXT           "Command Arguments:",IDC_STATIC,22,124,70,8
+    EDITTEXT        IDC_EDIT3,22,139,135,15,ES_AUTOHSCROLL
+    CONTROL         "Confirm before Executing Action",IDC_CHECK1,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,31,159,115,10
+    LTEXT           "String to send:",IDC_STATIC,199,98,70,8
+    EDITTEXT        IDC_EDIT4,194,114,135,15,ES_AUTOHSCROLL
+    CONTROL         "Confirm before sending keys",IDC_CHECK4,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,204,135,115,10
+    GROUPBOX        "",IDC_STATIC,351,65,155,88
+    LTEXT           "Image:",IDC_STATIC,365,100,29,8
+    EDITTEXT        IDC_EDIT5,363,114,135,15,ES_AUTOHSCROLL
+    LTEXT           "When one of the following words are heard:",IDC_STATIC,
+                    7,46,138,8
+    GROUPBOX        "",IDC_STATIC,183,65,155,88
+    PUSHBUTTON      "Help on Keys",IDCANCEL2,472,43,50,14
+    COMBOBOX        IDC_COMBO2,261,44,85,76,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO6,366,44,85,76,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "or",IDC_STATIC,247,46,8,8
+    LTEXT           "or",IDC_STATIC,352,46,8,8
+    PUSHBUTTON      "Browse",IDC_BUTTON20,455,95,42,14
+    PUSHBUTTON      "Browse",IDC_BUTTON2,115,121,42,14
+    LTEXT           "Document:",IDC_STATIC,22,200,36,8
+    EDITTEXT        IDC_EDIT6,22,214,135,15,ES_AUTOHSCROLL
+    PUSHBUTTON      "Browse",IDC_BUTTON3,115,196,42,14
+    GROUPBOX        "",IDC_STATIC,13,177,155,59
+END
+
+IDD_SHOWPIC DIALOG DISCARDABLE  0, 0, 456, 252
+STYLE WS_POPUP
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,399,7,50,14,NOT WS_VISIBLE
+    PUSHBUTTON      "Cancel",IDCANCEL,399,24,50,14,NOT WS_VISIBLE
+END
+
+IDD_LIGHTBOX_DIALOG DIALOGEX 0, 0, 320, 201
+STYLE WS_POPUP | WS_VISIBLE
+EXSTYLE WS_EX_APPWINDOW
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,260,7,50,14,NOT WS_VISIBLE | WS_DISABLED
+    PUSHBUTTON      "Cancel",IDCANCEL,260,23,50,14,NOT WS_VISIBLE
+END
+
+IDD_DIALOG9 DIALOG DISCARDABLE  0, 0, 169, 76
+STYLE WS_POPUP | WS_DISABLED
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "Static",IDC_TEXT,73,2,89,17,NOT WS_VISIBLE | 
+                    WS_DISABLED
+    LTEXT           "Static",IDC_TEXT2,13,1,89,17,NOT WS_VISIBLE | 
+                    WS_DISABLED
+    CONTROL         "Progress1",IDC_PROGRESS1,"msctls_progress32",WS_BORDER,
+                    3,27,152,14
+    PUSHBUTTON      "Cancel",IDC_BUTTON1,49,50,64,14
+END
+
+IDD_MBOX DIALOG DISCARDABLE  0, 0, 203, 94
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "&No",IDOK3,48,73,50,14
+    PUSHBUTTON      "&Yes",IDOK2,11,73,50,14
+    PUSHBUTTON      "&Stop",IDOK4,82,73,50,14
+    PUSHBUTTON      "&OK",IDOK,128,73,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,136,1,50,14,NOT WS_VISIBLE | 
+                    WS_DISABLED
+    ICON            IDR_MAINFRAME,IDC_MICON,14,35,21,20
+END
+
+IDD_DIALOG4 DIALOG DISCARDABLE  0, 0, 661, 265
+STYLE WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "Wav View"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,581,0,50,14,NOT WS_VISIBLE
+    PUSHBUTTON      "Cancel",IDCANCEL,525,0,50,14,NOT WS_VISIBLE
+    LTEXT           "",IDC_WAV,7,7,645,123,SS_SUNKEN
+    LTEXT           "",IDC_WAV3,7,136,645,123,SS_SUNKEN
+END
+
+IDD_DIALOG3 DIALOGEX 0, 0, 683, 257
+STYLE WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "PLT"
+FONT 8, "MS Sans Serif", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,554,0,50,14,NOT WS_VISIBLE
+    PUSHBUTTON      "Cancel",IDCANCEL,501,0,50,14,NOT WS_VISIBLE
+    LTEXT           "Static",IDC_VIS,3,65,669,190,SS_NOTIFY | SS_SUNKEN | 
+                    WS_TABSTOP
+    LTEXT           "Static",IDC_VIS2,6,0,483,8,SS_NOTIFY | SS_SUNKEN | NOT 
+                    WS_VISIBLE | WS_DISABLED
+    LTEXT           "Static",IDC_PLOT,3,0,669,61,SS_NOTIFY | SS_SUNKEN | 
+                    WS_TABSTOP
+END
+
+IDD_DIALOG6 DIALOG DISCARDABLE  0, 0, 610, 402
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "WaveLab"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "OK, E&xit",IDOK,548,382,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,424,0,50,14,NOT WS_VISIBLE
+    LTEXT           "Static",IDC_WAV,9,3,591,93,SS_SUNKEN | WS_TABSTOP
+    PUSHBUTTON      "&Save Wave",IDC_BUTTON38,492,382,50,14
+    PUSHBUTTON      "Load Wave",IDC_BUTTON40,436,382,50,14
+    PUSHBUTTON      "TransPick",IDC_BUTTON41,560,188,50,14,NOT WS_VISIBLE | 
+                    WS_DISABLED
+    PUSHBUTTON      "ClearPlots",IDC_BUTTON42,437,345,50,14
+    PUSHBUTTON      "Test",IDC_BUTTON43,493,345,50,14
+    LTEXT           "Static",IDC_WAV3,9,99,292,106,SS_SUNKEN | WS_TABSTOP
+    PUSHBUTTON      "WaveSimilar",IDC_BUTTON45,437,324,50,14
+    LTEXT           "",IDC_SEL,437,366,160,14,SS_SUNKEN
+    LTEXT           "",IDC_PLOT,9,208,291,91,SS_SUNKEN
+    LTEXT           "Static",IDC_SINGLE,312,208,288,91,SS_SUNKEN
+    PUSHBUTTON      "WaveProg",IDC_BUTTON47,549,324,50,14
+    LTEXT           "Static",IDC_SINGLE2,8,304,291,91,SS_SUNKEN
+    PUSHBUTTON      "WaveCmp",IDC_BUTTON48,493,324,50,14
+    LTEXT           "Static",IDC_WAV5,0,138,55,106,SS_SUNKEN | NOT 
+                    WS_VISIBLE | WS_DISABLED | WS_TABSTOP
+    LTEXT           "1:",IDC_STATIC,1,3,6,15
+    LTEXT           "2:",IDC_STATIC,0,99,6,15
+    PUSHBUTTON      "WavZcomp",IDC_BUTTON54,493,306,50,14
+    PUSHBUTTON      "Wav2Wav",IDC_BUTTON55,549,306,50,14
+    PUSHBUTTON      "WaveZeros",IDC_BUTTON56,437,306,50,14
+    LTEXT           "Static",IDC_WAV4,312,99,288,106,SS_SUNKEN | WS_TABSTOP
+    LTEXT           "Static",IDC_PICK2,0,292,35,91,SS_SUNKEN | NOT 
+                    WS_VISIBLE | WS_DISABLED | WS_TABSTOP
+    LTEXT           "Static",IDC_PICK3,587,234,23,91,SS_SUNKEN | NOT 
+                    WS_VISIBLE | WS_DISABLED | WS_TABSTOP
+    LTEXT           "Static",IDC_PICK4,0,247,98,91,SS_SUNKEN | NOT 
+                    WS_VISIBLE | WS_DISABLED | WS_TABSTOP
+    LTEXT           "Static",IDC_PICK5,312,304,106,91,SS_SUNKEN | WS_TABSTOP
+    PUSHBUTTON      "Test",IDC_BUTTON44,549,345,50,14
+END
+
+IDD_DIALOG5 DIALOG DISCARDABLE  0, 0, 525, 258
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Phoneme Help"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,313,0,50,14,NOT WS_VISIBLE
+    PUSHBUTTON      "Cancel",IDCANCEL,253,0,50,14,NOT WS_VISIBLE
+    EDITTEXT        IDC_EDIT1,5,6,508,244,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_AUTOHSCROLL | WS_VSCROLL | WS_HSCROLL
+END
+
+IDD_DIALOG7 DIALOGEX 0, 0, 168, 154
+STYLE WS_CHILD
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,41,0,50,14,NOT WS_VISIBLE | WS_DISABLED
+    PUSHBUTTON      "Cancel",IDCANCEL,88,0,50,14,NOT WS_VISIBLE | 
+                    WS_DISABLED
+    LTEXT           "Actions:",IDC_LAB_ACTIONS,3,6,26,8
+    COMBOBOX        IDC_COMBO4,37,5,107,64,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Add Action",IDC_BUTTON14,3,24,50,14
+    PUSHBUTTON      "C&onfigure",IDC_BUTTON16,56,24,50,14
+    PUSHBUTTON      "Remove ",IDC_BUTTON15,109,24,50,14
+    PUSHBUTTON      "Toggle Plot",IDC_BUTTON31,0,129,50,14
+    PUSHBUTTON      "Toggle Vis",IDC_BUTTON33,55,129,50,14
+    PUSHBUTTON      "Toggle Wav",IDC_BUTTON34,110,129,50,14
+    LTEXT           "Plot Dialog Toggles:",IDC_STATIC,1,100,64,8
+    PUSHBUTTON      "Toggle 4D",IDC_BUTTON36,1,112,50,14
+    PUSHBUTTON      "Toggle 3D",IDC_BUTTON37,55,112,50,14
+END
+
+IDD_DIALOG8 DIALOGEX 0, 0, 168, 154
+STYLE WS_CHILD
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Sans Serif"
+BEGIN
+    LISTBOX         IDC_LIST2,3,32,51,75,LBS_SORT | LBS_OWNERDRAWFIXED | 
+                    LBS_HASSTRINGS | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "&Waves for this frag:",IDC_LAB_WAV,62,62,62,8
+    COMBOBOX        IDC_COMBO5,59,76,100,64,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Pl&ay Wav",IDC_BUTTON4,57,94,101,14
+    PUSHBUTTON      "Delete Wa&v",IDC_BUTTON19,111,134,50,14
+    PUSHBUTTON      "&Train Current Wav to Frag",IDC_BUTTON12,5,114,155,14
+    PUSHBUTTON      "Load Frags",IDC_BUTTON5,3,76,50,14,NOT WS_VISIBLE | 
+                    WS_DISABLED
+    PUSHBUTTON      "Sllice",IDC_BUTTON9,3,52,50,14,NOT WS_VISIBLE | 
+                    WS_DISABLED
+    PUSHBUTTON      "Remove Last",IDC_BUTTON13,3,70,50,14,NOT WS_VISIBLE | 
+                    WS_DISABLED
+    COMBOBOX        IDC_COMBO4,3,2,51,57,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "&New Frag",IDC_BUTTON8,57,42,50,14
+    PUSHBUTTON      "Remove Frag",IDC_BUTTON18,110,42,50,14
+    PUSHBUTTON      "Reload Frags",IDC_BUTTON6,59,134,50,14
+    PUSHBUTTON      "New Speaker",IDC_BUTTON1,58,1,50,14
+    PUSHBUTTON      "Del Speaker",IDC_BUTTON20,110,1,50,14
+    PUSHBUTTON      "aaa",IDC_BUTTON2,7,134,50,14
+    LTEXT           "Frags:",IDC_STATIC,5,21,20,8
+    LTEXT           "",IDC_CURRSP,112,26,42,8
+    LTEXT           "Speaker:",IDC_STATIC,63,26,30,8
+END
+
+IDD_DIALOG10 DIALOGEX 0, 0, 168, 154
+STYLE WS_CHILD
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,0,76,50,14,NOT WS_VISIBLE | WS_DISABLED
+    PUSHBUTTON      "Cancel",IDCANCEL,0,55,50,14,NOT WS_VISIBLE | 
+                    WS_DISABLED
+    PUSHBUTTON      "Show",IDC_BUTTON11,113,23,50,14
+    PUSHBUTTON      "Add / Train",IDC_BUTTON21,58,4,50,14
+    PUSHBUTTON      "Train Waves",IDC_BUTTON25,58,23,50,14
+    PUSHBUTTON      "Clear Entry",IDC_BUTTON26,113,42,50,14
+    PUSHBUTTON      "Train Current Wav",IDC_BUTTON27,58,91,106,14
+    PUSHBUTTON      "Clear Word",IDC_BUTTON29,58,42,50,14
+    LISTBOX         IDC_LIST3,4,19,46,94,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Word List:",IDC_STATIC,6,6,33,8
+    PUSHBUTTON      "Toggle Plot",IDC_BUTTON31,3,133,50,14,NOT WS_VISIBLE | 
+                    WS_DISABLED
+    PUSHBUTTON      "Toggle Vis",IDC_BUTTON33,58,133,50,14,NOT WS_VISIBLE | 
+                    WS_DISABLED
+    PUSHBUTTON      "Toggle Wav",IDC_BUTTON34,113,133,50,14,NOT WS_VISIBLE | 
+                    WS_DISABLED
+    PUSHBUTTON      "Stop train",IDC_BUTTON35,113,3,50,14
+    COMBOBOX        IDC_COMBO1,58,74,106,75,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Wave Entries:",IDC_STATIC,57,61,46,8
+END
+
+IDD_DIALOG11 DIALOG DISCARDABLE  0, 0, 641, 296
+STYLE WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "4D"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,518,0,50,14,NOT WS_VISIBLE | WS_DISABLED
+    PUSHBUTTON      "Cancel",IDCANCEL,467,0,50,14,NOT WS_VISIBLE
+    LTEXT           "Static",IDC_4D,2,2,602,213
+END
+
+IDD_DIALOG12 DIALOG DISCARDABLE  0, 0, 565, 224
+STYLE WS_POPUP | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+CAPTION "3D View"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,494,8,50,14,NOT WS_VISIBLE | WS_DISABLED
+    PUSHBUTTON      "Cancel",IDCANCEL,494,25,50,14,NOT WS_VISIBLE
+    LTEXT           "Static",IDC_VIS,2,2,540,198
+END
+
+IDD_DIALOG13 DIALOG DISCARDABLE  0, 0, 168, 154
+STYLE WS_CHILD
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,0,54,50,14,NOT WS_VISIBLE | WS_DISABLED
+    PUSHBUTTON      "Cancel",IDCANCEL,0,33,50,14,NOT WS_VISIBLE | 
+                    WS_DISABLED
+    LISTBOX         IDC_LIST1,5,6,94,122,LBS_SORT | LBS_OWNERDRAWFIXED | 
+                    LBS_HASSTRINGS | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | 
+                    WS_TABSTOP
+    PUSHBUTTON      "New Speaker",IDC_BUTTON1,107,8,50,14
+    PUSHBUTTON      "Del Speaker",IDC_BUTTON32,106,28,50,14
+    CTEXT           "",IDC_CURRSP,105,139,58,8
+    LTEXT           "Current Speaker:",IDC_STATIC,23,138,54,8
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "wavfrag MFC Application\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "wavfrag\0"
+            VALUE "LegalCopyright", "Copyright (C) 2010\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "wavfrag.EXE\0"
+            VALUE "ProductName", "wavfrag Application\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_WAVFRAG_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 596
+    END
+
+    IDD_DIALOG2, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 644
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 427
+    END
+
+    IDD_DIALOG_GETTEXT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 343
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 37
+    END
+
+    IDD_DIALOG_COMM, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 522
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 242
+    END
+
+    IDD_SHOWPIC, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 449
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 245
+    END
+
+    IDD_LIGHTBOX_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 194
+    END
+
+    IDD_DIALOG9, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 162
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 69
+    END
+
+    IDD_MBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 196
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 87
+    END
+
+    IDD_DIALOG4, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 654
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 258
+    END
+
+    IDD_DIALOG3, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 676
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 250
+    END
+
+    IDD_DIALOG6, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 603
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 395
+    END
+
+    IDD_DIALOG5, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 518
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 251
+    END
+
+    IDD_DIALOG7, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 161
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 147
+    END
+
+    IDD_DIALOG8, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 161
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 147
+    END
+
+    IDD_DIALOG10, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 161
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 147
+    END
+
+    IDD_DIALOG11, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 634
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 289
+    END
+
+    IDD_DIALOG12, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 558
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 217
+    END
+
+    IDD_DIALOG13, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 161
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 147
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP1             BITMAP  DISCARDABLE     "res\\bitmap1.bmp"
+IDB_BITMAP22            BITMAP  DISCARDABLE     "res\\bitmap2.bmp"
+IDB_BITMAP34            BITMAP  DISCARDABLE     "res\\bmp00001.bmp"
+IDB_BITMAP2             BITMAP  DISCARDABLE     "res\\mic.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About wavfrag..."
+    IDP_SOCKETS_INIT_FAILED "Windows sockets initialization failed."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "WavFrag"
+    IDS_TEST                "Test string for the resource editor;"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "res\wavfrag.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

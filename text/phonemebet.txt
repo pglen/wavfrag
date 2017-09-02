@@ -1,0 +1,75 @@
+List of phonemes derived from multiple sources:
+
+Phoneme		Example		Translation       		Samples             	Category
+
+AA			CAT     	CC AA TT       			flat, mat 	            Monophthong
+AH			SAW       	SS AH WW				caught, tall            Monophthong
+AI			HAIR		HH AI RR				air, where
+AR			ARGUE       AR RR GG UW             aunt, car       		Monophthong
+AY			TABLE       TT AY BB LL	      		bake, train, say        Diphthongs
+
+BB			BABY        BB AY BB II           	ball, bow, buy, bay     Stop
+
+CC			CAKE		CC AY KK               	key, carot              Stop
+CH			CHEESE		CH EE ZZ                child, chair, chest     Affricate
+CK			BACK		BB AA CK             	racket
+
+DD			DISC        DD II SS KK             door, day
+DH			FATHER      FF AH DH ER          	gather, father          Fricative
+
+EA      	HEAD      	HH EA DD 				pet, red           		Monophthong
+EE			FEET		FF EE TT                meet, creep            	Monophthong
+EH			EVIL      	EH VV AH LL    		    enough, erase
+ER			HURT		HH ER T					her, bird, nurse        Monophthong
+
+FF			FOOL  		FF UU LL   				free, fry               Fricative
+GG			GREEN		GG RR EE NN            	girl, go, gas           Stop
+HH			HOT         HH OH TT               	hill, house             Fricative
+
+II			HILL        HH II LL                ill, pin                Monophthong
+IY			HIDE		HH IY DD                bite, pride             Monophthong
+
+JJ          BRIDGE     	BB RR II DD JJ          jeep, just, gym         Affricate
+
+KN			KNOCK		KN OO CK                knot, knife
+KW			QUICK		KW II CK                quiet
+KS			SIX			SS II KS				rocks,
+
+LL			LAMP		LL AA MM PP				lazy, loose           	Liquid
+
+MM			MEDIA 		MM EH DD II AH          my, kistery             Nasal
+NG			PING		PP II NG                lung, sing
+NN			NEED		NN EE DD             	nothing                 Nasal
+
+OH			BOX		    BB OH XX				pot, dot, box           Monophthong
+OO			OKAY		OO KK AY				oven, bone
+OW			COW			KK OW                   flower,                 Monophthong
+OY			TOY			TT OY              		soil, boil, low         Monophthong
+
+PP			PIE		    PP IY					pee, pay                Stop
+QQ          QUIT		QQ UU II TT				queue,
+RR			READ		RR EE DD   				roar                   	Liquid
+
+SH			SHE			SH II                   ship, nation, special   Fricative
+SS			SEA			SS EE                   soup,                   Fricative
+
+TT			TEA			TT EE                   take, tow               Stop
+TH			THICK		TH II CK				three, thrue            Fricative
+
+UH			HUT 		HH UH TT				utter, undo
+UR			FUR			FF UR					bird, urgent
+UU			HOOD		HH UU DD      			cure, boot, chew
+UW			FEW       	FF UW
+
+VV			VERIFY		VV EH RR II FF YY		vehicle, vase
+
+WH			WHITE       WH IY TT 				wheat, which
+WW			WEB        	WW EH BB                want, will, wash        Semivowel
+
+XX			EXAM		SS II XX                external, exist
+
+YY			YIELD		YY IY LL DD             yellow, yes             Semivowel
+
+ZH			SEIZURE		SS IY ZH ER           	measure
+ZZ			ZOO			ZZ UU                 	zorro, zero, nose
+

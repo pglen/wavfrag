@@ -1,0 +1,128 @@
+\hypertarget{class_c_frag_coll}{\section{C\-Frag\-Coll Class Reference}
+\label{class_c_frag_coll}\index{C\-Frag\-Coll@{C\-Frag\-Coll}}
+}
+
+
+This calss holds an array of frags for the recognition engine to search through.  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_c_frag_coll_afe96e72892c9edcdd3f7c9cd76b78e60}{void {\bfseries Add\-Frag} (\hyperlink{class_c_frag}{C\-Frag} $\ast$pfrag)}\label{class_c_frag_coll_afe96e72892c9edcdd3f7c9cd76b78e60}
+
+\item 
+\hypertarget{class_c_frag_coll_aa1e4760e687081ab581011bc3c3b1523}{int {\bfseries Parse\-All\-Waves} (C\-C\-H\-A\-R $\ast$dir, C\-C\-H\-A\-R $\ast$fdir, int reload)}\label{class_c_frag_coll_aa1e4760e687081ab581011bc3c3b1523}
+
+\item 
+\hypertarget{class_c_frag_coll_a262116ab5122e7e4b39c9606926abd73}{void {\bfseries Save\-All\-Frags} (const char $\ast$dir)}\label{class_c_frag_coll_a262116ab5122e7e4b39c9606926abd73}
+
+\item 
+\hypertarget{class_c_frag_coll_a21d012fac0ff6929521c13eb5776a9db}{int {\bfseries Load\-All\-Frags} (const char $\ast$dir, int reload)}\label{class_c_frag_coll_a21d012fac0ff6929521c13eb5776a9db}
+
+\item 
+\hypertarget{class_c_frag_coll_aa0fea9522694d1a3bd4509ed41dcefa2}{int {\bfseries Del\-Word} (C\-C\-H\-A\-R $\ast$pword)}\label{class_c_frag_coll_aa0fea9522694d1a3bd4509ed41dcefa2}
+
+\item 
+int \hyperlink{class_c_frag_coll_a076f6f4da36f3d5e18c69c0e51577343}{Del\-Frag\-Entry} (C\-C\-H\-A\-R $\ast$pword, C\-C\-H\-A\-R $\ast$pentry)
+\begin{DoxyCompactList}\small\item\em Delete one wav, and nuke the index if this was the last wave. \end{DoxyCompactList}\item 
+\hypertarget{class_c_frag_coll_a33f648bd97c5db0ed7977d73e32ad082}{C\-String {\bfseries Idx2\-Str} (int idx, int real=false)}\label{class_c_frag_coll_a33f648bd97c5db0ed7977d73e32ad082}
+
+\item 
+\hypertarget{class_c_frag_coll_a789f1c470b7a088850960117810405e1}{int {\bfseries Idx2\-Len} (int idx)}\label{class_c_frag_coll_a789f1c470b7a088850960117810405e1}
+
+\item 
+\hypertarget{class_c_frag_coll_a23a403ddccbf42bb37778b5103f7c59d}{C\-Ptr\-Array $\ast$ {\bfseries Get\-Data} ()}\label{class_c_frag_coll_a23a403ddccbf42bb37778b5103f7c59d}
+
+\item 
+\hypertarget{class_c_frag_coll_ab3ac2b9c9cff183f6e4e692dc7a1b8f6}{C\-Ptr\-Array $\ast$ {\bfseries Get\-Idx\-Data} ()}\label{class_c_frag_coll_ab3ac2b9c9cff183f6e4e692dc7a1b8f6}
+
+\item 
+\hypertarget{class_c_frag_coll_a37b450194f553aa696e39936ddf97b9b}{C\-String\-Array $\ast$ {\bfseries Get\-Str\-Data} ()}\label{class_c_frag_coll_a37b450194f553aa696e39936ddf97b9b}
+
+\item 
+\hypertarget{class_c_frag_coll_a489da546af38446774a484606b22c865}{void {\bfseries Dump\-Frags} ()}\label{class_c_frag_coll_a489da546af38446774a484606b22c865}
+
+\item 
+\hypertarget{class_c_frag_coll_a774f8a5cdd1104cdd42195aa1e389fa2}{void {\bfseries Dump\-Idx} ()}\label{class_c_frag_coll_a774f8a5cdd1104cdd42195aa1e389fa2}
+
+\item 
+\hypertarget{class_c_frag_coll_a142f3b4a541a5a4855cdf6fdc380b7e0}{void {\bfseries Save} (C\-File $\ast$pfp)}\label{class_c_frag_coll_a142f3b4a541a5a4855cdf6fdc380b7e0}
+
+\item 
+\hypertarget{class_c_frag_coll_a9526f9f4594deeed61e40a68767452e3}{int {\bfseries Load} (C\-File $\ast$pfp)}\label{class_c_frag_coll_a9526f9f4594deeed61e40a68767452e3}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_c_frag_coll_a7ef7f3c881de69316484752e48d17204}{int {\bfseries magic}}\label{class_c_frag_coll_a7ef7f3c881de69316484752e48d17204}
+
+\item 
+\hypertarget{class_c_frag_coll_aa7f7a2301a0adc206e59f50b45f2dcf9}{int {\bfseries stop}}\label{class_c_frag_coll_aa7f7a2301a0adc206e59f50b45f2dcf9}
+
+\item 
+\hypertarget{class_c_frag_coll_a526d5c7362210db8efee9cec145d356e}{int {\bfseries maxlen}}\label{class_c_frag_coll_a526d5c7362210db8efee9cec145d356e}
+
+\item 
+\hypertarget{class_c_frag_coll_a92a2d1bb78de66278f91a81c12ba8877}{int {\bfseries minlen}}\label{class_c_frag_coll_a92a2d1bb78de66278f91a81c12ba8877}
+
+\item 
+\hypertarget{class_c_frag_coll_af1a33e5f9766659793367b51dcd73cdc}{int {\bfseries maxidx}}\label{class_c_frag_coll_af1a33e5f9766659793367b51dcd73cdc}
+
+\item 
+\hypertarget{class_c_frag_coll_afc976541c77fd482aa6e70ca69be114d}{int {\bfseries noprompt}}\label{class_c_frag_coll_afc976541c77fd482aa6e70ca69be114d}
+
+\item 
+\hypertarget{class_c_frag_coll_a33f88683e069a43848b92f545734bc1d}{int {\bfseries farrlen}}\label{class_c_frag_coll_a33f88683e069a43848b92f545734bc1d}
+
+\item 
+\hypertarget{class_c_frag_coll_a8f6d4bb169cd517484fc3492aa3d5ce6}{C\-String \hyperlink{class_c_frag_coll_a8f6d4bb169cd517484fc3492aa3d5ce6}{fragdir}}\label{class_c_frag_coll_a8f6d4bb169cd517484fc3492aa3d5ce6}
+
+\begin{DoxyCompactList}\small\item\em Directory where flags are stored. \end{DoxyCompactList}\item 
+\hypertarget{class_c_frag_coll_acb9ee3e1eac3b69f6912134ee93f0d77}{C\-String \hyperlink{class_c_frag_coll_acb9ee3e1eac3b69f6912134ee93f0d77}{wavdir}}\label{class_c_frag_coll_acb9ee3e1eac3b69f6912134ee93f0d77}
+
+\begin{DoxyCompactList}\small\item\em Directory where waves are stored. \end{DoxyCompactList}\item 
+\hypertarget{class_c_frag_coll_af0866615fbc1287f352af26035c71ef1}{C\-String {\bfseries user}}\label{class_c_frag_coll_af0866615fbc1287f352af26035c71ef1}
+
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_c_frag_coll_a8c98dd49caae786a1db43654fe516506}{class {\bfseries C\-Frag}}\label{class_c_frag_coll_a8c98dd49caae786a1db43654fe516506}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This calss holds an array of frags for the recognition engine to search through. 
+
+It is responsible of maintaining a list of frags, and to give access to the iterator of the compare engine. 
+
+\subsection{Member Function Documentation}
+\hypertarget{class_c_frag_coll_a076f6f4da36f3d5e18c69c0e51577343}{\index{C\-Frag\-Coll@{C\-Frag\-Coll}!Del\-Frag\-Entry@{Del\-Frag\-Entry}}
+\index{Del\-Frag\-Entry@{Del\-Frag\-Entry}!CFragColl@{C\-Frag\-Coll}}
+\subsubsection[{Del\-Frag\-Entry}]{\setlength{\rightskip}{0pt plus 5cm}int C\-Frag\-Coll\-::\-Del\-Frag\-Entry (
+\begin{DoxyParamCaption}
+\item[{C\-C\-H\-A\-R $\ast$}]{pword, }
+\item[{C\-C\-H\-A\-R $\ast$}]{pentry}
+\end{DoxyParamCaption}
+)}}\label{class_c_frag_coll_a076f6f4da36f3d5e18c69c0e51577343}
+
+
+Delete one wav, and nuke the index if this was the last wave. 
+
+Param\-: \begin{DoxyVerb}        CCHAR *pword  - word to look in
+        CCHAR *pentry - frag name to delete
+\end{DoxyVerb}
+
+
+Return\-: \begin{DoxyVerb}        1 (true) if deleted OK
+        2 if deleted OK and removed index as well
+        -1 if error, -2 if not found \end{DoxyVerb}
+ 
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+Frag\-Coll.\-h\item 
+Frag\-Coll.\-cpp\end{DoxyCompactItemize}

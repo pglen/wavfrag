@@ -1,0 +1,116 @@
+# Microsoft Developer Studio Generated Dependency File, included by wflib.mak
+
+.\Contain.cpp : \
+	"..\..\..\common\work\mxpad.h"\
+	".\Contain.h"\
+	
+
+..\..\..\common\work\dsp.cpp : \
+	"..\..\..\common\work\dsp.h"\
+	"..\..\..\common\work\mxpad.h"\
+	
+
+.\Fft.cpp : \
+	"..\..\..\common\work\mxpad.h"\
+	".\Fft.h"\
+	
+
+.\FftBuff.cpp : \
+	"..\..\..\common\work\intarr.h"\
+	"..\..\..\common\work\mxpad.h"\
+	"..\..\..\common\work\plot.h"\
+	".\Fft.h"\
+	".\FftBuff.h"\
+	
+
+.\Frag.cpp : \
+	"..\..\..\common\work\dsp.h"\
+	"..\..\..\common\work\intarr.h"\
+	"..\..\..\common\work\mxpad.h"\
+	"..\..\..\common\work\plot.h"\
+	"..\..\..\common\work\Support.h"\
+	".\Contain.h"\
+	".\Fft.h"\
+	".\FftBuff.h"\
+	".\Frag.h"\
+	".\FragColl.h"\
+	".\Recog.h"\
+	".\wflib.h"\
+	
+
+.\FragColl.cpp : \
+	"..\..\..\common\work\dsp.h"\
+	"..\..\..\common\work\intarr.h"\
+	"..\..\..\common\work\mxpad.h"\
+	"..\..\..\common\work\plot.h"\
+	"..\..\..\common\work\Support.h"\
+	".\Contain.h"\
+	".\Frag.h"\
+	".\FragColl.h"\
+	".\Recog.h"\
+	".\wflib.h"\
+	
+
+..\..\..\common\work\IntArr.cpp : \
+	"..\..\..\common\work\intarr.h"\
+	"..\..\..\common\work\mxpad.h"\
+	"..\..\..\common\work\plot.h"\
+	
+
+..\..\..\common\work\mxpad.cpp : \
+	"..\..\..\common\work\mxpad.h"\
+	
+
+.\Recog.cpp : \
+	"..\..\..\common\work\dsp.h"\
+	"..\..\..\common\work\intarr.h"\
+	"..\..\..\common\work\mxpad.h"\
+	"..\..\..\common\work\plot.h"\
+	"..\..\..\common\work\Support.h"\
+	".\Contain.h"\
+	".\Fft.h"\
+	".\FftBuff.h"\
+	".\Frag.h"\
+	".\FragColl.h"\
+	".\Recog.h"\
+	".\wflib.h"\
+	
+
+..\..\..\common\work\RecordSound.cpp : \
+	"..\..\..\common\work\dsp.h"\
+	"..\..\..\common\work\mxpad.h"\
+	"..\..\..\common\work\RecordSound.h"\
+	"..\..\..\common\work\soundpar.h"\
+	"..\..\..\common\work\Support.h"\
+	
+
+.\StdAfx.cpp : \
+	"..\..\..\..\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	".\StdAfx.h"\
+	
+
+..\..\..\common\work\Support.cpp : \
+	"..\..\..\common\work\mxpad.h"\
+	"..\..\..\common\work\Support.h"\
+	
+
+.\wflib.cpp : \
+	"..\..\..\common\work\dsp.h"\
+	"..\..\..\common\work\intarr.h"\
+	"..\..\..\common\work\mxpad.h"\
+	"..\..\..\common\work\plot.h"\
+	"..\..\..\common\work\RecordSound.h"\
+	"..\..\..\common\work\soundpar.h"\
+	"..\..\..\common\work\Support.h"\
+	".\Contain.h"\
+	".\Fft.h"\
+	".\FftBuff.h"\
+	".\Frag.h"\
+	".\FragColl.h"\
+	".\Recog.h"\
+	".\wflib.h"\
+	
+
+.\wflib.rc : \
+	".\res\wflib.rc2"\
+	

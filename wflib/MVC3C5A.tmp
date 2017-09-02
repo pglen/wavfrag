@@ -1,0 +1,1184 @@
+
+/* =====[ Contain.cpp ]========================================================== 
+                                                                             
+   Description:     The wavfrag project, implementation of the Contain.cpp                
+                                                                             
+                    Defines the behavior for the application.          
+                                                                             
+   Compiled:        MS-VC 6.00                                               
+                                                                             
+   Notes:           <Empty Notes>                                            
+                                                                             
+   Revisions:                                                                
+                                                                             
+      REV     DATE        BY            DESCRIPTION                       
+      ----  --------  -----------  ----------------------------   
+      0.00  8/23/2010  Peter Glen   Initial version.                         
+                                                                             
+   ======================================================================= */
+
+#include "stdafx.h"
+#include "mxpad.h"
+
+#include "xrecog.h"
+#include "ContColl.h"
+#include "Contain.h"
+
+extern CxRecog	xdllrecog;
+extern	CContColl	contcoll;
+
+#ifdef _DEBUG
+#undef THIS_FILE
+static char THIS_FILE[]=__FILE__;
+#define new DEBUG_NEW
+#endif
+
+//////////////////////////////////////////////////////////////////////
+// Construction/Destruction
+//////////////////////////////////////////////////////////////////////
+
+CContain::CContain()
+
+{
+	magic = CContain_Magic;
+	name = new CString;	
+}
+
+//////////////////////////////////////////////////////////////////////////
+
+CContain::~CContain()
+
+{
+	ASSERT(CContain_Magic == magic);	
+
+	xDelAll();
+
+	delete name;
+}
+
+//////////////////////////////////////////////////////////////////////////
+// Get item
+
+CContain::CContData* CContain::GetAt(int pos)
+	
+{
+	ASSERT(pos >= 0); ASSERT(pos < xcontarr.GetSize());
+
+	CContain::CContData *ptr = NULL;
+	ptr = (CContain::CContData*)xcontarr.GetAt(pos);
+
+	ASSERT(ptr->magic == CContData_Magic);
+
+	return ptr;
+}
+
+//////////////////////////////////////////////////////////////////////////
+// Add recognized entry
+
+void	CContain::Add(CContain::CContData *ppredat)
+
+{
+	ASSERT(ppredat->magic == CContData_Magic);
+	ASSERT(CContain_Magic == magic);	
+
+	xcontarr.Add(ppredat);
+}
+
+//////////////////////////////////////////////////////////////////////////
+// Clear data for a fresh start
+
+void CContain::xDelAll()
+
+{
+	ASSERT(CContain_Magic == magic);
+		
+	int alen = xcontarr.GetSize();
+	for(int loop = 0; loop < alen; loop++)
+		{
+		CContData *val = (CContData *)xcontarr.GetAt(loop);
+		delete val;
+ 		}
+	xcontarr.RemoveAll();
+
+	int alen2 = xfiltarr.GetSize();
+	for(int loop2 = 0; loop2 < alen2; loop2++)
+		{
+		CContFilt *val2 = (CContFilt *)xfiltarr.GetAt(loop2);
+		delete val2;
+ 		}
+	xcontarr.RemoveAll();
+}
+
+//////////////////////////////////////////////////////////////////////////
+
+void  CContain::Dump()
+
+{
+	AP2N("CContain::Dump() '%s' len=%d (str, val, rat) sig -- sig2\r\n", 
+													*name, GetSize());
+
+	
+	int alen = xcontarr.GetSize();
+	for(int loop = 0; loop < alen; loop++)
+		{
+		CString sumstr;
+
+		CContData *pval = (CContData *)xcontarr.GetAt(loop);
+		ASSERT(pval->magic == CContData_Magic);
+
+		int zval  = 0, sval = sig.GetAt(loop);
+		int sval2 = sig2.GetAt(loop);
+		int flen = pval->frags.GetSize();
+
+		for(int loop2 = 0; loop2 < flen; loop2++)
+			{
+			CFrag *pfr = (CFrag*)pval->frags.GetAt(loop2);			
+			ASSERT(pfr->magic == CFrag_Magic);
+
+			int rat = 0, val = pval->vals.GetAt(loop2);
+
+			if(loop2 < flen - 1)
+				{
+				int next = pval->vals.GetAt(loop2 + 1);
+
+				if(next)
+					rat = 100 * val / pval->vals.GetAt(loop2 + 1);
+				}
+
+			if(loop2 == 0) zval = val;
+
+			CString str;
+			str.Format("%8s = %3d / %3d  ",  *pfr->name, val, rat);
+			
+			sumstr += str;
+ 			}		
+
+		CString tail;
+		tail.Format("  %d -- %d  (%d)\r\n", sval, sval2, sval * sval2);
+		sumstr += tail;
+
+		AP2N("%s", sumstr);
+
+		//if(xdllrecog._fragrec)
+		//	xdllrecog._fragrec(sumstr, sumstr.GetLength());
+		}		
+	
+	//CString sep("---------");
+
+	//if(xdllrecog._fragrec)
+	//		xdllrecog._fragrec(sep, sep.GetLength());
+		
+	AP2N("\r\n");	
+}
+
+//////////////////////////////////////////////////////////////////////////
+
+void  CContain::DumpFilter()
+
+{
+	int alen = xfiltarr.GetSize();
+	
+	AP2N("CContain::DumpFilter() '%s' len=%d (str, val, rat)\r\n", *name, alen);
+
+	for(int loop = 0; loop < alen; loop++)
+		{
+		CContFilt *pval = (CContFilt *)xfiltarr.GetAt(loop);
+		ASSERT(pval->magic == CContFilt_Magic);
+
+		int flen = pval->snames.GetSize();
+		for(int loop2 = 0; loop2 < flen; loop2++)
+			{
+			CString name = pval->snames.GetAt(loop2);
+
+			int rat = 0, val = pval->vals.GetAt(loop2);
+
+			if(loop2 < flen - 1)
+				{
+				int next = pval->vals.GetAt(loop2 + 1);
+
+				if(next)
+					rat = 100 * val / pval->vals.GetAt(loop2 + 1);
+				}
+
+			AP2N("%8s = %3d / %3d  ",  name, val, rat);
+ 			}
+		AP2N("\r\n");
+		}		
+
+	AP2N("\r\n");	
+}
+
+//////////////////////////////////////////////////////////////////////////
+
+CString  CContain::Dump2Str()
+
+{
+	CString str, tmp;
+
+	AP2N("CContain::Dump() '%s' len=%d \r\n", *name, GetSize());
+
+#if 1
+	int alen = xcontarr.GetSize();
+	for(int loop = 0; loop < alen; loop++)
+		{
+		CContData *pval = GetAt(loop);
+
+		//tmp.Format("%3d %6s\t", pval->val, *pval-str);
+		//str += tmp;
+
+		if(loop % 8 == 7)
+			str += "\r\n";
+		}		
+
+	str += "\r\n";
+#endif
+
+	return str;
+}
+
+//////////////////////////////////////////////////////////////////////////
+// Weed out less than half powers
+
+void CContain::Weed()
+
+{
+	int mxx2 = 0, mxv2 = 0, alen2 = xcontarr.GetSize();
+
+	if(alen2 == 0)
+		return;
+
+#if 0
+	// Draw Value Curve
+	CIntArr arr;
+	for(int loopv = 0; loopv < alen2; loopv++)
+		{
+		CContData *pval = (CContData *)xcontarr.GetAt(loopv);
+
+		//arr.Add(pval->val);
+		arr.Add(pval->sum);
+		//AP2N("%3d %6s\t", pval->val, *pval->str);
+		}		
+
+	arr.Smooth(4);		// Factor determined experimentally
+
+	if(xdllrecog._plotrec)
+		{
+		xdllrecog._plotrec(arr.GetData(), arr.GetSize(), 0);
+		xdllrecog._plotrec(NULL, 0, 0);
+		}	
+
+	int	px, pv, pv2; arr.FindMax(&px, &pv);  
+	
+	// Assume dynamic range
+	//pv2 = pv / 10;
+	
+	// or ... Force constant value
+	pv2 = 5000;
+
+	// To the left
+	for(int loop1 = px; loop1 >= 0; loop1--)
+		{		
+		if(pv2 > arr[loop1])
+			break;
+ 		}
+	// To te right
+	for(int loop2 = px; loop2 < alen2; loop2++)
+		{
+		if(pv2 > arr[loop2])
+			break;
+ 		}
+	int sss = max(0, loop1), eee = min(alen2, loop2);
+
+	//AP2N("CContain::Weed sss=%d sss=%d alen2=%d\r\n", sss, eee, alen2);
+
+	CPtrArray tmp;
+
+	// Create new arr within bounds
+	for(int loop4 = 0; loop4 < alen2; loop4++)
+		{
+		CContData *pval = (CContData *)xcontarr.GetAt(loop4);
+		
+		if(loop4 >= sss && loop4 <= eee)
+			{
+			tmp.Add(pval);
+			}	
+		else
+			{
+			delete pval;
+			}
+		}
+
+	xcontarr.RemoveAll(); xcontarr.Copy(tmp);
+
+	len = xcontarr.GetSize();
+
+#endif
+}
+		
+//////////////////////////////////////////////////////////////////////////
+
+CString	CContain::GetConcatStrx()
+
+{
+	CString str;
+
+	int alen = xcontarr.GetSize();
+	for(int loop = 0; loop < alen; loop++)
+		{
+		CContData *pval = (CContData *)xcontarr.GetAt(loop);
+		ASSERT(pval->magic == CContData_Magic);
+
+		int flen = pval->frags.GetSize();
+		flen = MIN(flen, 1);
+		for(int loop2 = 0; loop2 < flen; loop2++)
+			{
+			CFrag *pfr = (CFrag*)pval->frags.GetAt(loop2);			
+			ASSERT(pfr->magic == CFrag_Magic);
+
+			int val = pval->vals.GetAt(loop2);
+
+			str += *pfr->shortname;
+			str += " ";
+ 			}
+		}		
+	
+	return str;
+}
+
+//////////////////////////////////////////////////////////////////////////
+
+CString	CContain::GetConcatStrf()
+
+{
+	CString str;
+
+	int alen = xfiltarr.GetSize();
+	for(int loop = 0; loop < alen; loop++)
+		{
+		CContFilt *pval = (CContFilt *)xfiltarr.GetAt(loop);
+		ASSERT(pval->magic == CContFilt_Magic);
+
+		int flen = pval->snames.GetSize();
+		flen = MIN(flen, 1);
+		for(int loop2 = 0; loop2 < flen; loop2++)
+			{			
+			int val = pval->vals.GetAt(loop2);
+
+			str += pval->snames.GetAt(loop2);
+			str += " ";
+ 			}
+		}		
+	return str;
+}
+
+//////////////////////////////////////////////////////////////////////////
+
+void CContain::WeedNX()
+
+{
+	int alen = xcontarr.GetSize();
+
+	CPtrArray tmpa;
+
+	for(int loop = 0; loop < alen; loop++)
+		{
+		CContData *pval = (CContData *)xcontarr.GetAt(loop);
+		ASSERT(pval->magic == CContData_Magic);
+
+		int flen = pval->frags.GetSize();
+		if(flen)
+			{
+			CFrag *pfr = (CFrag*)pval->frags.GetAt(0);			
+			ASSERT(pfr->magic == CFrag_Magic);
+		
+			//AP2N("%-6s -> %-4d     ",  *pfr->name, val);
+
+			if(*pfr->shortname  != "nx")			
+				{
+				tmpa.Add(pval);
+				}
+			else
+				{
+				delete pval;
+				}
+			}
+		}	
+		
+	// Commit
+	xcontarr.RemoveAll(); xcontarr.Copy(tmpa);
+}
+
+//////////////////////////////////////////////////////////////////////////
+
+void CContain::WeedWeak()
+
+{
+	int alen = xcontarr.GetSize();
+
+	CPtrArray tmpa;
+
+	// Create sum 
+	int sum = 0, cnt = 0;
+	for(int loops = 0; loops < alen; loops++)
+		{
+		CContData *pval = (CContData *)xcontarr.GetAt(loops);
+		ASSERT(pval->magic == CContData_Magic);
+
+		int flen = pval->frags.GetSize();
+		if(flen)
+			{
+			CFrag *pfr = (CFrag*)pval->frags.GetAt(0);			
+			ASSERT(pfr->magic == CFrag_Magic);
+			
+			sum +=  pval->vals.GetAt(0);
+			cnt++;
+			//AP2N("%-6s -> %-4d     ",  *pfr->name, val);
+			}
+		}
+
+	if(cnt)
+		sum /= cnt ;
+
+	AP2N("CContain::WeedWeak sum = %d\r\n", sum);
+
+	for(int loop = 0; loop < alen; loop++)
+		{
+		CContData *pval = (CContData *)xcontarr.GetAt(loop);
+		ASSERT(pval->magic == CContData_Magic);
+
+		int flen = pval->frags.GetSize();
+		if(flen)
+			{			
+			if(pval->vals.GetAt(0) > sum)
+				{
+				tmpa.Add(pval);
+				}
+			else
+				{
+				delete pval;
+				}
+			}
+		}	
+		
+	// Commit
+	xcontarr.RemoveAll(); xcontarr.Copy(tmpa);
+}
+
+//////////////////////////////////////////////////////////////////////////
+// Delete all zero entries
+
+void CContain::WeedNul()
+
+{
+	CPtrArray tmpa;
+
+	int alen = xcontarr.GetSize();
+	for(int loop = 0; loop < alen; loop++)
+		{
+		CContData *pval = GetAt(loop);
+
+		if(pval->vals.GetSize() > 0)
+			{
+			if(pval->vals.GetAt(0) > 0)
+				{
+				tmpa.Add(pval);
+				}
+			else
+				{
+				delete pval;	
+				}
+			}
+		}
+
+	// Commit
+	xcontarr.RemoveAll(); xcontarr.Copy(tmpa);
+}
+		
+//////////////////////////////////////////////////////////////////////////
+
+void CContain::WeedEnds(int tresh)
+
+{
+	int mxx2 = 0, mxv2 = 0, alen2 = GetSize();
+
+	if(alen2 == 0)
+		return;
+
+	// Draw Value Curve
+	CIntArrRec arr;
+
+	for(int loopv = 0; loopv < alen2; loopv++)
+		{		
+		int val = sig.GetAt(loopv); 
+		int val2 = sig2.GetAt(loopv);
+
+		arr.Add(val * val2);
+		}		
+
+	arr.Smooth(1);		// Factor determined experimentally
+
+	if(xdllrecog._plotrec)
+		{
+		xdllrecog._plotrec(arr.GetData(), arr.GetSize(), 3);
+		xdllrecog._plotrec(NULL, 0, 3);
+		}	
+
+	// Find max value
+	int xxx, vvv; arr.FindMax(&xxx, &vvv);
+
+	// Dynamic or ... force constant value
+	if(tresh == 0)
+		{
+		tresh = vvv / 10;
+		}
+
+	//AP2N("CContain::WeedEnds xxx=%d vvv=%d (%d)\r\n", xxx, vvv, tresh);
+
+	// To the beginning
+	for(int loop2 = xxx; loop2 >= 0; loop2--)
+		{		
+		if(tresh > arr[loop2])
+			break;
+ 		}
+
+	// Do the end
+	for(int loop3 = xxx; loop3 < alen2; loop3++)
+		{
+		if(tresh > arr[loop3])
+			break;
+ 		}
+	
+	int sss = MAX(0, loop2), eee = MIN(alen2, loop3);
+
+	//AP2N("CContain::WeedEnds sss=%d eee=%d alen2=%d\r\n", sss, eee, alen2);
+
+	CPtrArray tmp;
+
+	// Weed sigs too
+	sig.RemoveAt(eee, sig.GetSize() - eee); sig.RemoveAt(0, sss);
+	sig2.RemoveAt(eee, sig2.GetSize() - eee); sig2.RemoveAt(0, sss);
+
+	// Create new arr within bounds, discard not needed ones
+	for(int loop4 = 0; loop4 < alen2; loop4++)
+		{
+		CContData *pval = (CContData*)xcontarr.GetAt(loop4);
+		
+		if(loop4 >= sss && loop4 <= eee)
+			{
+			tmp.Add(pval);
+			}	
+		else
+			{
+			delete pval;
+			}
+		}
+
+	// Remove and commit
+	xcontarr.RemoveAll(); xcontarr.Copy(tmp);
+}
+
+//////////////////////////////////////////////////////////////////////////
+
+CContain::CContData::CContData()
+
+{
+	magic = CContData_Magic;
+	outlim = 0;
+}
+
+//////////////////////////////////////////////////////////////////////////
+
+CContain::CContData::~CContData()
+
+{
+	ASSERT(magic == CContData_Magic);
+	ASSERT(vals.magic == CIntArr_Magic);
+	ASSERT(idxs.magic == CIntArr_Magic);
+
+	// Cannot check if after frag release
+#if 0
+	// Do not free frags ... just check it
+	int alen = frags.GetSize();
+	for(int loop = 0; loop < alen; loop++)
+		{
+		CFrag *pfr = (CFrag*)frags.GetAt(loop);
+
+		ASSERT(pfr->magic == CFrag_Magic);
+ 		}
+#endif
+
+}
+
+//////////////////////////////////////////////////////////////////////////
+
+void CContain::xConvStr(CString &xname)
+
+{
+	int idxx = xname.FindOneOf("1234567890-");
+
+	if(idxx >= 0)
+		xname = xname.Left(idxx);
+	
+	xname.MakeLower();
+}
+
+//////////////////////////////////////////////////////////////////////////
+// Add to string collection
+	
+//DEL int		CContain::xUniqueAddToStrArr(CStringArray &arr, CString *str)
+//DEL 
+//DEL {
+//DEL 	int tmpidx = 0, found = 0, alens = arr.GetSize();
+//DEL 
+//DEL 	for(int loops = 0; loops < alens; loops++)
+//DEL 		{
+//DEL 		if(arr.GetAt(loops) == *str)
+//DEL 			{
+//DEL 			tmpidx = loops; found = true; break;
+//DEL 			}
+//DEL 		}
+//DEL 	if(!found)
+//DEL 		{	
+//DEL 		tmpidx = arr.Add(*str);
+//DEL 		}
+//DEL 
+//DEL 	return tmpidx;
+//DEL }
+
+//////////////////////////////////////////////////////////////////////////
+
+//DEL void	CContain::FillSimple()
+//DEL 
+//DEL {
+//DEL 	int	ulen = GetData()->GetSize();
+//DEL 
+//DEL 	xFillSimple(ulen);
+//DEL 	xFillSimple(ulen / 2);
+//DEL 	xFillSimple(ulen / 3);
+//DEL 	xFillSimple(ulen / 4);
+//DEL 	xFillSimple(ulen / 5);
+//DEL 	xFillSimple(ulen / 6);
+//DEL 	xFillSimple(ulen / 7);
+//DEL 	xFillSimple(ulen / 8);
+//DEL }
+
+//////////////////////////////////////////////////////////////////////////
+
+//DEL void	CContain::xFillSimple(int len)
+//DEL 
+//DEL {
+//DEL 	int lastpos = 0, oldval = 0, ulen = GetData()->GetSize();
+//DEL 	
+//DEL #if 0
+//DEL 	CStringArray sarr; CIntArr iarr; CString old;
+//DEL 
+//DEL 	sim.RemoveAll(); isim.RemoveAll();
+//DEL 
+//DEL 	for(int loopr = 0; loopr < ulen; loopr++)
+//DEL 		{
+//DEL 		CContData *val = (CContData*)GetData()->GetAt(loopr);
+//DEL 
+//DEL 		// Add to string collection
+//DEL 		int	tmpidx =	xUniqueAddToStrArr(sarr, val->shstr);
+//DEL 
+//DEL 		//iarr.AddToVal(tmpidx, 1);
+//DEL 		iarr.AddToVal(tmpidx, val->val);		// Try hit strenght
+//DEL 
+//DEL 		
+//DEL #if 0
+//DEL 		CIntArr sortarr; iarr.Sort(&sortarr);		
+//DEL 
+//DEL 		// Dump collection
+//DEL 		int alens2 = sortarr.GetSize();
+//DEL 		for(int loops2 = 0; loops2 < alens2; loops2++)
+//DEL 			{
+//DEL 			int idx = sortarr.GetAt(loops2);
+//DEL 			AP2N("%s %5d  -  ", sarr.GetAt(idx), iarr.GetAt(idx));
+//DEL 			}
+//DEL 		AP2N("\r\n");		
+//DEL #endif
+//DEL 
+//DEL 		if(loopr % len == len - 1)
+//DEL 			{
+//DEL 			CIntArr sortarr2; iarr.Sort(&sortarr2);		
+//DEL 			if(sortarr2.GetSize())
+//DEL 				{
+//DEL 				int idx = sortarr2.GetAt(0);
+//DEL 				CString str = sarr.GetAt(idx);
+//DEL 				int ival = iarr.GetAt(idx);
+//DEL 
+//DEL 				//AP2N(" %s ival=%d pos=%d\r\n", str, ival, loopr);
+//DEL 
+//DEL 				sim.Add(str); isim.Add(ival);
+//DEL 			
+//DEL 				old = sarr.GetAt(idx);	oldval = ival;
+//DEL 				sarr.RemoveAll(); iarr.RemoveAll();				
+//DEL 				}	
+//DEL 			}		
+//DEL 		}	
+//DEL 
+//DEL 	// The last match is still pending
+//DEL 	//sim.Add(old); isim.Add(oldval);
+//DEL 						
+//DEL #if 0
+//DEL 	// Dump Sim
+//DEL 	CString tmp; 
+//DEL 	for(int loopd = 0; loopd < sim.GetSize(); loopd++)
+//DEL 		{
+//DEL 		CString tmp2; tmp2.Format("%s %d ", sim.GetAt(loopd), isim.GetAt(loopd));
+//DEL 		tmp += tmp2;
+//DEL 		}
+//DEL 	AP2N("sim='%s'\r\n", tmp);
+//DEL #endif
+//DEL 
+//DEL #endif
+//DEL 
+//DEL }
+
+//////////////////////////////////////////////////////////////////////////
+
+CString CContain::MaxHitAll(int divi)
+
+{
+	CString maxstr;
+
+	int contlen = GetSize(); if(!contlen) return "";	
+
+	if(!divi) divi = 1;
+
+	int step = contlen / divi;
+
+	//AP2N("Maxhitall: ");
+	for(int loopx = 0; loopx < contlen; loopx += step)
+		{
+		//int ss = MAX(0, loopx - step / 2);
+		//int ee = MIN(contlen, loopx + step + step / 2);
+
+		int ss = MAX(0, loopx);
+		int ee = MIN(contlen, loopx + step);
+
+		CString strx = MaxHit(ss, ee);			
+		maxstr += strx + " ";				
+		}
+
+	//AP2N("%s\r\n", maxstr);
+
+	return maxstr;
+}
+
+//////////////////////////////////////////////////////////////////////////
+//
+
+//DEL CString CContain::MaxHit(int start, int endd)
+//DEL 
+//DEL {
+//DEL 	//AP2N("CContain::MaxHit %d %d\r\n", start, endd);
+//DEL 
+//DEL 	CString str; CStringArray strarr;
+//DEL 	CIntArr iarr;
+//DEL 
+//DEL 	int alen = xcontarr.GetSize();
+//DEL 
+//DEL 	if(endd == -1) endd = alen;
+//DEL 
+//DEL 	start = MAX(start, 0);	endd = MIN(endd, alen);
+//DEL 
+//DEL 	for(int loop = start; loop < endd; loop++)
+//DEL 		{
+//DEL 		CContData *pval = (CContData *)xcontarr.GetAt(loop);
+//DEL 		ASSERT(pval->magic == CContData_Magic);
+//DEL 
+//DEL 		int flen = pval->frags.GetSize();
+//DEL 		
+//DEL 		flen = MIN(flen, 4);
+//DEL 
+//DEL 		for(int loop2 = 0; loop2 < flen; loop2++)
+//DEL 			{
+//DEL 			CFrag *pfr = (CFrag*)pval->frags.GetAt(loop2);			
+//DEL 			ASSERT(pfr->magic == CFrag_Magic);
+//DEL 
+//DEL 			int	idx = xUniqueIdx(pfr->shortname, &strarr);
+//DEL 			int val = pval->vals.GetAt(loop2);
+//DEL 			
+//DEL 			iarr.AddToVal(idx, val);
+//DEL  			}
+//DEL 		}		
+//DEL 
+//DEL 	//iarr.DumpAll("iarr");
+//DEL 
+//DEL 	CIntArr siarr; iarr.Sort(&siarr);
+//DEL 
+//DEL 	int alens = siarr.GetSize(); alens = MIN(alens, 4);
+//DEL 	for(int loops = 0; loops < alens; loops++)
+//DEL 		{
+//DEL 		int idx = siarr.GetAt(loops);
+//DEL 		CString strx = strarr.GetAt(idx);
+//DEL 		int val = iarr.GetAt(idx);
+//DEL 
+//DEL 		AP2N("%s %d   ", strx, val);
+//DEL 
+//DEL 		if(loops == 0)
+//DEL 			str = strx;
+//DEL  		}
+//DEL 
+//DEL 	AP2N("\r\n");
+//DEL 	return str;
+//DEL }
+
+//////////////////////////////////////////////////////////////////////////
+// Scan for local max
+
+CString CContain::Scan(int start)
+
+{
+	CString maxstr; CIntArrRec arr;
+
+	int contlen = GetSize(); if(!contlen) return "";
+	
+	for(int loopx = 0; loopx < contlen; loopx++)
+		{
+		CContData *pval =  GetAt(loopx);
+		int flen = pval->frags.GetSize();		
+	
+		for(int loop2 = 0; loop2 < MIN(4, flen); loop2++)
+			{
+			CFrag *pfr = (CFrag*)pval->frags.GetAt(loop2);			
+			ASSERT(pfr->magic == CFrag_Magic);
+
+			int hit = pval->vals.GetAt(loop2);
+	
+			AP2N("%5s %4d  ", *pfr->name, hit);
+
+			if(loop2 == 0)
+				arr.Add(hit);			
+			}
+		AP2N("\r\n");
+		}
+
+	AP2N("\r\n");
+
+	arr.Smooth(4);
+
+	//xdllrecog._plotrec(arr.GetData(), arr.GetSize(), 1);
+	//xdllrecog._plotrec(0, 0, 1);
+
+	ASSERT(arr.GetSize() == contlen);
+
+	CIntArrRec xx, vv;	arr.TurnArr(&xx, &vv, true);
+
+	xx.DumpAll("xx");
+
+	int wobble = 3;
+
+	for(int loop3 = 0; loop3 < xx.GetSize(); loop3++)
+		{
+		int idx = xx.GetAt(loop3);
+
+		int ss = MAX(0, idx - wobble);
+		int ee = MIN(contlen, idx + wobble);
+
+		//CString strx = xWalk(ss, ee);		
+		//maxstr += strx + " ";		
+
+#if 0
+		CContData *pval =  GetAt(idx);
+	
+		if(pval->vals.GetSize() > 0)
+			{
+			CFrag *pfr = (CFrag*)pval->frags.GetAt(0);			
+			ASSERT(pfr->magic == CFrag_Magic);
+
+			int hit = pval->vals.GetAt(0);
+
+			AP2N("%5s %4d  ", *pfr->name, hit);
+			}
+#endif
+
+		}
+	AP2N("\r\n");
+	
+
+	//AP2N("%s\r\n", maxstr);
+
+	return maxstr;
+}
+
+//////////////////////////////////////////////////////////////////////////
+
+CString CContain::Filter()
+
+{
+	CString maxstr;	
+
+	int contlen = GetSize(); if(!contlen) return "";
+
+	int step = 1, wobble = 2;
+
+	for(int loopx = 0; loopx < contlen; loopx++)
+		{
+		int ss = MAX(0, loopx - wobble);
+		int ee = MIN(contlen, loopx + wobble);
+
+		CContFilt *ptr = new CContFilt;
+		CString strx = xFilter(ss, ee, ptr);		
+
+		// Apply weighing factors
+		//int old = ptr->vals.GetAt(0);
+		//old *= sig.GetAt(loopx);	old /= 255;
+		//ptr->vals.SetAt(0, old);
+		
+		xfiltarr.Add(ptr);
+
+		maxstr += strx + " ";				
+		}
+
+	//AP2N("%s\r\n", maxstr);
+
+	return maxstr;
+}
+
+//////////////////////////////////////////////////////////////////////////
+//
+
+CString CContain::xFilter(int start, int endd, CContain::CContFilt *pdata)
+
+{
+	//AP2N("CContain::xWalk %d %d\r\n", start, endd);
+
+	CString str; CStringArray strarr; CIntArr iarr;
+
+	int alen = xcontarr.GetSize(); 
+	
+	if(endd == -1) endd = alen;
+	
+	start = MAX(start, 0);	endd = MIN(endd, alen);
+
+	for(int loop = start; loop < endd; loop++)
+		{
+		CContData *pval = (CContData *)xcontarr.GetAt(loop);
+
+		ASSERT(pval->magic == CContData_Magic);
+
+		int flen = pval->frags.GetSize();
+		
+		//flen = MIN(flen, 4);
+
+		for(int loop2 = 0; loop2 < flen; loop2++)
+			{
+			CFrag *pfr = (CFrag*)pval->frags.GetAt(loop2);			
+			ASSERT(pfr->magic == CFrag_Magic);
+
+			int	idx = xUniqueIdx(pfr->shortname, &strarr);
+			int val = pval->vals.GetAt(loop2);
+			
+			iarr.AddToVal(idx, val);
+ 			}
+		}		
+
+	//iarr.DumpAll("iarr");
+
+	CIntArr siarr; iarr.Sort(&siarr);
+
+	int alens = siarr.GetSize(); alens = MIN(alens, 4);
+
+	for(int loops = 0; loops < alens; loops++)
+		{
+		int idx = siarr.GetAt(loops);
+
+		int val = iarr.GetAt(idx);
+		
+		CString strx = strarr.GetAt(idx);	
+		pdata->snames.Add(strx); pdata->vals.Add(val);
+	
+		//AP2N("%5s %4d   ", strx, val);
+
+		if(loops == 0)
+			str = strx;
+ 		}
+
+	//AP2N("\r\n");
+
+	return str;
+}
+
+
+
+//////////////////////////////////////////////////////////////////////////
+#if 0
+
+CString CContain::MinHit()
+
+{
+	int sum2 = 0, cnt2 = 0, avg2 = 0, alen2 = xcontarr.GetSize();
+
+	CString ret;
+
+	if(alen2 == 0)
+		return ret;
+
+#if 0
+	// Generate sums
+	for(int loopv = 0; loopv < alen2; loopv++)
+		{
+		CContData *pval = (CContData *)xcontarr.GetAt(loopv);
+		int hhh = pval->val;
+
+		if(hhh)
+			{
+			cnt2++; sum2 += hhh;
+			}
+
+		//AP2N("%3d %6s\t", pval->rat, *pval->str);
+		}		
+
+	// Calc avarage
+	if(cnt2)
+		avg2 = sum2 / cnt2;
+
+//////////////////////////////////////////////////////////////////////////
+	
+	AP2N("Minhit = '");
+	for(int loopd2 = 0; loopd2 < alen2; loopd2++)
+		{
+		CContData *pval = (CContData *)xcontarr.GetAt(loopd2);
+	
+		if(pval->val < avg2)
+			{
+			AP2N("%s ", *pval->str);
+			ret += *pval->str; ret += " ";			
+			}			
+		}
+	AP2N("'\r\n");
+
+#endif
+
+	return ret;
+}
+
+
+#endif
+
+//////////////////////////////////////////////////////////////////////////
+
+//DEL int	CContain::xIsUnique(CString *str, CStringArray *pstrarr)
+//DEL 
+//DEL {
+//DEL 	int tmpidx = 0, found = 0, alens = pstrarr->GetSize();
+//DEL 		
+//DEL 	for(int loops = 0; loops < alens; loops++)
+//DEL 		{
+//DEL 		//AP2N("CContain::xIsUnique %s  %s\r\n", *str, pstrarr->GetAt(loops));
+//DEL 	
+//DEL 		if(pstrarr->GetAt(loops) == *str)
+//DEL 			{
+//DEL 			tmpidx = loops; found = true; break;
+//DEL 			}
+//DEL 		}
+//DEL 
+//DEL 	if(!found)
+//DEL 		tmpidx = pstrarr->Add(*str);
+//DEL 
+//DEL 	return !found;
+//DEL }
+
+//////////////////////////////////////////////////////////////////////////
+
+//DEL int	CContain::xUniqueIdx(CString *str, CStringArray *pstrarr)
+//DEL 
+//DEL {
+//DEL 	int tmpidx = 0, found = 0, alens = pstrarr->GetSize();
+//DEL 		
+//DEL 	for(int loops = 0; loops < alens; loops++)
+//DEL 		{
+//DEL 		
+//DEL 		if(pstrarr->GetAt(loops) == *str)
+//DEL 			{
+//DEL 			//AP2N("CContain::xUniqueIdx %s  %s\r\n", *str, pstrarr->GetAt(loops));
+//DEL 			tmpidx = loops; found = true; break;
+//DEL 			}
+//DEL 		}
+//DEL 
+//DEL 	if(!found)
+//DEL 		tmpidx = pstrarr->Add(*str);
+//DEL 
+//DEL 	return tmpidx;
+//DEL }
+
+//////////////////////////////////////////////////////////////////////////
+
+#if 0
+CString CContain::TopMinHit(int topent)
+
+{
+	int sum2 = 0, cnt2 = 0, avg2 = 0, alen2 = xcontarr.GetSize();
+
+	CString ret;
+
+#if 0
+	CIntArr hitarr; //, ratarr;
+	CPtrArray parr;
+
+	// Generate arrays
+	for(int loopv = 0; loopv < alen2; loopv++)
+		{
+		CContData *pval = (CContData *)xcontarr.GetAt(loopv);
+		
+		hitarr.Add(pval->val); //ratarr.Add(pval->rat);
+		parr.Add(pval);
+		}		
+
+	// Dump top entries
+	CIntArr  sarr; hitarr.Sort(&sarr, false);	
+			
+	int top = 0;
+	CStringArray strarr;
+
+	int prog = 0, uni = 0;
+	while(true)
+		{
+		int idx2 = sarr.GetAt(prog);
+		
+		CContData *pval = (CContData *)parr.GetAt(idx2);
+
+		if(xIsUnique(pval->str, &strarr))
+			{
+			//AP2N("Unii %s %d\r\n", * pval->str, uni);
+			uni++;
+			if(uni >= topent)
+				{
+				top = hitarr.GetAt(idx2);
+				}
+			}
+
+		prog++;
+		if(prog >= sarr.GetSize())
+			break;
+		}
+	
+	AP2N("Top hits (at %d) = ", top);
+	for(int loopd2 = 0; loopd2 < alen2; loopd2++)
+		{
+		CContData *pval = (CContData *)xcontarr.GetAt(loopd2);
+	
+		if(pval->val < top)
+			{
+			AP2N("%s ", *pval->str);
+			ret += *pval->str; ret += " ";			
+			}			
+		}
+	AP2N("'\r\n");
+#endif
+
+	return ret;
+}
+#endif
+
+//////////////////////////////////////////////////////////////////////////
+// Create a copy of the container(s)
+// 
+
+void CContain::Copy(CContain *ptr)
+
+{
+	ASSERT(true);
+}

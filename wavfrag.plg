@@ -1,0 +1,719 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: wavfrag - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Debug/wavfrag.res" /d "_DEBUG" /d "_AFXDLL" "C:\develop3\wavfrag\work\wavfrag.rc"" 
+Creating temporary file "C:\Users\petergl\AppData\Local\Temp\RSPD15A.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /I "../../common/work" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /FR"Debug/" /Fp"Debug/wavfrag.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\develop3\wavfrag\work\3DDlg.cpp"
+"C:\develop3\wavfrag\work\3DPlot.cpp"
+"C:\develop3\wavfrag\work\4D.cpp"
+"C:\develop3\wavfrag\work\4DDlg.cpp"
+"C:\develop3\wavfrag\work\ActionTab.cpp"
+"C:\develop3\wavfrag\work\ComColl.cpp"
+"C:\develop3\wavfrag\work\ComConf.cpp"
+"C:\develop3\wavfrag\work\Command.cpp"
+"C:\develop3\common\work\dsp.cpp"
+"C:\develop3\common\work\FileDialogST.cpp"
+"C:\develop3\wavfrag\work\Focus.cpp"
+"C:\develop3\wavfrag\work\FragCollTab.cpp"
+"C:\develop3\wavfrag\work\FragTab.cpp"
+"C:\develop3\wavfrag\work\gettext.cpp"
+"C:\develop3\common\work\GrayDlg.cpp"
+"C:\develop3\common\work\IntArr.cpp"
+"C:\develop3\common\work\label.cpp"
+"C:\develop3\common\work\Led.cpp"
+"C:\develop3\wavfrag\work\LightBoxDlg.cpp"
+"C:\develop3\common\work\LogWin.cpp"
+"C:\develop3\common\work\memdc.cpp"
+"C:\develop3\common\work\misc.cpp"
+"C:\develop3\wavfrag\work\Mixer.cpp"
+"C:\develop3\wavfrag\work\MsgBox.cpp"
+"C:\develop3\common\work\multimon.cpp"
+"C:\develop3\common\work\mxpad.cpp"
+"C:\develop3\common\work\PersistDlg.cpp"
+"C:\develop3\common\work\PersistInt.cpp"
+"C:\develop3\common\work\PersistStr.cpp"
+"C:\develop3\wavfrag\work\Phonames.cpp"
+"C:\develop3\wavfrag\work\PickDlg.cpp"
+"C:\develop3\wavfrag\work\Picture.cpp"
+"C:\develop3\common\work\PlaySound.cpp"
+"C:\develop3\common\work\Plot.cpp"
+"C:\develop3\wavfrag\work\PlotDlg.cpp"
+"C:\develop3\common\work\Popup.cpp"
+"C:\develop3\common\work\RecordSound.cpp"
+"C:\develop3\wavfrag\work\SelList.cpp"
+"C:\develop3\wavfrag\work\SendKeys.cpp"
+"C:\develop3\wavfrag\work\ShowPic.cpp"
+"C:\develop3\common\work\SimpleGrid.cpp"
+"C:\develop3\wavfrag\work\Status.cpp"
+"C:\develop3\common\work\Support.cpp"
+"C:\develop3\common\work\TextMode.cpp"
+"C:\develop3\wavfrag\work\transprog.cpp"
+"C:\develop3\wavfrag\work\UserTab.cpp"
+"C:\develop3\wavfrag\work\Vis.cpp"
+"C:\develop3\wavfrag\work\VisDlg.cpp"
+"C:\develop3\wavfrag\work\WavCmp.cpp"
+"C:\develop3\wavfrag\work\WavDlg.cpp"
+"C:\develop3\common\work\waveEdit.cpp"
+"C:\develop3\wavfrag\work\wavfrag.cpp"
+"C:\develop3\wavfrag\work\wavfragDlg.cpp"
+"C:\develop3\common\work\xButton.cpp"
+"C:\develop3\wavfrag\work\xProgCtrl.cpp"
+"C:\develop3\common\work\xPtrArr.cpp"
+"C:\develop3\common\work\XrayM.cpp"
+"C:\develop3\common\work\xRect.cpp"
+]
+Creating command line "cl.exe @C:\Users\petergl\AppData\Local\Temp\RSPD15A.tmp" 
+Creating temporary file "C:\Users\petergl\AppData\Local\Temp\RSPD15B.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /I "../../common/work" /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /FR"Debug/" /Fp"Debug/wavfrag.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"C:\develop3\wavfrag\work\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\Users\petergl\AppData\Local\Temp\RSPD15B.tmp" 
+Creating temporary file "C:\Users\petergl\AppData\Local\Temp\RSPD15C.tmp" with contents
+[
+wflibd.lib /nologo /subsystem:windows /incremental:yes /pdb:"Debug/wavfrag.pdb" /debug /machine:I386 /out:"Debug/wavfrag.exe" /pdbtype:sept 
+.\Debug\3DDlg.obj
+.\Debug\3DPlot.obj
+.\Debug\4D.obj
+.\Debug\4DDlg.obj
+.\Debug\ActionTab.obj
+.\Debug\ComColl.obj
+.\Debug\ComConf.obj
+.\Debug\Command.obj
+.\Debug\dsp.obj
+.\Debug\FileDialogST.obj
+.\Debug\Focus.obj
+.\Debug\FragCollTab.obj
+.\Debug\FragTab.obj
+.\Debug\gettext.obj
+.\Debug\GrayDlg.obj
+.\Debug\IntArr.obj
+.\Debug\label.obj
+.\Debug\Led.obj
+.\Debug\LightBoxDlg.obj
+.\Debug\LogWin.obj
+.\Debug\memdc.obj
+.\Debug\misc.obj
+.\Debug\Mixer.obj
+.\Debug\MsgBox.obj
+.\Debug\multimon.obj
+.\Debug\mxpad.obj
+.\Debug\PersistDlg.obj
+.\Debug\PersistInt.obj
+.\Debug\PersistStr.obj
+.\Debug\Phonames.obj
+.\Debug\PickDlg.obj
+.\Debug\Picture.obj
+.\Debug\PlaySound.obj
+.\Debug\Plot.obj
+.\Debug\PlotDlg.obj
+.\Debug\Popup.obj
+.\Debug\RecordSound.obj
+.\Debug\SelList.obj
+.\Debug\SendKeys.obj
+.\Debug\ShowPic.obj
+.\Debug\SimpleGrid.obj
+.\Debug\Status.obj
+.\Debug\StdAfx.obj
+.\Debug\Support.obj
+.\Debug\TextMode.obj
+.\Debug\transprog.obj
+.\Debug\UserTab.obj
+.\Debug\Vis.obj
+.\Debug\VisDlg.obj
+.\Debug\WavCmp.obj
+.\Debug\WavDlg.obj
+.\Debug\waveEdit.obj
+.\Debug\wavfrag.obj
+.\Debug\wavfragDlg.obj
+.\Debug\xButton.obj
+.\Debug\xProgCtrl.obj
+.\Debug\xPtrArr.obj
+.\Debug\XrayM.obj
+.\Debug\xRect.obj
+.\Debug\wavfrag.res
+]
+Creating command line "link.exe @C:\Users\petergl\AppData\Local\Temp\RSPD15C.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+3DDlg.cpp
+c:\develop3\common\work\xraym.h(163) : error C2061: syntax error : identifier 'CStringA'
+3DPlot.cpp
+c:\develop3\common\work\xraym.h(163) : error C2061: syntax error : identifier 'CStringA'
+4D.cpp
+c:\develop3\common\work\xraym.h(163) : error C2061: syntax error : identifier 'CStringA'
+4DDlg.cpp
+c:\develop3\common\work\xraym.h(163) : error C2061: syntax error : identifier 'CStringA'
+ActionTab.cpp
+c:\develop3\common\work\xraym.h(163) : error C2061: syntax error : identifier 'CStringA'
+ComColl.cpp
+ComConf.cpp
+Command.cpp
+dsp.cpp
+C:\develop3\common\work\dsp.cpp(208) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [26]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\dsp.cpp(355) : error C2664: 'UnicodeToAnsi' : cannot convert parameter 1 from 'class CString' to 'const unsigned short *'
+        No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+C:\develop3\common\work\dsp.cpp(367) : error C2664: 'UnicodeToAnsi' : cannot convert parameter 1 from 'class CString' to 'const unsigned short *'
+        No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+FileDialogST.cpp
+Focus.cpp
+FragCollTab.cpp
+c:\develop3\common\work\xraym.h(163) : error C2061: syntax error : identifier 'CStringA'
+FragTab.cpp
+c:\develop3\common\work\xraym.h(163) : error C2061: syntax error : identifier 'CStringA'
+gettext.cpp
+GrayDlg.cpp
+IntArr.cpp
+label.cpp
+C:\develop3\common\work\label.cpp(128) : error C2065: '_vsntprintf_s' : undeclared identifier
+C:\develop3\common\work\label.cpp(128) : error C2065: '_TRUNCATE' : undeclared identifier
+C:\develop3\common\work\label.cpp(240) : error C2065: '_tcscpy_s' : undeclared identifier
+C:\develop3\common\work\label.cpp(392) : error C2664: 'ShellExecuteA' : cannot convert parameter 2 from 'unsigned short [5]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\label.cpp(729) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [17]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\label.cpp(733) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [13]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\label.cpp(735) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [14]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\label.cpp(737) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [12]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\label.cpp(739) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [19]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\label.cpp(741) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [19]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\label.cpp(743) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [15]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\label.cpp(745) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [15]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\label.cpp(747) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [12]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\label.cpp(749) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [14]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\label.cpp(751) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [15]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\label.cpp(753) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [18]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\label.cpp(755) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [15]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\label.cpp(757) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [18]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\label.cpp(759) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [17]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\label.cpp(761) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [23]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\label.cpp(763) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [12]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\label.cpp(765) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [18]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\label.cpp(767) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [14]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\label.cpp(769) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [14]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\label.cpp(771) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [17]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\label.cpp(773) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [14]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\label.cpp(775) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [14]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\label.cpp(777) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [3]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\label.cpp(784) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [24]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\label.cpp(788) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [19]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\label.cpp(790) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [18]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\label.cpp(792) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [15]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\label.cpp(794) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [18]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\label.cpp(796) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [17]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\label.cpp(798) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [13]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\label.cpp(800) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [13]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\label.cpp(802) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [23]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\label.cpp(804) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [17]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\label.cpp(806) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [14]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\label.cpp(808) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [15]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\label.cpp(810) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [17]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\label.cpp(812) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [19]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\label.cpp(814) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [18]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\label.cpp(816) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [3]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\label.cpp(822) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [26]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\label.cpp(826) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [22]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\label.cpp(828) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [19]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\label.cpp(830) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [20]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\label.cpp(832) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [22]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\label.cpp(834) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [22]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\label.cpp(836) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [13]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\label.cpp(838) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [22]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\label.cpp(840) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [19]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\label.cpp(842) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [17]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\label.cpp(844) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [23]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\label.cpp(846) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [25]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\label.cpp(848) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [22]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\label.cpp(850) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [14]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\label.cpp(852) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [23]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\label.cpp(854) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [19]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\label.cpp(856) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [19]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\label.cpp(858) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [19]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\label.cpp(860) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [16]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\label.cpp(862) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [20]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\label.cpp(864) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [19]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\label.cpp(866) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [3]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+Led.cpp
+LightBoxDlg.cpp
+c:\develop3\common\work\xraym.h(163) : error C2061: syntax error : identifier 'CStringA'
+LogWin.cpp
+Generating Code...
+Compiling...
+memdc.cpp
+misc.cpp
+C:\develop3\common\work\misc.cpp(114) : error C2065: 'RPC_WSTR' : undeclared identifier
+C:\develop3\common\work\misc.cpp(114) : error C2059: syntax error : ')'
+C:\develop3\common\work\misc.cpp(121) : error C2059: syntax error : ')'
+C:\develop3\common\work\misc.cpp(134) : error C2146: syntax error : missing ')' before identifier 'ptr'
+C:\develop3\common\work\misc.cpp(134) : error C2059: syntax error : ')'
+C:\develop3\common\work\misc.cpp(139) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [47]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\misc.cpp(243) : error C2664: 'unsigned long __thiscall CMisc::AnsiToUnicode(const char *,class CString &)' : cannot convert parameter 2 from 'char ** ' to 'class CString &'
+        A reference that is not to 'const' cannot be bound to a non-lvalue
+Mixer.cpp
+MsgBox.cpp
+multimon.cpp
+mxpad.cpp
+C:\develop3\common\work\mxpad.cpp(428) : error C2065: '_tcscpy_s' : undeclared identifier
+C:\develop3\common\work\mxpad.cpp(535) : error C2065: '_vsntprintf_s' : undeclared identifier
+C:\develop3\common\work\mxpad.cpp(535) : error C2065: '_TRUNCATE' : undeclared identifier
+C:\develop3\common\work\mxpad.cpp(620) : error C2065: '_stprintf_s' : undeclared identifier
+C:\develop3\common\work\mxpad.cpp(1081) : error C2065: 'sprintf_s' : undeclared identifier
+C:\develop3\common\work\mxpad.cpp(3266) : error C2065: 'strcpy_s' : undeclared identifier
+PersistDlg.cpp
+C:\develop3\common\work\PersistDlg.cpp(165) : error C2664: 'void __cdecl CString::Format(const char *,...)' : cannot convert parameter 1 from 'unsigned short [9]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\PersistDlg.cpp(167) : error C2664: 'GetProfileStringA' : cannot convert parameter 3 from 'unsigned short [1]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\PersistDlg.cpp(180) : error C2065: '_stscanf_s' : undeclared identifier
+C:\develop3\common\work\PersistDlg.cpp(203) : error C2664: 'void __cdecl CString::Format(const char *,...)' : cannot convert parameter 1 from 'unsigned short [10]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\PersistDlg.cpp(204) : error C2664: 'GetProfileStringA' : cannot convert parameter 3 from 'unsigned short [2]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\PersistDlg.cpp(208) : error C2065: '_tstoi' : undeclared identifier
+C:\develop3\common\work\PersistDlg.cpp(248) : error C2664: 'void __cdecl CString::Format(const char *,...)' : cannot convert parameter 1 from 'unsigned short [12]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\PersistDlg.cpp(250) : error C2664: 'void __cdecl CString::Format(const char *,...)' : cannot convert parameter 1 from 'unsigned short [9]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\PersistDlg.cpp(256) : error C2664: 'void __cdecl CString::Format(const char *,...)' : cannot convert parameter 1 from 'unsigned short [3]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\PersistDlg.cpp(260) : error C2664: 'void __cdecl CString::Format(const char *,...)' : cannot convert parameter 1 from 'unsigned short [10]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\PersistDlg.cpp(508) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [38]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+PersistInt.cpp
+PersistStr.cpp
+Phonames.cpp
+PickDlg.cpp
+c:\develop3\common\work\xraym.h(163) : error C2061: syntax error : identifier 'CStringA'
+Picture.cpp
+PlaySound.cpp
+C:\develop3\common\work\PlaySound.cpp(303) : error C2664: 'aprintf' : cannot convert parameter 1 from 'unsigned short [32]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\PlaySound.cpp(380) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [41]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\PlaySound.cpp(651) : error C2664: 'aprintf' : cannot convert parameter 1 from 'unsigned short [34]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\PlaySound.cpp(674) : error C2664: 'aprintf' : cannot convert parameter 1 from 'unsigned short [32]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\PlaySound.cpp(698) : error C2664: 'aprintf' : cannot convert parameter 1 from 'unsigned short [45]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\PlaySound.cpp(760) : error C2664: 'UnicodeToAnsi' : cannot convert parameter 1 from 'class CString' to 'const unsigned short *'
+        No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+C:\develop3\common\work\PlaySound.cpp(770) : error C2664: 'UnicodeToAnsi' : cannot convert parameter 1 from 'class CString' to 'const unsigned short *'
+        No user-defined-conversion operator available that can perform this conversion, or the operator cannot be called
+C:\develop3\common\work\PlaySound.cpp(821) : error C2664: 'void __cdecl CString::Format(const char *,...)' : cannot convert parameter 1 from 'unsigned short [25]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\PlaySound.cpp(823) : error C2664: 'aprintf' : cannot convert parameter 1 from 'unsigned short [5]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\PlaySound.cpp(826) : error C2664: 'MessageBoxA' : cannot convert parameter 3 from 'unsigned short [11]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+Plot.cpp
+c:\develop3\common\work\xraym.h(163) : error C2061: syntax error : identifier 'CStringA'
+PlotDlg.cpp
+c:\develop3\common\work\xraym.h(163) : error C2061: syntax error : identifier 'CStringA'
+Popup.cpp
+RecordSound.cpp
+C:\develop3\common\work\RecordSound.cpp(150) : error C2664: 'aprintf' : cannot convert parameter 1 from 'unsigned short [45]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\RecordSound.cpp(319) : error C2664: 'void __cdecl CString::Format(const char *,...)' : cannot convert parameter 1 from 'unsigned short [27]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\RecordSound.cpp(324) : error C2664: 'MessageBoxA' : cannot convert parameter 3 from 'unsigned short [13]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+SelList.cpp
+SendKeys.cpp
+ShowPic.cpp
+Generating Code...
+Compiling...
+SimpleGrid.cpp
+C:\develop3\common\work\SimpleGrid.cpp(752) : error C2664: 'int __thiscall CDC::DrawTextA(const char *,int,struct tagRECT *,unsigned int)' : cannot convert parameter 1 from 'unsigned short [2]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\SimpleGrid.cpp(881) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [21]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\SimpleGrid.cpp(891) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [13]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\SimpleGrid.cpp(1125) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [15]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\SimpleGrid.cpp(1171) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [18]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\SimpleGrid.cpp(1186) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [24]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\SimpleGrid.cpp(1262) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [25]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\SimpleGrid.cpp(1325) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [26]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+Status.cpp
+Support.cpp
+C:\develop3\common\work\Support.cpp(170) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [12]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\Support.cpp(180) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [12]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\Support.cpp(183) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [3]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\Support.cpp(187) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [38]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\Support.cpp(191) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [44]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\Support.cpp(195) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [43]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\Support.cpp(199) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [24]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\Support.cpp(204) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [29]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\Support.cpp(231) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [37]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\Support.cpp(235) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [38]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\Support.cpp(239) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [44]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\Support.cpp(243) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [43]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\Support.cpp(247) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [29]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\Support.cpp(373) : error C2065: '_tdupenv_s' : undeclared identifier
+C:\develop3\common\work\Support.cpp(375) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [21]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\Support.cpp(408) : error C2665: 'AfxMessageBox' : none of the 2 overloads can convert parameter 1 from type 'unsigned short [61]'
+C:\develop3\common\work\Support.cpp(416) : error C2664: 'GetEnvStr' : cannot convert parameter 1 from 'unsigned short [16]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\Support.cpp(428) : error C2665: 'AfxMessageBox' : none of the 2 overloads can convert parameter 1 from type 'unsigned short [58]'
+C:\develop3\common\work\Support.cpp(479) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [37]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\Support.cpp(911) : error C2065: '_tsplitpath_s' : undeclared identifier
+C:\develop3\common\work\Support.cpp(930) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [15]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\Support.cpp(941) : error C2664: 'ShellExecuteA' : cannot convert parameter 2 from 'unsigned short [5]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\Support.cpp(1213) : error C2065: 'strcat_s' : undeclared identifier
+C:\develop3\common\work\Support.cpp(1308) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [23]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\Support.cpp(1322) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [16]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\Support.cpp(1328) : error C2664: 'AfxTrace' : cannot convert parameter 1 from 'unsigned short [16]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\Support.cpp(1333) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [11]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\Support.cpp(1349) : error C2065: '_vsntprintf_s' : undeclared identifier
+C:\develop3\common\work\Support.cpp(1378) : error C2664: 'GetEnvStr' : cannot convert parameter 1 from 'unsigned short [16]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\Support.cpp(1392) : error C2664: 'GetEnvStr' : cannot convert parameter 1 from 'unsigned short [5]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\Support.cpp(1399) : error C2665: 'AfxMessageBox' : none of the 2 overloads can convert parameter 1 from type 'unsigned short [24]'
+C:\develop3\common\work\Support.cpp(1441) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [26]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\Support.cpp(1452) : error C2665: 'AfxMessageBox' : none of the 2 overloads can convert parameter 1 from type 'unsigned short [61]'
+C:\develop3\common\work\Support.cpp(1469) : error C2664: 'GetEnvironmentVariableA' : cannot convert parameter 1 from 'unsigned short [5]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\Support.cpp(1472) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [30]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\Support.cpp(1754) : error C2664: 'int __thiscall CString::Find(char,int) const' : cannot convert parameter 1 from 'unsigned short [2]' to 'char'
+        This conversion requires a reinterpret_cast, a C-style cast or function-style cast
+C:\develop3\common\work\Support.cpp(1850) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [37]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\Support.cpp(2022) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [12]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\Support.cpp(2227) : error C2664: 'aprintf' : cannot convert parameter 1 from 'unsigned short [52]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\Support.cpp(2233) : error C2664: '_findfirst' : cannot convert parameter 1 from 'unsigned short [4]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\Support.cpp(2244) : error C2664: '_tcsicmp' : cannot convert parameter 2 from 'unsigned short [4]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\Support.cpp(2245) : error C2664: '_tcsicmp' : cannot convert parameter 2 from 'unsigned short [4]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\Support.cpp(2246) : error C2664: '_tcsicmp' : cannot convert parameter 2 from 'unsigned short [4]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\Support.cpp(2247) : error C2664: '_tcsicmp' : cannot convert parameter 2 from 'unsigned short [4]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\Support.cpp(2254) : error C2664: 'aprintf' : cannot convert parameter 1 from 'unsigned short [16]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\Support.cpp(2297) : error C2664: 'aprintf' : cannot convert parameter 1 from 'unsigned short [52]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\Support.cpp(2306) : error C2664: '_findfirst' : cannot convert parameter 1 from 'unsigned short [4]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\Support.cpp(2317) : error C2664: '_tcsicmp' : cannot convert parameter 2 from 'unsigned short [4]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\Support.cpp(2318) : error C2664: '_tcsicmp' : cannot convert parameter 2 from 'unsigned short [4]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\Support.cpp(2319) : error C2664: '_tcsicmp' : cannot convert parameter 2 from 'unsigned short [4]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\Support.cpp(2320) : error C2664: '_tcsicmp' : cannot convert parameter 2 from 'unsigned short [4]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\Support.cpp(2327) : error C2664: 'aprintf' : cannot convert parameter 1 from 'unsigned short [15]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\Support.cpp(2362) : error C2065: '_itot_s' : undeclared identifier
+TextMode.cpp
+C:\develop3\common\work\TextMode.cpp(41) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [35]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+transprog.cpp
+UserTab.cpp
+Vis.cpp
+VisDlg.cpp
+c:\develop3\common\work\xraym.h(163) : error C2061: syntax error : identifier 'CStringA'
+WavCmp.cpp
+c:\develop3\common\work\xraym.h(163) : error C2061: syntax error : identifier 'CStringA'
+WavDlg.cpp
+c:\develop3\common\work\xraym.h(163) : error C2061: syntax error : identifier 'CStringA'
+waveEdit.cpp
+c:\develop3\common\work\xraym.h(163) : error C2061: syntax error : identifier 'CStringA'
+C:\develop3\common\work\waveEdit.cpp(89) : error C2664: 'RegisterClipboardFormatA' : cannot convert parameter 1 from 'unsigned short [13]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\waveEdit.cpp(295) : error C2664: 'aprintf' : cannot convert parameter 1 from 'unsigned short [27]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\waveEdit.cpp(318) : error C2664: 'void __thiscall CwaveEdit::xShowInfo(class CString &,int)' : cannot convert parameter 1 from 'unsigned short [19]' to 'class CString &'
+        A reference that is not to 'const' cannot be bound to a non-lvalue
+C:\develop3\common\work\waveEdit.cpp(320) : error C2664: 'aprintf' : cannot convert parameter 1 from 'unsigned short [77]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\waveEdit.cpp(538) : error C2664: 'aprintf' : cannot convert parameter 1 from 'unsigned short [19]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\waveEdit.cpp(604) : error C2664: 'aprintf' : cannot convert parameter 1 from 'unsigned short [15]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\waveEdit.cpp(643) : error C2664: 'aprintf' : cannot convert parameter 1 from 'unsigned short [60]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\waveEdit.cpp(806) : error C2664: 'aprintf' : cannot convert parameter 1 from 'unsigned short [61]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\waveEdit.cpp(1037) : error C2664: 'OpenWave' : cannot convert parameter 1 from 'unsigned short [1]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\waveEdit.cpp(1152) : error C2664: 'int __thiscall CXrayM::FindMenuItem(const char *)' : cannot convert parameter 1 from 'unsigned short [12]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\waveEdit.cpp(1179) : error C2664: 'void __thiscall CwaveEdit::xShowInfo(class CString &,int)' : cannot convert parameter 1 from 'unsigned short [22]' to 'class CString &'
+        A reference that is not to 'const' cannot be bound to a non-lvalue
+C:\develop3\common\work\waveEdit.cpp(1197) : error C2664: 'void __thiscall CwaveEdit::xShowInfo(class CString &,int)' : cannot convert parameter 1 from 'unsigned short [22]' to 'class CString &'
+        A reference that is not to 'const' cannot be bound to a non-lvalue
+C:\develop3\common\work\waveEdit.cpp(1333) : error C2664: 'SaveWave' : cannot convert parameter 1 from 'unsigned short [1]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\waveEdit.cpp(1352) : error C2664: 'OpenWave' : cannot convert parameter 1 from 'unsigned short [1]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\waveEdit.cpp(1438) : error C2440: 'initializing' : cannot convert from 'unsigned short [41]' to 'char []'
+        There is no context in which this conversion is possible
+C:\develop3\common\work\waveEdit.cpp(1440) : error C2440: '=' : cannot convert from 'unsigned short [2]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\waveEdit.cpp(1464) : error C2664: 'aprintf' : cannot convert parameter 1 from 'unsigned short [22]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\waveEdit.cpp(1465) : error C2664: 'void __thiscall CwaveEdit::xShowInfo(class CString &,int)' : cannot convert parameter 1 from 'unsigned short [20]' to 'class CString &'
+        A reference that is not to 'const' cannot be bound to a non-lvalue
+C:\develop3\common\work\waveEdit.cpp(1468) : error C2664: 'void __cdecl CString::Format(const char *,...)' : cannot convert parameter 1 from 'unsigned short [19]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\waveEdit.cpp(1486) : error C2664: 'void __thiscall CwaveEdit::xShowInfo(class CString &,int)' : cannot convert parameter 1 from 'unsigned short [36]' to 'class CString &'
+        A reference that is not to 'const' cannot be bound to a non-lvalue
+C:\develop3\common\work\waveEdit.cpp(1498) : error C2664: 'void __thiscall CwaveEdit::xShowInfo(class CString &,int)' : cannot convert parameter 1 from 'unsigned short [7]' to 'class CString &'
+        A reference that is not to 'const' cannot be bound to a non-lvalue
+C:\develop3\common\work\waveEdit.cpp(1834) : error C2664: 'void __cdecl CString::Format(const char *,...)' : cannot convert parameter 1 from 'unsigned short [33]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\waveEdit.cpp(1851) : error C2664: 'void __thiscall CwaveEdit::xShowInfo(class CString &,int)' : cannot convert parameter 1 from 'unsigned short [24]' to 'class CString &'
+        A reference that is not to 'const' cannot be bound to a non-lvalue
+C:\develop3\common\work\waveEdit.cpp(1865) : error C2664: 'void __thiscall CwaveEdit::xShowInfo(class CString &,int)' : cannot convert parameter 1 from 'unsigned short [24]' to 'class CString &'
+        A reference that is not to 'const' cannot be bound to a non-lvalue
+C:\develop3\common\work\waveEdit.cpp(2022) : error C2440: 'initializing' : cannot convert from 'unsigned short [41]' to 'char []'
+        There is no context in which this conversion is possible
+C:\develop3\common\work\waveEdit.cpp(2045) : error C2664: 'void __thiscall CwaveEdit::xShowInfo(class CString &,int)' : cannot convert parameter 1 from 'unsigned short [22]' to 'class CString &'
+        A reference that is not to 'const' cannot be bound to a non-lvalue
+C:\develop3\common\work\waveEdit.cpp(2057) : error C2664: 'void __cdecl CString::Format(const char *,...)' : cannot convert parameter 1 from 'unsigned short [7]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\waveEdit.cpp(2084) : error C2664: 'void __cdecl CString::Format(const char *,...)' : cannot convert parameter 1 from 'unsigned short [7]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\waveEdit.cpp(2087) : error C2664: 'void __cdecl CString::Format(const char *,...)' : cannot convert parameter 1 from 'unsigned short [7]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\waveEdit.cpp(2100) : error C2664: 'void __cdecl CString::Format(const char *,...)' : cannot convert parameter 1 from 'unsigned short [7]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\waveEdit.cpp(2141) : error C2664: 'void __cdecl CString::Format(const char *,...)' : cannot convert parameter 1 from 'unsigned short [24]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\waveEdit.cpp(2217) : error C2664: 'void __thiscall CwaveEdit::xShowInfo(class CString &,int)' : cannot convert parameter 1 from 'unsigned short [21]' to 'class CString &'
+        A reference that is not to 'const' cannot be bound to a non-lvalue
+C:\develop3\common\work\waveEdit.cpp(2294) : error C2664: 'void __thiscall CwaveEdit::xShowInfo(class CString &,int)' : cannot convert parameter 1 from 'unsigned short [17]' to 'class CString &'
+        A reference that is not to 'const' cannot be bound to a non-lvalue
+C:\develop3\common\work\waveEdit.cpp(2374) : error C2664: 'void __cdecl CString::Format(const char *,...)' : cannot convert parameter 1 from 'unsigned short [22]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\waveEdit.cpp(2451) : error C2664: 'AppendMenuItem' : cannot convert parameter 1 from 'unsigned short [10]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\waveEdit.cpp(2452) : error C2664: 'AppendMenuItem' : cannot convert parameter 1 from 'unsigned short [1]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\waveEdit.cpp(2453) : error C2664: 'AppendMenuItem' : cannot convert parameter 1 from 'unsigned short [8]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\waveEdit.cpp(2454) : error C2664: 'AppendMenuItem' : cannot convert parameter 1 from 'unsigned short [9]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\waveEdit.cpp(2462) : error C2664: 'void __cdecl CString::Format(const char *,...)' : cannot convert parameter 1 from 'unsigned short [7]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\waveEdit.cpp(2478) : error C2664: 'void __cdecl CString::Format(const char *,...)' : cannot convert parameter 1 from 'unsigned short [7]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\waveEdit.cpp(2491) : error C2664: 'AppendMenuItem' : cannot convert parameter 1 from 'unsigned short [11]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\waveEdit.cpp(2492) : error C2664: 'AppendMenuItem' : cannot convert parameter 1 from 'unsigned short [1]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\waveEdit.cpp(2493) : error C2664: 'AppendMenuItem' : cannot convert parameter 1 from 'unsigned short [27]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\waveEdit.cpp(2494) : error C2664: 'AppendMenuItem' : cannot convert parameter 1 from 'unsigned short [1]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\waveEdit.cpp(2497) : error C2664: 'AppendSubMenu' : cannot convert parameter 1 from 'unsigned short [14]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\waveEdit.cpp(2499) : error C2664: 'AppendMenuItem' : cannot convert parameter 1 from 'unsigned short [1]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\waveEdit.cpp(2500) : error C2664: 'AppendMenuItem' : cannot convert parameter 1 from 'unsigned short [21]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\waveEdit.cpp(2501) : error C2664: 'AppendMenuItem' : cannot convert parameter 1 from 'unsigned short [1]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\waveEdit.cpp(2502) : error C2664: 'AppendMenuItem' : cannot convert parameter 1 from 'unsigned short [20]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\waveEdit.cpp(2503) : error C2664: 'AppendMenuItem' : cannot convert parameter 1 from 'unsigned short [21]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\waveEdit.cpp(2504) : error C2664: 'AppendMenuItem' : cannot convert parameter 1 from 'unsigned short [1]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\waveEdit.cpp(2505) : error C2664: 'AppendMenuItem' : cannot convert parameter 1 from 'unsigned short [13]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\waveEdit.cpp(2506) : error C2664: 'AppendMenuItem' : cannot convert parameter 1 from 'unsigned short [20]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\waveEdit.cpp(2507) : error C2664: 'AppendMenuItem' : cannot convert parameter 1 from 'unsigned short [1]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\waveEdit.cpp(2508) : error C2664: 'AppendMenuItem' : cannot convert parameter 1 from 'unsigned short [19]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\waveEdit.cpp(2509) : error C2664: 'AppendMenuItem' : cannot convert parameter 1 from 'unsigned short [1]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\waveEdit.cpp(2510) : error C2664: 'AppendMenuItem' : cannot convert parameter 1 from 'unsigned short [21]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\waveEdit.cpp(2511) : error C2664: 'AppendMenuItem' : cannot convert parameter 1 from 'unsigned short [18]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\waveEdit.cpp(2512) : error C2664: 'AppendMenuItem' : cannot convert parameter 1 from 'unsigned short [1]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\waveEdit.cpp(2513) : error C2664: 'AppendMenuItem' : cannot convert parameter 1 from 'unsigned short [17]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\waveEdit.cpp(2516) : error C2664: 'AppendSubMenu' : cannot convert parameter 1 from 'unsigned short [13]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\waveEdit.cpp(2518) : error C2664: 'AppendMenuItem' : cannot convert parameter 1 from 'unsigned short [1]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\waveEdit.cpp(2519) : error C2664: 'AppendMenuItem' : cannot convert parameter 1 from 'unsigned short [22]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\waveEdit.cpp(2520) : error C2664: 'AppendMenuItem' : cannot convert parameter 1 from 'unsigned short [12]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\waveEdit.cpp(2528) : error C2664: 'aprintf' : cannot convert parameter 1 from 'unsigned short [32]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+wavfrag.cpp
+c:\develop3\common\work\xraym.h(163) : error C2061: syntax error : identifier 'CStringA'
+wavfragDlg.cpp
+c:\develop3\common\work\xraym.h(163) : error C2061: syntax error : identifier 'CStringA'
+xButton.cpp
+xProgCtrl.cpp
+xPtrArr.cpp
+C:\develop3\common\work\xPtrArr.cpp(334) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [69]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\xPtrArr.cpp(369) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [63]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+XrayM.cpp
+c:\develop3\common\work\xraym.h(163) : error C2061: syntax error : identifier 'CStringA'
+C:\develop3\common\work\XrayM.cpp(274) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [47]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\XrayM.cpp(359) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [36]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\XrayM.cpp(975) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [61]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\XrayM.cpp(976) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [12]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\XrayM.cpp(984) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [14]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\XrayM.cpp(990) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [56]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\XrayM.cpp(998) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [61]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\XrayM.cpp(999) : error C2664: 'printf' : cannot convert parameter 1 from 'unsigned short [16]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\XrayM.cpp(1190) : error C2664: 'void __cdecl CString::Format(const char *,...)' : cannot convert parameter 1 from 'unsigned short [32]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\XrayM.cpp(1200) : error C2664: 'void __cdecl CString::Format(const char *,...)' : cannot convert parameter 1 from 'unsigned short [32]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\XrayM.cpp(1259) : error C2664: 'AppendSubMenu' : cannot convert parameter 1 from 'unsigned short *' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\XrayM.cpp(1275) : error C2664: 'AppendMenuItem' : cannot convert parameter 1 from 'unsigned short [35]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\XrayM.cpp(1282) : error C2664: 'AppendMenuItem' : cannot convert parameter 1 from 'unsigned short *' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\XrayM.cpp(1303) : error C2664: 'void __cdecl CString::Format(const char *,...)' : cannot convert parameter 1 from 'unsigned short [19]' to 'const char *'
+        Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+C:\develop3\common\work\XrayM.cpp(1352) : error C2065: '_tcsncpy_s' : undeclared identifier
+C:\develop3\common\work\XrayM.cpp(1352) : error C2065: '_TRUNCATE' : undeclared identifier
+C:\develop3\common\work\XrayM.cpp(1471) : error C2061: syntax error : identifier 'CStringA'
+C:\develop3\common\work\XrayM.cpp(1480) : error C2065: 'str' : undeclared identifier
+C:\develop3\common\work\XrayM.cpp(1480) : error C2440: '=' : cannot convert from 'char [1]' to 'int'
+        This conversion requires a reinterpret_cast, a C-style cast or function-style cast
+C:\develop3\common\work\XrayM.cpp(1488) : error C2228: left of '.GetBuffer' must have class/struct/union type
+C:\develop3\common\work\XrayM.cpp(1498) : error C2228: left of '.ReleaseBuffer' must have class/struct/union type
+xRect.cpp
+Generating Code...
+Error executing cl.exe.
+
+
+
+<h3>Results</h3>
+wavfrag.exe - 274 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

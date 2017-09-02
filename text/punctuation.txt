@@ -1,0 +1,59 @@
+EXCLAMATION-POINT             EH K S K L AX M EY SH AX N P OY N T
+CLOSE-QUOTE                   K L OW Z K W OW T
+DOUBLE-QUOTE                  D AH B AX L K W OW T
+END-OF-QUOTE                  EH N D AX V K W OW T
+END-QUOTE                     EH N D K W OW T
+IN-QUOTES                     IH N K W OW T S
+QUOTE                         K W OW T
+UNQUOTE                       AH N K W OW T
+SHARP-SIGN                    SH AA R P S AY N
+PERCENT                       P AXR S EH N T
+AMPERSAND                     AE M P AXR S AE N D
+CAUSE                         K AX Z
+COURSE                        K AO R S
+EM                            AX M
+END-INNER-QUOTE               EH N D IH N AXR K W OW T
+END-QUOTE                     EH N D K W OW T
+INNER-QUOTE                   IH N AXR K W OW T
+M                             AX M
+N                             AX N
+QUOTE                         K W OW T
+S                             EH S
+SINGLE-QUOTE                  S IH NG G AX L K W OW T
+TIL                           T IH L
+TIS                           T IH Z
+TWAS                          T W AH Z
+BEGIN-PARENS                  B IX G IH N P AXR EH N Z
+IN-PARENTHESES                IH N P AXR EH N TH AX S IY Z
+LEFT-PAREN                    L EH F T P AXR EH N
+OPEN-PARENTHESES              OW P AX N P AXR EH N TH AX S IY Z
+PAREN                         P AXR EH N
+PARENS                        P AXR EH N Z
+PARENTHESES                   P AXR EH N TH AX S IY Z
+CLOSE-PAREN                   K L OW Z P AXR EH N
+CLOSE-PARENTHESES             K L OW Z P AXR EH N TH AX S IY Z
+END-PAREN                     EH N D P AXR EH N
+END-PARENS                    EH N D P AXR EH N Z
+END-PARENTHESES               EH N D P AXR EH N TH AX S IY Z
+END-THE-PAREN                 EH N D DH AX P AXR EH N
+PAREN                         P AXR EH N
+PARENS                        P AXR EH N Z
+RIGHT-PAREN                   R AY T P AXR EH N
+RIGHT-PAREN(2)                R AY T P EH R AX N
+UN-PARENTHESES                AH N P AXR EH N TH AX S IY Z
+COMMA                         K AA M AX
+DASH                          D AE SH
+HYPHEN                        HH AY F AX N
+ELLIPSIS                    IX L IH P S IX S
+DECIMAL                       D EH S AX M AX L
+DOT                           D AA T
+FULL-STOP                     F UH L S T AA P
+PERIOD                        P IH R IY AX D
+POINT                         P OY N T
+SLASH                         S L AE SH
+MALEFACTORS                   M AE L AX F AE K T AXR Z
+COLON                         K OW L AX N
+SEMI-COLON                    S EH M IY K OW L AX N
+QUESTION-MARK                 K W EH S CH AX N M AA R K
+
+

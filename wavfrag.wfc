@@ -1,0 +1,364 @@
+Homepage
+Goto Home Page
+Homepage
+Display Homepage
+firefox
+C:\LAMP\xampp\htdocs\robotmonkey\index.html
+1 1
+Stop Listening
+goto sleep
+stop listening
+
+
+
+5 0
+Show Image
+display
+
+
+C:\Program Files\Internet Explorer\iexplore.exe
+C:\Users\peterglen\Pictures\brushes.bmp
+3 0
+Display Earth Picture
+Display Earth
+Show Earth
+Show Image
+
+C:\Program Files\WavFrag\html\hurricane.andrew.globe.gif
+3 0
+Display Favorite
+Display Favorite
+
+
+
+C:\Program Files\WavFrag\html\Earth_from_space.jpg
+3 0
+Exit
+Exit Wavfrag
+Close Wavfrag
+
+
+
+7 0
+Yes on confirm dialogs
+Yes
+ok
+Answer Yes
+
+
+10 0
+No on confirm dialogs
+No
+Cancel That
+Answer No
+
+
+11 0
+Show Next Image
+Next Image
+Next
+
+
+
+12 0
+Close Image
+Close Image
+Cancel That
+Escape
+
+
+4 0
+Show Prev Image
+Previous Image
+
+
+
+
+14 0
+Show Current Weather
+Show Current Weather
+Display Current Weather
+Display Weather
+firefox
+http://www.weather.com/weather/map/interactive/34293?from=36hr_maps&zoom=8&interactiveMapLayer=radar
+1 0
+Shutdown Computer
+Shutdown Computer
+
+
+
+
+15 0
+Minimize Window
+Minimize Window
+
+
+
+
+8 0
+Maximize Window
+Maximize Window
+
+
+
+
+9 0
+Close program
+Close Active Program
+close window
+Exit Program
+
+
+16 0
+Activate Next
+Activate next program
+Activate Next
+
+
+
+17 0
+Activate Previous
+Activate Previous
+
+
+
+
+18 0
+Page Down
+Page Down
+Scroll Down
+
+
+VK_NEXT
+2 0
+Page Up
+Page Up
+Scroll Up
+
+
+VK_PRIOR
+2 0
+Start Text Editor
+Start Text Editor
+Text Editor
+Open text editor
+notepad
+
+1 0
+Undo That
+Undo That
+
+
+
+VK_CONTROLzVK_CONTROL
+2 0
+Enter
+Enter
+
+
+
+VK_RETURN
+2 0
+Insert my name
+Insert my name
+
+
+
+Peter Glen
+2 0
+Return
+Return
+
+
+
+VK_RETURN
+2 0
+Insert My Address
+Insert My Address
+
+
+
+3336 Orange RdVK_RETURNVENICE, FL, 34293
+2 0
+NewLine
+NewLine
+
+
+
+VK_RETURN
+2 0
+Close Window
+Close Window
+
+
+
+
+16 0
+enable commands
+Enable Actions
+Enable Commands
+
+
+
+19 0
+Open Help
+Open Help
+
+
+iexplore
+C:\develop2\wavfrag\work\html\index.html
+21 0
+Open sample document
+Open sample document
+
+
+
+C:\Users\peterglen\Documents\The UDO.doc
+21 0
+Show Help
+Show Help
+
+
+
+C:\Program Files\WavFrag\html\index.html
+21 0
+Select document
+Select document
+
+
+
+VK_CONTROLVH_HOMEVK_SHIFTVK_ENDVK_SHIFTVK_CONTROL
+2 0
+Tea, Earl Grey, HOT
+Tea, Earl Grey Hot
+
+
+
+C:\Program Files\WavFrag\html\earl.jpg
+3 0
+Down Arrow
+Down Arrow
+Down Arrow Key
+
+
+VK_DOWN
+2 0
+Up Arrow
+Up Arrow
+Up Arrow Key
+
+
+VK_UP
+2 0
+Five lines Down
+Five lines Down
+
+
+
+VK_DOWN VK_DOWN VK_DOWN VK_DOWN VK_DOWN
+2 0
+Wake Up
+Wake Up
+
+
+
+
+6 0
+Check Email
+Check Email
+
+
+thunderbird
+
+1 0
+Space
+Space
+Space Bar
+
+
+VK_SPACE
+2 0
+Text Editor
+Text Editor
+
+
+notepad
+
+1 0
+Yes Key
+Yes Key
+
+
+
+y
+2 0
+No Key
+No Key
+
+
+
+n
+2 0
+iexplore
+Iexplore
+
+
+iexplore
+
+1 0
+Outlook
+Outlook
+Winmail
+
+msimn
+
+1 0
+Maximize WaveFrag
+Maximize Wavefrag
+Activate Wavefrag
+
+
+
+9 0
+Minimize WaveFrag
+Minimize Wavefrag
+
+
+
+
+8 0
+Goto Sleep
+Goto Sleep
+
+
+
+
+5 0
+Earl Gray, Tea Hot
+Earl Gray, Tea Hot
+
+
+
+C:\Program Files\WavFrag\html\earl.jpg
+3 0
+Close WaveFrag
+Close Wavefrag
+Exit Wavefrag
+
+
+
+7 0
+Goto Next Message
+Goto Next Message
+
+
+
+f
+2 0
+Goto Previous  Message
+Goto Previous  message
+
+
+
+b
+2 0

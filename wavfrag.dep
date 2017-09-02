@@ -1,0 +1,447 @@
+# Microsoft Developer Studio Generated Dependency File, included by wavfrag.mak
+
+.\ComColl.cpp : \
+	"..\..\common\work\mxpad.h"\
+	"..\..\common\work\Support.h"\
+	".\ComColl.h"\
+	".\Command.h"\
+	".\wavfrag.h"\
+	".\wflib\wflib.h"\
+	
+
+.\ComConf.cpp : \
+	"..\..\common\work\FileDialogST.h"\
+	"..\..\common\work\label.h"\
+	"..\..\common\work\mxpad.h"\
+	"..\..\common\work\Popup.h"\
+	"..\..\common\work\Support.h"\
+	".\ComColl.h"\
+	".\ComConf.h"\
+	".\Command.h"\
+	".\wavfrag.h"\
+	".\wflib\wflib.h"\
+	
+
+.\Command.cpp : \
+	"..\..\common\work\mxpad.h"\
+	"..\..\common\work\Support.h"\
+	".\ComColl.h"\
+	".\Command.h"\
+	".\wavfrag.h"\
+	".\wflib\wflib.h"\
+	
+
+..\..\common\work\dsp.cpp : \
+	"..\..\common\work\dsp.h"\
+	"..\..\common\work\mxpad.h"\
+	
+
+..\..\common\work\FileDialogST.cpp : \
+	"..\..\common\work\FileDialogST.h"\
+	"..\..\common\work\mxpad.h"\
+	
+
+.\FreqScan.cpp : \
+	"..\..\common\work\GrayDlg.h"\
+	"..\..\common\work\intarr.h"\
+	"..\..\common\work\label.h"\
+	"..\..\common\work\Led.h"\
+	"..\..\common\work\LogWin.h"\
+	"..\..\common\work\mxpad.h"\
+	"..\..\common\work\PersistDlg.h"\
+	"..\..\common\work\PlaySound.h"\
+	"..\..\common\work\Plot.h"\
+	"..\..\common\work\Popup.h"\
+	"..\..\common\work\RecordSound.h"\
+	"..\..\common\work\soundpar.h"\
+	"..\..\common\work\Support.h"\
+	"..\..\common\work\waveEdit.h"\
+	"..\..\common\work\xButton.h"\
+	"..\..\common\work\xPtrArr.h"\
+	"..\..\common\work\XrayM.h"\
+	".\ComColl.h"\
+	".\Command.h"\
+	".\FreqScan.h"\
+	".\LightBoxDlg.h"\
+	".\Mixer.h"\
+	".\Picture.h"\
+	".\PlotDlg.h"\
+	".\ShowPic.h"\
+	".\Vis.h"\
+	".\VisDlg.h"\
+	".\wavfrag.h"\
+	".\wavfragDlg.h"\
+	".\wflib\wflib.h"\
+	".\xProgCtrl.h"\
+	
+
+.\GetText.cpp : \
+	".\ComColl.h"\
+	".\Command.h"\
+	".\GetText.h"\
+	".\wavfrag.h"\
+	".\wflib\wflib.h"\
+	
+
+..\..\common\work\GrayDlg.cpp : \
+	"..\..\common\work\GrayDlg.h"\
+	"..\..\common\work\mxpad.h"\
+	"..\..\common\work\PersistDlg.h"\
+	"..\..\common\work\Support.h"\
+	"..\..\common\work\xPtrArr.h"\
+	
+
+..\..\common\work\IntArr.cpp : \
+	"..\..\common\work\intarr.h"\
+	"..\..\common\work\mxpad.h"\
+	"..\..\common\work\Plot.h"\
+	
+
+..\..\common\work\label.cpp : \
+	"..\..\common\work\label.h"\
+	"..\..\common\work\mxpad.h"\
+	"..\..\common\work\Popup.h"\
+	
+
+..\..\common\work\Led.cpp : \
+	"..\..\common\work\Led.h"\
+	
+
+.\LightBoxDlg.cpp : \
+	"..\..\common\work\GrayDlg.h"\
+	"..\..\common\work\label.h"\
+	"..\..\common\work\mxpad.h"\
+	"..\..\common\work\PersistDlg.h"\
+	"..\..\common\work\Popup.h"\
+	"..\..\common\work\Support.h"\
+	"..\..\common\work\xPtrArr.h"\
+	"..\..\common\work\XrayM.h"\
+	"..\..\common\work\xRect.h"\
+	".\ComColl.h"\
+	".\Command.h"\
+	".\LightBoxDlg.h"\
+	".\wavfrag.h"\
+	".\wflib\wflib.h"\
+	
+
+..\..\common\work\LogWin.cpp : \
+	"..\..\common\work\LogWin.h"\
+	"..\..\common\work\mxpad.h"\
+	
+
+..\..\common\work\memdc.cpp : \
+	"..\..\common\work\memdc.h"\
+	"..\..\common\work\mxpad.h"\
+	
+
+..\..\common\work\misc.cpp : \
+	"..\..\common\work\misc.h"\
+	"..\..\common\work\mxpad.h"\
+	
+
+.\Mixer.cpp : \
+	"..\..\common\work\mxpad.h"\
+	".\Mixer.h"\
+	".\StdAfx.h"\
+	
+
+.\MsgBox.cpp : \
+	"..\..\common\work\GrayDlg.h"\
+	"..\..\common\work\mxpad.h"\
+	"..\..\common\work\PersistDlg.h"\
+	"..\..\common\work\Popup.h"\
+	"..\..\common\work\Support.h"\
+	"..\..\common\work\xButton.h"\
+	"..\..\common\work\xPtrArr.h"\
+	".\ComColl.h"\
+	".\Command.h"\
+	".\MsgBox.h"\
+	".\wavfrag.h"\
+	".\wflib\wflib.h"\
+	
+
+..\..\common\work\mxpad.cpp : \
+	"..\..\common\work\mxpad.h"\
+	
+
+..\..\common\work\PersistDlg.cpp : \
+	"..\..\common\work\mxpad.h"\
+	"..\..\common\work\PersistDlg.h"\
+	"..\..\common\work\Support.h"\
+	"..\..\common\work\xPtrArr.h"\
+	
+
+..\..\common\work\PersistInt.cpp : \
+	"..\..\common\work\mxpad.h"\
+	"..\..\common\work\PersistInt.h"\
+	
+
+..\..\common\work\PersistStr.cpp : \
+	"..\..\common\work\mxpad.h"\
+	"..\..\common\work\PersistStr.h"\
+	
+
+.\Picture.cpp : \
+	".\Picture.h"\
+	
+
+..\..\common\work\PlaySound.cpp : \
+	"..\..\common\work\dsp.h"\
+	"..\..\common\work\mxpad.h"\
+	"..\..\common\work\PlaySound.h"\
+	"..\..\common\work\soundpar.h"\
+	"..\..\common\work\Support.h"\
+	
+
+..\..\common\work\Plot.cpp : \
+	"..\..\common\work\mxpad.h"\
+	"..\..\common\work\Plot.h"\
+	
+
+.\PlotDlg.cpp : \
+	"..\..\common\work\mxpad.h"\
+	"..\..\common\work\Plot.h"\
+	".\ComColl.h"\
+	".\Command.h"\
+	".\PlotDlg.h"\
+	".\wavfrag.h"\
+	".\wflib\wflib.h"\
+	
+
+..\..\common\work\Popup.cpp : \
+	"..\..\common\work\misc.h"\
+	"..\..\common\work\mxpad.h"\
+	"..\..\common\work\Popup.h"\
+	"..\..\common\work\Support.h"\
+	
+
+..\..\common\work\RecordSound.cpp : \
+	"..\..\common\work\dsp.h"\
+	"..\..\common\work\mxpad.h"\
+	"..\..\common\work\RecordSound.h"\
+	"..\..\common\work\soundpar.h"\
+	"..\..\common\work\Support.h"\
+	
+
+.\SendKeys.cpp : \
+	"..\..\common\work\mxpad.h"\
+	".\ComColl.h"\
+	".\Command.h"\
+	".\SendKeys.h"\
+	".\wavfrag.h"\
+	".\wflib\wflib.h"\
+	
+
+.\ShowPic.cpp : \
+	"..\..\common\work\GrayDlg.h"\
+	"..\..\common\work\misc.h"\
+	"..\..\common\work\mxpad.h"\
+	"..\..\common\work\PersistDlg.h"\
+	"..\..\common\work\Support.h"\
+	"..\..\common\work\xPtrArr.h"\
+	".\ComColl.h"\
+	".\Command.h"\
+	".\Picture.h"\
+	".\ShowPic.h"\
+	".\wavfrag.h"\
+	".\wflib\wflib.h"\
+	
+
+..\..\common\work\SimpleGrid.cpp : \
+	"..\..\common\work\mxpad.h"\
+	"..\..\common\work\Popup.h"\
+	"..\..\common\work\SimpleGrid.h"\
+	"..\..\common\work\Support.h"\
+	
+
+.\Status.cpp : \
+	"..\..\common\work\label.h"\
+	"..\..\common\work\mxpad.h"\
+	"..\..\common\work\Popup.h"\
+	"..\..\common\work\Support.h"\
+	".\ComColl.h"\
+	".\Command.h"\
+	".\Status.h"\
+	".\transprog.h"\
+	".\wavfrag.h"\
+	".\wflib\wflib.h"\
+	
+
+.\StdAfx.cpp : \
+	"..\..\..\program files\microsoft visual studio\vc98\include\basetsd.h"\
+	".\StdAfx.h"\
+	
+
+..\..\common\work\Support.cpp : \
+	"..\..\common\work\mxpad.h"\
+	"..\..\common\work\Support.h"\
+	
+
+..\..\common\work\TextMode.cpp : \
+	"..\..\common\work\mxpad.h"\
+	"..\..\common\work\TextMode.h"\
+	
+
+.\transprog.cpp : \
+	"..\..\common\work\mxpad.h"\
+	".\transprog.h"\
+	
+
+.\Vis.cpp : \
+	"..\..\common\work\intarr.h"\
+	"..\..\common\work\memdc.h"\
+	"..\..\common\work\mxpad.h"\
+	"..\..\common\work\Plot.h"\
+	".\ComColl.h"\
+	".\Command.h"\
+	".\Vis.h"\
+	".\wavfrag.h"\
+	".\wflib\wflib.h"\
+	
+
+.\VisDlg.cpp : \
+	"..\..\common\work\intarr.h"\
+	"..\..\common\work\Plot.h"\
+	".\ComColl.h"\
+	".\Command.h"\
+	".\Vis.h"\
+	".\VisDlg.h"\
+	".\wavfrag.h"\
+	".\wflib\wflib.h"\
+	
+
+..\..\common\work\waveEdit.cpp : \
+	"..\..\common\work\dsp.h"\
+	"..\..\common\work\FileDialogST.h"\
+	"..\..\common\work\GrayDlg.h"\
+	"..\..\common\work\label.h"\
+	"..\..\common\work\misc.h"\
+	"..\..\common\work\mxpad.h"\
+	"..\..\common\work\PersistDlg.h"\
+	"..\..\common\work\PlaySound.h"\
+	"..\..\common\work\Popup.h"\
+	"..\..\common\work\soundpar.h"\
+	"..\..\common\work\Support.h"\
+	"..\..\common\work\waveEdit.h"\
+	"..\..\common\work\xPtrArr.h"\
+	"..\..\common\work\XrayM.h"\
+	
+
+.\wavfrag.cpp : \
+	"..\..\common\work\GrayDlg.h"\
+	"..\..\common\work\intarr.h"\
+	"..\..\common\work\label.h"\
+	"..\..\common\work\Led.h"\
+	"..\..\common\work\LogWin.h"\
+	"..\..\common\work\mxpad.h"\
+	"..\..\common\work\PersistDlg.h"\
+	"..\..\common\work\PlaySound.h"\
+	"..\..\common\work\Plot.h"\
+	"..\..\common\work\Popup.h"\
+	"..\..\common\work\RecordSound.h"\
+	"..\..\common\work\soundpar.h"\
+	"..\..\common\work\Support.h"\
+	"..\..\common\work\waveEdit.h"\
+	"..\..\common\work\xButton.h"\
+	"..\..\common\work\xPtrArr.h"\
+	"..\..\common\work\XrayM.h"\
+	".\ComColl.h"\
+	".\Command.h"\
+	".\FreqScan.h"\
+	".\LightBoxDlg.h"\
+	".\Mixer.h"\
+	".\MsgBox.h"\
+	".\Picture.h"\
+	".\PlotDlg.h"\
+	".\reso.h"\
+	".\ShowPic.h"\
+	".\Vis.h"\
+	".\VisDlg.h"\
+	".\wavfrag.h"\
+	".\wavfragDlg.h"\
+	".\wflib\wflib.h"\
+	".\xProgCtrl.h"\
+	
+
+.\wavfragDlg.cpp : \
+	"..\..\common\work\FileDialogST.h"\
+	"..\..\common\work\GrayDlg.h"\
+	"..\..\common\work\intarr.h"\
+	"..\..\common\work\label.h"\
+	"..\..\common\work\Led.h"\
+	"..\..\common\work\LogWin.h"\
+	"..\..\common\work\mxpad.h"\
+	"..\..\common\work\PersistDlg.h"\
+	"..\..\common\work\PlaySound.h"\
+	"..\..\common\work\Plot.h"\
+	"..\..\common\work\Popup.h"\
+	"..\..\common\work\RecordSound.h"\
+	"..\..\common\work\soundpar.h"\
+	"..\..\common\work\Support.h"\
+	"..\..\common\work\waveEdit.h"\
+	"..\..\common\work\xButton.h"\
+	"..\..\common\work\xPtrArr.h"\
+	"..\..\common\work\XrayM.h"\
+	".\ComColl.h"\
+	".\ComConf.h"\
+	".\Command.h"\
+	".\GetText.h"\
+	".\LightBoxDlg.h"\
+	".\Mixer.h"\
+	".\Picture.h"\
+	".\PlotDlg.h"\
+	".\SendKeys.h"\
+	".\ShowPic.h"\
+	".\Status.h"\
+	".\transprog.h"\
+	".\Vis.h"\
+	".\VisDlg.h"\
+	".\wavfrag.h"\
+	".\wavfragDlg.h"\
+	".\wflib\wflib.h"\
+	".\xProgCtrl.h"\
+	
+
+..\..\common\work\xButton.cpp : \
+	"..\..\common\work\mxpad.h"\
+	"..\..\common\work\Popup.h"\
+	"..\..\common\work\xButton.h"\
+	
+
+.\xProgCtrl.cpp : \
+	"..\..\common\work\mxpad.h"\
+	".\xProgCtrl.h"\
+	
+
+..\..\common\work\xPtrArr.cpp : \
+	"..\..\common\work\mxpad.h"\
+	"..\..\common\work\xPtrArr.h"\
+	
+
+..\..\common\work\XrayM.cpp : \
+	"..\..\common\work\GrayDlg.h"\
+	"..\..\common\work\label.h"\
+	"..\..\common\work\misc.h"\
+	"..\..\common\work\mxpad.h"\
+	"..\..\common\work\PersistDlg.h"\
+	"..\..\common\work\Popup.h"\
+	"..\..\common\work\Support.h"\
+	"..\..\common\work\TextMode.h"\
+	"..\..\common\work\xPtrArr.h"\
+	"..\..\common\work\XrayM.h"\
+	
+
+..\..\common\work\xRect.cpp : \
+	"..\..\common\work\xRect.h"\
+	
+
+.\wavfrag.rc : \
+	".\res\bitmap1.bmp"\
+	".\res\bitmap2.bmp"\
+	".\res\bmp00001.bmp"\
+	".\res\icon1.ico"\
+	".\res\icon2.ico"\
+	".\res\mic.bmp"\
+	".\res\wavfrag.ico"\
+	".\res\wavfrag.rc2"\
+	

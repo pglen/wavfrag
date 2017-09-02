@@ -1,0 +1,192 @@
+# /////////////////////////////////////////////////////////////////////////
+# Wavefrag dictionary file
+#
+# Comments start with a hash mark ('#'), blank lines are ignored
+#
+#  File structure:
+#
+#    Line starting with a non space (' \t') is the name of the entry,
+# 	 Lines starting with space are the dictionary expansion strings
+#
+# /////////////////////////////////////////////////////////////////////////
+
+notrecog
+	nx nx
+
+one
+	w+ah nn
+	w+ah oh vv
+	w+ah oh ah ah+n oo
+	w+ah oh ah ah+n
+	w+ah oh ah+n
+	w+ah oh ah+n oo
+	w+ah ah+n
+	ww ah nn
+	ww oh ah nn
+
+two
+	tt t+uw uw
+	t+uw uw
+	t+uw ww
+	tt oh
+	tt uw
+	tt uw oh
+
+three
+	th rr ee
+	th er rr ee
+	th rr ii ee
+	th ii ee
+	th rr ii ee
+	th th+r rr+e ee
+	th th+r ee
+	th th+r ii ee
+	th th+r ii ee rr
+	th th+r ay ii ee vv
+	th th+r ii ea ah+n
+	tt th+r ea
+	tt th+r ee ea
+	tt th+r ee
+	th+r tt ee
+	th+r ee
+	ff th+r ee
+	th+r rr+e
+	th+r rr+e ee
+	ss th+r rr+e ee
+	ss th+r rr+e ee ii
+	ff rr+e ee
+	th rr+e ee
+	ff th+r rr+e ee
+	tt th+r ee ii
+	tt rr rr+e ee
+	tt ff rr+e ee
+	tt th rr+e ee
+	tt th rr+e ee
+	ff rr+e ee
+	ff rr+e ee
+
+four
+	f+oh oh
+	f+oh oh+r
+	f+oh oh oh+r
+	f+oh oh oh+r vv
+	ff oh oh+r
+	ff oh+r
+	ff oh+r oo
+	ff oh rr
+	ff oh ww
+	ff oo ww
+	ff oo rr
+	ff oh er
+	ff oh er
+
+five
+   	f+iy ah oh vv
+   	f+iy oh vv
+   	f+iy oh ay+v uw
+   	f+iy ay ay+v
+   	f+iy oh ay+v
+   	f+iy ah ay+v
+   	f+iy ah ee ay+v
+   	f+iy iy
+   	f+iy ay+v
+   	f+iy ar ay+v
+   	f+iy ih ay+v
+   	f+iy iy ay+v
+   	ff f+ay oh
+   	ff f+iy iy ay+v
+   	ff ii vv
+   	ff iy ww
+   	ff iy ar
+   	ff iy ar ii
+   	ff iy ah ww
+   	ff iy ah vv
+   	ff iy vv
+   	ff iy ah
+   	ff ar ii
+   	ff ar ii vv
+   	ff ar iy vv
+   	ff ah iy vv
+   	ff ah iy ay+v
+
+six
+	ck eh ks
+	ks eh ks
+	ss ii ss
+	ss ee ih+ks
+	ss ih ih+ks
+	ss ii eh ss
+	ss ii iy ss
+	zz ii ee ss
+	ss ii ks ss
+	ss ii uw ss
+	ss ks ee ss
+	ss uw ks
+	ss ii ks
+	ss ai ii ks
+
+seven
+	ss s+eh eh+v eh+n
+	ss s+eh eh+v oh eh+n
+	s+eh ah+n v+ah eh+n
+	s+eh v+ah eh+n
+	s+eh w+ah v+ah eh+n
+	ss s+eh eh eh+n
+	ss s+eh v+eh eh+n
+	s+eh v+ah nn
+
+eight
+	eh ee tt
+	ii oh tt
+	ay ii ee tt
+	ay ay+t
+	ai ay+t
+	ai ih ii+t
+	ay ee ii ii+t
+	ay ee ii+t
+	ay ii ii+t
+
+nine
+	nn n+ah ar ay
+	n+ah nn ar ay
+	n+ah nn ah ay+n
+	n+ah iy
+	n+ah ah ay
+	n+ah ah ay ii
+	n+ah ay+n
+	n+ah ay+n
+	n+ah iy ay+n
+	n+ah oh ay+n
+	n+ah ah ay+n
+	n+ah ah ay+n nn
+	n+ah ay ea nn
+	n+ah ay nn
+	nn n+ah ar ay+n
+	n+ah ar ay+n
+	n+ah ar ay+n nn
+	n+ah ar ih ay+n nn
+	n+ah ar ih ay+n
+	n+ah ih ay+n
+	nn n+ah ah ay+n
+
+ten
+	tt ea nn
+	tt ai uw nn
+	tt aa nn
+	tt aa ah nn
+	tt ii ea
+	tt ii ea ee
+	tt aa ah nn
+	tt aa eh nn
+	tt t+eh iy ah+n
+	tt t+eh ah+n
+	tt t+eh oh eh+n
+	tt t+eh eh eh+n
+	t+eh ih nn
+	t+eh ih iy nn
+	t+eh eh ah+n
+	t+eh eh eh+n
+	t+eh eh+n
+	t+eh iy eh+n
+
+
